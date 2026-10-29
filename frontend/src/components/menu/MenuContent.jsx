@@ -527,7 +527,7 @@ function ProductRow({ product, categoryName, currency, language, onAccentText, o
   )
 }
 
-export default function MenuContent({
+function OriginalMenuContent({
   menu,
   language = 'tr',
   onLanguageChange,
@@ -1263,4 +1263,69 @@ export default function MenuContent({
       />
     </div>
   )
+}
+
+function CafeMenuExperience({ menu, language }) {
+  const business = menu?.business || {}
+  const cats = useMemo(() => normalizeCategories(menu?.categories, language), [menu?.categories, language])
+  const [selected, setSelected] = useState('todos')
+  const [query, setQuery] = useState('')
+  const [detail, setDetail] = useState(null)
+  const active = cats.some(c => String(c.key) === selected) ? selected : 'todos'
+  const all = cats.flatMap(c => (c.products || []).map(p => ({...p, categoryName:c.name, categoryKey:String(c.key)})))
+  const results = all.filter(p => (active === 'todos' || p.categoryKey === active) && searchFold([p.name,p.description].join(' ')).includes(searchFold(query)))
+  const featured = all.filter(p=>p.is_featured).slice(0,5)
+  const shownFeatured = featured.length ? featured : all.slice(0,5)
+  const cafeName = business.name || 'Café com Amor'
+  const hero = business.cover_image_url || business.header_image_url || 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=80'
+  const price = p => formatPrice(p.price ?? 0, business.currency || 'BRL')
+  return (
+    <div className="min-h-full bg-[#faf5ec] text-[#33251c]" lang="pt-BR">
+      <header className="relative flex min-h-[310px] flex-col justify-end bg-[#33251c] bg-cover bg-center px-5 pb-6 text-white" style={{backgroundImage:`linear-gradient(180deg,rgba(22,12,8,.25),rgba(22,12,8,.88)),url("${hero}")`}}>
+        <div className="mb-3 inline-flex h-12 w-12 items-center justify-center self-start rounded-xl bg-[#9d693c] text-3xl">☕</div>
+        <h1 className="font-serif text-4xl font-bold leading-tight">{cafeName}</h1>
+        <p className="mt-1 text-xs uppercase tracking-[.2em]">Seu cardápio digital</p>
+        <div className="mt-4 flex flex-wrap gap-2 text-xs">
+          <span className="rounded-full border border-white/40 bg-black/30 px-3 py-2">☕ Feito com carinho</span>
+          <span className="rounded-full border border-white/40 bg-black/30 px-3 py-2">🇧🇷 Português</span>
+        </div>
+      </header>
+      <div className="sticky top-0 z-10 border-b border-[#e2d3c0] bg-[#fff9f0]/95 px-3 py-3 backdrop-blur">
+        <div className="flex gap-2 overflow-x-auto pb-1">
+          {[{key:'todos',name:'Todos'},...cats.map(c=>({key:String(c.key),name:c.name}))].map(c=><button type="button" key={c.key} onClick={()=>setSelected(c.key)} className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium ${active===c.key?'border-[#775034] bg-[#775034] text-white':'border-[#dfd1bc] bg-[#f5ede1] text-[#604630]'}`}>{c.name}</button>)}
+        </div>
+      </div>
+      <main className="px-4 pb-12 pt-5">
+        <label className="mb-5 flex items-center gap-2 rounded-xl border border-[#e2d2bf] bg-white px-3 py-3">
+          <Search className="h-5 w-5 text-[#977753]"/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Buscar no cardápio..." className="min-w-0 flex-1 bg-transparent text-sm outline-none" />
+        </label>
+        {active==='todos' && !query && shownFeatured.length>0 && <section className="mb-8">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-[#98642e]">● Recomendado</p>
+          <h2 className="mb-4 mt-1 font-serif text-3xl">Sugestões do Barista</h2>
+          <div className="flex snap-x gap-3 overflow-x-auto pb-2">
+            {shownFeatured.map((p,i)=><button type="button" key={p.id||i} onClick={()=>setDetail(p)} className="w-[190px] shrink-0 snap-start overflow-hidden rounded-2xl border border-[#e9dac5] bg-white text-left shadow-sm">
+              {p.image_url?<img src={p.image_url} alt={p.name} className="h-36 w-full object-cover" loading="lazy"/>:<div className="flex h-36 items-center justify-center bg-[#eadccc] text-4xl">☕</div>}
+              <div className="p-3"><p className="min-h-[42px] font-serif text-lg leading-tight">{p.name}</p><p className="mt-2 font-semibold text-[#99612c]">{price(p)}</p></div>
+            </button>)}
+          </div>
+        </section>}
+        {cats.length===0?<div className="rounded-xl border border-[#e1d5c5] bg-white p-8 text-center"><p className="font-serif text-xl">Cardápio em preparação</p><p className="mt-2 text-sm text-[#776658]">Os produtos aparecerão aqui assim que forem cadastrados.</p></div>:<>
+          <h2 className="mb-4 font-serif text-3xl">{active==='todos'?'Nosso cardápio':cats.find(c=>String(c.key)===active)?.name}</h2>
+          <div className="space-y-3">
+            {results.map((p,i)=><button type="button" key={p.id||i} onClick={()=>setDetail(p)} className="flex w-full items-center gap-3 rounded-2xl border border-[#e6d7c0] bg-[#fffaf1] p-3 text-left shadow-sm">
+              {p.image_url?<img src={p.image_url} alt={p.name} className="h-24 w-24 shrink-0 rounded-xl object-cover" loading="lazy"/>:<div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-[#ede1cf] text-3xl">☕</div>}
+              <span className="min-w-0 flex-1"><span className="block font-serif text-lg font-semibold leading-tight">{p.name}</span><span className="mt-1 line-clamp-2 block text-xs text-[#75665a]">{p.description}</span><span className="mt-2 block font-semibold text-[#93602d]">{price(p)}</span></span>
+            </button>)}
+            {results.length===0&&<p className="py-6 text-center text-sm text-[#776658]">Nenhum produto encontrado.</p>}
+          </div>
+        </>}
+      </main>
+      <MenuFooter business={business} footer={menu?.footer} language={language}/>
+      <ProductDetailModal product={detail} business={business} language={language} onClose={()=>setDetail(null)}/>
+    </div>
+  )
+}
+
+export default function MenuContent(props) {
+  return <CafeMenuExperience menu={props.menu} language={props.language || 'pt'} />
 }
