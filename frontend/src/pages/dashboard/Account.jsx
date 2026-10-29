@@ -33,15 +33,15 @@ export default function Account() {
        sees it, because "you typed your new password twice" is a question about
        this form, not about the account. */
     if (newPassword !== confirmPassword) {
-      setError('Yeni şifre ve tekrarı aynı değil.')
+      setError('A nova senha e a confirmação não coincidem.')
       return
     }
     if (newPassword.length < MIN_PASSWORD_LENGTH) {
-      setError(`Yeni şifreniz en az ${MIN_PASSWORD_LENGTH} karakter olmalıdır.`)
+      setError(`Sua nova senha deve ter pelo menos ${MIN_PASSWORD_LENGTH} caracteres.`)
       return
     }
     if (newPassword === currentPassword) {
-      setError('Yeni şifreniz mevcut şifrenizden farklı olmalıdır.')
+      setError('A nova senha deve ser diferente da atual.')
       return
     }
 
@@ -60,8 +60,8 @@ export default function Account() {
       const revoked = Number(result?.revoked_sessions) || 0
       toast.success(
         revoked > 0
-          ? `Şifreniz güncellendi. Diğer ${revoked} oturum kapatıldı.`
-          : 'Şifreniz güncellendi.',
+          ? `Senha atualizada. Outras ${revoked} sessões foram encerradas.`
+          : 'Sua senha foi atualizada.',
       )
     } catch (err) {
       // A wrong current password comes back 401 with its own Turkish message.
@@ -169,7 +169,7 @@ export default function Account() {
               className="btn-primary"
               disabled={saving || !currentPassword || !newPassword || !confirmPassword}
             >
-              {saving ? 'Güncelleniyor...' : 'Şifreyi güncelle'}
+              {saving ? 'Atualizando...' : 'Atualizar senha'}
             </button>
           </form>
         </section>
