@@ -12,6 +12,7 @@ type Currency struct {
 
 // Currencies lists the currencies selectable in the dashboard. Default: TRY.
 var Currencies = map[string]Currency{
+	"BRL": {Code: "BRL", Symbol: "R$", Name: "Real brasileiro", Position: "prefix"},
 	"TRY": {Code: "TRY", Symbol: "₺", Name: "Türk Lirası", Position: "suffix"},
 	"USD": {Code: "USD", Symbol: "$", Name: "Amerikan Doları", Position: "prefix"},
 	"EUR": {Code: "EUR", Symbol: "€", Name: "Euro", Position: "prefix"},
