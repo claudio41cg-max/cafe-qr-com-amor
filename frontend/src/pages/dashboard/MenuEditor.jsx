@@ -548,12 +548,12 @@ export default function MenuEditor() {
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" className="btn-secondary" onClick={() => setBulkPriceOpen(true)}>
               <Percent className="h-4 w-4" aria-hidden="true" />
-              Toplu Fiyat Güncelle
+              Atualizar preços em lote
             </button>
 
             <button type="button" className="btn-primary" onClick={openCreateCategory}>
               <Plus className="h-4 w-4" aria-hidden="true" />
-              Kategori Ekle
+              Adicionar categoria
             </button>
           </div>
         ) : null}
@@ -607,7 +607,7 @@ export default function MenuEditor() {
               action={
                 <button type="button" className="btn-primary" onClick={openCreateCategory}>
                   <Plus className="h-4 w-4" aria-hidden="true" />
-                  Kategori Ekle
+                  Adicionar categoria
                 </button>
               }
             />
