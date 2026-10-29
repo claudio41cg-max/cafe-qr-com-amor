@@ -57,14 +57,14 @@ function getCategoryName(category, language) {
   return (
     category.translations?.[language]?.name ||
     category.translations?.tr?.name ||
-    'İsimsiz kategori'
+    'Categoria sem nome'
   )
 }
 
 /** Product name in the selected language, falling back to Turkish. */
 function getProductName(product, language) {
   if (!product) return ''
-  return product.translations?.[language]?.name || product.translations?.tr?.name || 'İsimsiz ürün'
+  return product.translations?.[language]?.name || product.translations?.tr?.name || 'Produto sem nome'
 }
 
 /**
@@ -423,7 +423,7 @@ export default function MenuEditor() {
     try {
       const updated = await api.updateProductPrice(productId, nextPrice)
       if (updated && updated.id) patchProductLocally(productId, updated)
-      toast.success('Fiyat güncellendi.')
+      toast.success('Preço atualizado.')
       // The new price may have moved the menu's price date; see onProductSaved.
       refreshMenu(activeMenuID)
       // The live preview is refetched only now. It renders what the SERVER
@@ -508,7 +508,7 @@ export default function MenuEditor() {
 
       setProductToDelete(null)
       refreshPreview()
-      toast.success('Ürün silindi.')
+      toast.success('Produto excluído.')
     } catch (err) {
       toast.error(err.message)
       reloadIfStale(err)
@@ -536,9 +536,9 @@ export default function MenuEditor() {
       {/* --------------------------------------------------------- header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
-          <h1 className="text-xl font-semibold text-gray-900">Menü Yönetimi</h1>
+          <h1 className="text-xl font-semibold text-gray-900">Gerenciamento de cardápios</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Kategorileri ve ürünleri sürükleyerek sıralayabilirsiniz.
+            Arraste para organizar categorias e produtos.
           </p>
         </div>
 
@@ -592,18 +592,18 @@ export default function MenuEditor() {
         {/* ------------------------------------------------------- editor */}
         <div className="min-w-0">
           {loading ? (
-            <Loading text="Menü yükleniyor..." />
+            <Loading text="Carregando cardápio..." />
           ) : !hasMenu ? (
             <EmptyState
               icon={LayoutList}
-              title="Henüz bir menünüz yok"
-              description="Başlamak için bir menü oluşturun."
+              title="Você ainda não tem um cardápio"
+              description="Crie um cardápio para começar."
             />
           ) : categories.length === 0 ? (
             <EmptyState
               icon={LayoutList}
-              title="Henüz kategori eklemediniz"
-              description="Menünüzü oluşturmak için ilk kategoriyi ekleyin. Örn: Sıcak İçecekler, Tatlılar"
+              title="Você ainda não adicionou categorias"
+              description="Adicione sua primeira categoria, como Cafés, Salgados ou Doces."
               action={
                 <button type="button" className="btn-primary" onClick={openCreateCategory}>
                   <Plus className="h-4 w-4" aria-hidden="true" />
@@ -773,7 +773,7 @@ export default function MenuEditor() {
             open={Boolean(productToDelete)}
             onClose={() => setProductToDelete(null)}
             onConfirm={confirmProductDelete}
-            title="Ürünü sil"
+            title="Excluir produto"
             message={
               productToDelete
                 ? `"${getProductName(productToDelete, language)}" ürünü kalıcı olarak silinecek.`
