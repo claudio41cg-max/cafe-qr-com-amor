@@ -111,20 +111,20 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
 
     const finalName = name.trim()
     if (finalName.length < 2 || finalName.length > 60) {
-      toast.error('Menü adı 2 ile 60 karakter arasında olmalıdır.')
+      toast.error('Nome do cardápio Use entre 2 e 60 caracteres.')
       return
     }
 
     if (requestedSlug.length < MIN_SLUG_LENGTH) {
       setSlugError(
-        'Menü adresi en az 2 karakter olmalı ve yalnızca harf, rakam ve tire içerebilir.',
+        'Endereço do cardápio en az 2 karakter olmalı ve yalnızca harf, rakam ve tire içerebilir.',
       )
       return
     }
 
     const finalDescription = description.trim()
     if (finalDescription.length > 200) {
-      toast.error('Menü açıklaması en fazla 200 karakter olabilir.')
+      toast.error('A descrição deve ter no máximo 200 caracteres.')
       return
     }
 
@@ -144,9 +144,9 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
       // The address was already taken in this business: the server appended a
       // number, and the user has to be told which address was really stored.
       const renamed = Boolean(saved?.slug) && saved.slug !== requestedSlug
-      if (renamed && !menu) toast.success(`Menü oluşturuldu. Adres: ${saved.slug}`)
-      else if (renamed) toast.success(`Menü kaydedildi. Adres: ${saved.slug}`)
-      else toast.success(menu ? 'Menü kaydedildi.' : 'Menü oluşturuldu.')
+      if (renamed && !menu) toast.success(`Cardápio criado. Endereço: ${saved.slug}`)
+      else if (renamed) toast.success(`Cardápio salvo. Endereço: ${saved.slug}`)
+      else toast.success(menu ? 'Cardápio salvo.' : 'Cardápio criado.')
 
       onSaved?.(saved)
       onClose?.()
@@ -164,21 +164,21 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
     <Modal
       open={open}
       onClose={saving ? () => {} : onClose}
-      title={menu ? 'Menüyü Düzenle' : 'Yeni Menü'}
-      description="Menü adı, adresi ve yayın durumu."
+      title={menu ? 'Editar cardápio' : 'Novo cardápio'}
+      description="Nome, endereço e publicação do cardápio."
       width="max-w-lg"
       footer={
         <>
           <button type="button" className="btn-secondary" onClick={onClose} disabled={saving}>
-            İptal
+            Cancelar
           </button>
           <button type="button" className="btn-primary" onClick={save} disabled={saving}>
             {saving ? (
               <>
-                <Loader2 className="h-4 w-4 animate-spin" /> Kaydediliyor
+                <Loader2 className="h-4 w-4 animate-spin" /> Salvando
               </>
             ) : (
-              'Kaydet'
+              'Salvar'
             )}
           </button>
         </>
@@ -188,7 +188,7 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
         {/* ------------------------------------------------------------ name */}
         <div>
           <label className="label" htmlFor="menu-name">
-            Menü adı <span className="text-red-500">*</span>
+            Nome do cardápio <span className="text-red-500">*</span>
           </label>
           <input
             id="menu-name"
@@ -196,16 +196,16 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
             className="input"
             value={name}
             maxLength={60}
-            placeholder="Örn. Kahvaltı Menüsü"
+            placeholder="Ex.: Cardápio principal"
             autoComplete="off"
             onChange={(event) => setName(event.target.value)}
           />
-          <p className="help-text">2 ile 60 karakter arasında olmalıdır.</p>
+          <p className="help-text">Use entre 2 e 60 caracteres.</p>
         </div>
 
         {/* ------------------------------------------------------------ slug */}
         <div>
-          <span className="label">Menü adresi</span>
+          <span className="label">Endereço do cardápio</span>
 
           {/* Both segments, so the user sees the address a customer will type:
               the subdomain is the business, the path is this menu. */}
@@ -217,8 +217,8 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
             <ToggleField
               checked={customSlug}
               onChange={toggleCustomSlug}
-              label="Adresi özelleştir"
-              description="Kapalıyken adres menü adından oluşturulur."
+              label="Personalizar endereço"
+              description="Se desativado, o endereço será gerado a partir do nome."
             />
           </div>
 
@@ -231,7 +231,7 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
               placeholder="kahvalti"
               autoComplete="off"
               spellCheck={false}
-              aria-label="Menü adresi"
+              aria-label="Endereço do cardápio"
               onChange={(event) => {
                 setSlugError('')
                 setSlug(cleanSlugInput(event.target.value))
@@ -242,11 +242,11 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
           {slugError ? <p className="error-text">{slugError}</p> : null}
 
           <p className="help-text">
-            Bu adres bu işletmede kullanılıyorsa sonuna otomatik olarak bir numara eklenir.
+            Se este endereço já estiver em uso nesta cafeteria, será acrescentado um número automaticamente.
           </p>
           {menu ? (
             <p className="help-text">
-              Adresi değiştirirseniz bu menüyü gösteren eski QR kodları çalışmaya devam ETMEZ.
+              Se alterar o endereço, os QR Codes antigos deste cardápio deixarão de funcionar.
             </p>
           ) : null}
         </div>
@@ -254,7 +254,7 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
         {/* ----------------------------------------------------- description */}
         <div>
           <label className="label" htmlFor="menu-description">
-            Açıklama (opsiyonel)
+            Descrição (opcional)
           </label>
           <textarea
             id="menu-description"
@@ -262,18 +262,18 @@ export default function MenuModal({ open, onClose, menu, onSaved }) {
             rows={2}
             value={description}
             maxLength={200}
-            placeholder="Menü hakkında kısa bir not"
+            placeholder="Breve descrição do cardápio"
             onChange={(event) => setDescription(event.target.value)}
           />
-          <p className="help-text">En fazla 200 karakter.</p>
+          <p className="help-text">Máximo de 200 caracteres.</p>
         </div>
 
         {/* --------------------------------------------------------- toggles */}
         <ToggleField
           checked={isActive}
           onChange={setIsActive}
-          label="Menü yayında"
-          description="Kapatırsanız menü müşterilere gösterilmez, adresi de açılmaz."
+          label="Cardápio publicado"
+          description="Se desativar, os clientes não poderão visualizar o cardápio."
         />
       </div>
     </Modal>
