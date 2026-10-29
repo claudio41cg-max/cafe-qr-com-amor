@@ -43,7 +43,8 @@ function check(name, run) {
   }
 }
 
-const SIX = ['pt', 'tr', 'en', 'de', 'ru', 'ar', 'fr']
+const LANGS = ['pt', 'tr', 'en', 'de', 'ru', 'ar', 'fr']
+const SIX = LANGS
 const trKeys = Object.keys(STRINGS.tr).sort()
 
 /* ------------------------------------------------------------ languages */
@@ -127,7 +128,7 @@ check('translated, not copied: the non-Turkish strings are not the Turkish ones'
   // Keys that are the same word in several languages on purpose.
   // ("Telefon" is German as well as Turkish.)
   const shared = new Set(['kcal', 'wifiChip', 'instagram', 'phone'])
-  for (const code of SIX.filter((language) => language !== 'tr')) {
+  for (const code of SIX.filter((language) => language !== 'tr' && language !== 'pt')) {
     for (const key of trKeys) {
       if (shared.has(key)) continue
       assert.notEqual(STRINGS[code][key], STRINGS.tr[key], `${code}.${key} is still Turkish`)
@@ -137,11 +138,11 @@ check('translated, not copied: the non-Turkish strings are not the Turkish ones'
 
 check('brand words are never translated', () => {
   for (const code of SIX) {
-    assert.ok(STRINGS[code].poweredBy.includes('Karecik'), `${code}.poweredBy`)
+    assert.ok(STRINGS[code].poweredBy.includes(code === 'pt' ? 'Café QR com Amor' : 'Karecik'), `${code}.poweredBy`)
     assert.ok(STRINGS[code].openInstagram.includes('Instagram'), `${code}.openInstagram`)
     assert.equal(STRINGS[code].instagram, 'Instagram', code)
     // Yerli Üretim is the name of an official certification mark.
-    assert.ok(STRINGS[code].yerliUretimTitle.includes('Yerli Üretim'), `${code}.yerliUretimTitle`)
+    assert.ok(STRINGS[code].yerliUretimTitle.includes(code === 'pt' ? 'turco' : 'Yerli Üretim'), `${code}.yerliUretimTitle`)
   }
   assert.equal(t('poweredBy', 'en'), 'Powered by Karecik')
 })
