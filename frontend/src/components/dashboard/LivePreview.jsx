@@ -79,6 +79,42 @@ const NO_FAILURE = { slug: '', message: '' }
  * @param {string}  className
  * @param {boolean} showSplashControl - Adds the "replay splash screen" button
  */
+
+function CafePreviewExample() {
+  const items = [["Cappuccino artesanal","R$ 12,90","https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=760&q=80"],["Espresso duplo","R$ 8,90","https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=760&q=80"],["Latte caramelizado","R$ 16,90","https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=760&q=80"],["Croissant de queijo","R$ 14,50","https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=540&q=80"],["Cheesecake","R$ 18,50","https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=540&q=80"],["Affogato","R$ 15,90","https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=760&q=80"]]
+  return (
+    <div className="h-full overflow-y-auto bg-[#faf3e8] text-[#36251c]">
+      <div className="relative min-h-[295px] bg-cover bg-center" style={{backgroundImage:"linear-gradient(180deg,rgba(20,13,9,.35),rgba(20,13,9,.83)),url(https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=80)"}}>
+        <div className="absolute bottom-5 left-5 right-4 text-white">
+          <span className="mb-3 inline-block rounded-xl bg-[#a56c32] px-3 py-2 text-xl">☕</span>
+          <h2 className="font-serif text-[35px] leading-tight">Café com Amor</h2>
+          <p className="mb-4 text-xs uppercase tracking-[.23em]">Seu cardápio digital</p>
+          <div className="flex flex-wrap gap-2 text-xs">
+            <span className="rounded-full border border-white/40 bg-black/30 px-3 py-2">📍 Mesa 1</span>
+            <span className="rounded-full border border-white/40 bg-black/30 px-3 py-2">Atendimento no balcão</span>
+            <span className="rounded-full border border-white/40 bg-black/30 px-3 py-2">🟢 Aberto</span>
+          </div>
+        </div>
+      </div>
+      <div className="border-b border-[#e2d4c0] bg-[#fffaf1] px-3 py-3">
+        <div className="flex gap-2 overflow-x-auto whitespace-nowrap text-[12px]">
+          {["☕ Cafés especiais","🧊 Cafés gelados","🥐 Salgados","🍰 Doces","🎁 Combos"].map((x,i)=><span key={x} className={`rounded-full border px-3 py-2 ${i===0?"border-[#85532d] bg-[#85532d] text-white":"border-[#e5d7c4] bg-[#f8f0e5] text-[#66452d]"}`}>{x}</span>)}
+        </div>
+      </div>
+      <div className="px-4 pb-10 pt-5">
+        <p className="mb-1 text-[11px] font-bold uppercase tracking-[.22em] text-[#a66a2b]">● Recomendado</p>
+        <h3 className="mb-4 font-serif text-[28px]">Sugestões do Barista</h3>
+        <div className="grid grid-cols-2 gap-3">
+          {items.map(([name,price,url])=><div key={name} className="overflow-hidden rounded-2xl border border-[#eadcc9] bg-white shadow-sm">
+            <img src={url} alt="" className="h-28 w-full object-cover" loading="lazy"/>
+            <div className="p-3"><p className="min-h-[40px] font-serif text-[16px] leading-tight">{name}</p><p className="mt-2 font-semibold text-[#956021]">{price}</p></div>
+          </div>)}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function LivePreview({
   business,
   refresh = 0,
@@ -197,7 +233,7 @@ export default function LivePreview({
       } catch (err) {
         if (cancelled) return
         // No toast here: a preview failure should not be noisy.
-        setFailure({ slug: menuSlug, message: err.message || 'Önizleme yüklenemedi.' })
+        setFailure({ slug: menuSlug, message: err.message || 'Não foi possível carregar a prévia.' })
       } finally {
         if (!cancelled) setLoading(false)
       }
@@ -294,7 +330,7 @@ export default function LivePreview({
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
           <Eye className="h-4 w-4 text-brand-600" aria-hidden="true" />
-          <span>Canlı Önizleme</span>
+          <span>Visualização ao vivo</span>
           {/* The refetch indicator. Its slot is always reserved, so the spinner
               coming and going never reflows this row, which is allowed to
               wrap. */}
@@ -302,7 +338,7 @@ export default function LivePreview({
             {loading && previewMenu ? (
               <>
                 <Loader2 className="h-3.5 w-3.5 animate-spin text-gray-400" aria-hidden="true" />
-                <span className="sr-only">Önizleme güncelleniyor</span>
+                <span className="sr-only">Atualizando prévia</span>
               </>
             ) : null}
           </span>
@@ -313,12 +349,12 @@ export default function LivePreview({
             <button
               type="button"
               onClick={playSplash}
-              title="Karşılama ekranını oynat"
-              aria-label="Karşılama ekranını oynat"
+              title="Reproduzir tela de boas-vindas"
+              aria-label="Reproduzir tela de boas-vindas"
               className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-2 py-1 text-xs font-medium text-gray-700 outline-none hover:bg-gray-50 focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
             >
               <Play className="h-3.5 w-3.5 text-brand-600" aria-hidden="true" />
-              Karşılama ekranını oynat
+              Reproduzir tela de boas-vindas
             </button>
           ) : null}
 
@@ -326,7 +362,7 @@ export default function LivePreview({
             <select
               value={language}
               onChange={(event) => setLanguage(event.target.value)}
-              aria-label="Önizleme dili"
+              aria-label="Idioma da prévia"
               className="rounded-lg border border-gray-300 bg-white px-2 py-1 text-xs text-gray-700 outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
             >
               {languages.map((code) => {
@@ -433,17 +469,18 @@ export default function LivePreview({
                           className="mt-0.5 h-4 w-4 shrink-0 text-red-600"
                           aria-hidden="true"
                         />
-                        <p className="text-xs font-medium text-red-800">Önizleme görüntülenemedi</p>
+                        <p className="text-xs font-medium text-red-800">Não foi possível exibir a prévia</p>
                       </div>
                     </div>
                   }
                 >
-                  <MenuContent
+                  {(!previewMenu.categories || previewMenu.categories.length === 0) ? <CafePreviewExample /> : <MenuContent
                     menu={previewMenu}
                     language={language}
                     onLanguageChange={(next) => setLanguage(next)}
                     embedded
-                  />
+                  />}
+                  {(!previewMenu.categories || previewMenu.categories.length === 0) ? <p className="absolute bottom-2 left-2 right-2 z-10 rounded-lg bg-white/95 px-2 py-1 text-center text-[10px] text-[#6b4a31]">Exemplo visual · não publicado</p> : null}
                 </ErrorBoundary>
               ) : error ? (
                 /* The full error box is only for a preview with nothing on
@@ -463,7 +500,7 @@ export default function LivePreview({
               ) : hasPayload && !loading ? null : (
                 /* Nothing for this menu yet: the first request is on its way,
                    or starts right after this render. */
-                <Loading text="Önizleme hazırlanıyor..." />
+                <Loading text="Preparando prévia..." />
               )}
             </div>
 
@@ -495,11 +532,11 @@ export default function LivePreview({
           title={error}
         >
           <AlertCircle className="mt-px h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-          <span>Önizleme güncellenemedi, son yüklenen hali gösteriliyor.</span>
+          <span>Não foi possível atualizar a prévia. Exibindo a versão anterior.</span>
         </p>
       ) : (
         <p className="mt-3 text-center text-xs text-gray-500">
-          Değişiklikler burada anında görünür, kaydedene kadar müşterilere yansımaz.
+          As alterações aparecem aqui imediatamente, mas só chegam aos clientes depois de salvar.
         </p>
       )}
     </div>
