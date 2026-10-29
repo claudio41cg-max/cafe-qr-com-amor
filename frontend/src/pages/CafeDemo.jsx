@@ -26,7 +26,7 @@ const menu = {
     {
       "id": 1,
       "name": "Cafés quentes",
-      "emoji": "☕",
+      "icon": "☕",
       "is_active": true,
       "sort_order": 0,
       "products": [
@@ -116,7 +116,7 @@ const menu = {
     {
       "id": 2,
       "name": "Cafés gelados",
-      "emoji": "🧊",
+      "icon": "🧊",
       "is_active": true,
       "sort_order": 1,
       "products": [
@@ -170,7 +170,7 @@ const menu = {
     {
       "id": 3,
       "name": "Salgados",
-      "emoji": "🥐",
+      "icon": "🥐",
       "is_active": true,
       "sort_order": 2,
       "products": [
@@ -233,7 +233,7 @@ const menu = {
     {
       "id": 4,
       "name": "Doces e sobremesas",
-      "emoji": "🍰",
+      "icon": "🍰",
       "is_active": true,
       "sort_order": 3,
       "products": [
@@ -296,7 +296,7 @@ const menu = {
     {
       "id": 5,
       "name": "Combos",
-      "emoji": "❤️",
+      "icon": "❤️",
       "is_active": true,
       "sort_order": 4,
       "products": [
