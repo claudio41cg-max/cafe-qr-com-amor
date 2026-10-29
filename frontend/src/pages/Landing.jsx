@@ -171,15 +171,27 @@ export default function Landing() {
                    image is pixel-crisp on a phone and object-cover has almost
                    nothing to crop. Stating them keeps the layout from jumping
                    while it loads. */
-                <img
-                  src="/demo-onizleme.png"
-                  alt={t.demoTitle}
-                  width={632}
-                  height={1336}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover object-top"
-                />
+                <div className="h-full overflow-hidden bg-[#fff9f2] px-3 py-5 text-[#4e3025]">
+                  <div className="mb-3 text-center text-2xl">☕❤️</div>
+                  <div className="text-center text-sm font-bold">Café QR com Amor</div>
+                  <div className="mb-4 text-center text-[10px] text-[#906b59]">Cardápio de demonstração</div>
+                  <div className="mb-3 rounded-lg bg-white p-2 text-xs text-gray-500">⌕ Buscar no cardápio</div>
+                  <div className="grid grid-cols-2 gap-2 text-center text-[11px]">
+                    {[
+                      ['☕','Cafés quentes','8 produtos'],
+                      ['🧋','Cafés gelados','6 produtos'],
+                      ['🍰','Bolos e doces','9 produtos'],
+                      ['🥐','Salgados','7 produtos'],
+                    ].map(([icon, name, count]) => (
+                      <div key={name} className="rounded-xl border border-[#e9dfd3] bg-white px-1 py-5">
+                        <div className="text-2xl">{icon}</div>
+                        <div className="mt-1 font-semibold">{name}</div>
+                        <div className="text-[9px] text-gray-500">{count}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-center text-[10px] text-gray-500">Exemplo visual · Produtos ilustrativos</p>
+                </div>
               ) : DEMO_BUSINESS_SLUG ? (
                 /* `?lang=` makes the sample menu follow this page's language
                    picker (CustomerMenu reads it as an explicit choice, never
