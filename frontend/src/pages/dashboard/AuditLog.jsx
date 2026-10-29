@@ -18,7 +18,7 @@ import DateTimeCell from '../../components/analytics/DateTimeCell.jsx'
 import Pagination from '../../components/analytics/Pagination.jsx'
 
 /**
- * "Değişiklik Geçmişi" - who changed what in the panel, and when: products and
+ * "Histórico de alterações" - who changed what in the panel, and when: products and
  * prices, categories, menu settings (contact details, logos, footer notices),
  * the business record and the account password. Read from GET /api/audit-logs,
  * which the server writes on every such change; nothing here can edit it.
@@ -59,7 +59,7 @@ function ChangeValue({ text, expanded, muted = false }) {
 }
 
 /**
- * The "Değişiklikler" cell: one line per field, "alan: eski → yeni".
+ * The "Alterações" cell: one line per field, "alan: eski → yeni".
  * A created record has no old value and a deleted one no new value, so those
  * lines print the one side they have. A category or menu id prints as that
  * record's name, from `names` (auditNameLookup).
@@ -113,7 +113,7 @@ function Changes({ entry, names, expanded, onToggle }) {
           aria-expanded={expanded}
           className="mt-1 text-xs font-medium text-brand-700 hover:text-brand-800"
         >
-          {expanded ? 'Daha az göster' : 'Tümünü göster'}
+          {expanded ? 'Mostrar menos' : 'Mostrar tudo'}
         </button>
       ) : null}
 
@@ -163,7 +163,7 @@ export default function AuditLog() {
       .catch((err) => {
         if (request !== requestRef.current) return
         setData({ items: [], total: 0, names: null })
-        setError(err.message || 'Değişiklik geçmişi yüklenemedi.')
+        setError(err.message || 'Não foi possível carregar o histórico de alterações.')
       })
       .finally(() => {
         if (request === requestRef.current) setLoading(false)
@@ -184,7 +184,7 @@ export default function AuditLog() {
   return (
     <div className="pb-10">
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold text-gray-900">Değişiklik Geçmişi</h1>
+        <h1 className="text-2xl font-semibold text-gray-900">Histórico de alterações</h1>
         <p className="mt-1 text-sm text-gray-500">
           Panelde yapılan önemli değişiklikler: ürün ve fiyat düzenlemeleri, kategoriler, menü
           ayarları, iletişim bilgileri, logolar ve hesap işlemleri. Kim, ne zaman, neyi değiştirdi
@@ -254,16 +254,16 @@ export default function AuditLog() {
         ) : null}
 
         {loading && items.length === 0 && !error ? (
-          <Loading text="Değişiklik geçmişi yükleniyor..." />
+          <Loading text="Carregando histórico de alterações..." />
         ) : items.length === 0 && !error ? (
           <div className="p-4">
             <EmptyState
               icon={History}
-              title={entityType ? 'Bu türde kayıt yok' : 'Henüz kayıtlı bir değişiklik yok'}
+              title={entityType ? 'Nenhum registro deste tipo' : 'Ainda não existem alterações registradas'}
               description={
                 entityType
-                  ? 'Başka bir kayıt türü seçmeyi deneyin.'
-                  : 'Ürün, fiyat, menü ayarı ya da hesap değişikliği yaptığınızda burada listelenir.'
+                  ? 'Experimente selecionar outro tipo de registro.'
+                  : 'Alterações de produtos, preços, cardápios ou conta aparecerão aqui.'
               }
             />
           </div>
@@ -289,7 +289,7 @@ export default function AuditLog() {
                     Kayıt
                   </th>
                   <th scope="col" className="w-[40%] px-3 py-2.5 font-medium">
-                    Değişiklikler
+                    Alterações
                   </th>
                   <th scope="col" className="px-4 py-2.5 font-medium">
                     IP / Port
