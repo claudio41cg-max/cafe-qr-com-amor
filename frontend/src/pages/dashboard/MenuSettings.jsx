@@ -88,7 +88,7 @@ const MENU_FIELDS = [
   'wifi_ssid',
   'wifi_password',
   'links',
-  /* 3. contact placement and footer notices ("İletişim ve alt bilgi") */
+  /* 3. contact placement and footer notices ("Contato ve alt bilgi") */
   'contact_display',
   'contact_in_footer',
   'show_price_date',
@@ -288,7 +288,7 @@ function formatOpacity(value) {
 /** Short readability hint shown next to the darkening slider. */
 function readabilityHint(value) {
   const opacity = clampOpacity(value)
-  if (opacity < 0.25) return 'Görsel çok baskın, yazılar okunmayabilir.'
+  if (opacity < 0.25) return 'Imagem çok baskın, yazılar okunmayabilir.'
   if (opacity < 0.6) return 'Dengeli: görsel görünür, yazılar okunur.'
   return 'Yazılar çok net, görsel geri planda kalır.'
 }
@@ -690,7 +690,7 @@ export default function MenuSettings() {
   }, [])
 
   if (loading && !activeMenu) {
-    return <Loading text="Menü ayarları yükleniyor..." />
+    return <Loading text="Carregando configurações do cardápio..." />
   }
 
   // No menu, no settings: every control on this page writes onto one menu, so
@@ -702,9 +702,9 @@ export default function MenuSettings() {
         <ActiveMenuBar />
         <EmptyState
           icon={Palette}
-          title={error ? 'Menü ayarları yüklenemedi' : 'Önce bir menü oluşturun'}
+          title={error ? 'Não foi possível carregar as configurações' : 'Crie um cardápio primeiro'}
           description={
-            error || 'Görünüm, Wi-Fi ve karşılama ekranı ayarları seçili menüye aittir.'
+            error || 'As configurações de aparência, Wi-Fi e tela de boas-vindas pertencem ao cardápio selecionado.'
           }
         />
       </div>
@@ -775,7 +775,7 @@ export default function MenuSettings() {
     const isSelected = draft.languages.includes(code)
 
     if (isSelected && draft.languages.length <= 1) {
-      toast.error('En az bir menü dili seçili kalmalıdır.')
+      toast.error('Selecione pelo menos um idioma.')
       return
     }
 
@@ -854,12 +854,12 @@ export default function MenuSettings() {
 
     const name = draft.name.trim()
     if (name.length < 2 || name.length > 60) {
-      toast.error('Menü adı 2 ile 60 karakter arasında olmalıdır.')
+      toast.error('Nome do cardápio 2 ile 60 karakter arasında olmalıdır.')
       return
     }
     if (finalSlug.length < MIN_SLUG_LENGTH) {
       setSlugError(
-        'Menü adresi en az 2 karakter olmalı ve yalnızca harf, rakam ve tire içerebilir.',
+        'Endereço do cardápio en az 2 karakter olmalı ve yalnızca harf, rakam ve tire içerebilir.',
       )
       return
     }
@@ -904,7 +904,7 @@ export default function MenuSettings() {
       }
     }
     if (draft.languages.length === 0) {
-      toast.error('En az bir menü dili seçmelisiniz.')
+      toast.error('Escolha pelo menos um idioma.')
       return
     }
     if (primaryColorInvalid) {
@@ -995,9 +995,9 @@ export default function MenuSettings() {
       // The address was already taken inside this business: the server appended
       // a number, so the user is told which address was really stored.
       if (body.slug && updated?.slug && updated.slug !== body.slug) {
-        toast.success(`Menü ayarları kaydedildi. Adres: ${updated.slug}`)
+        toast.success(`Configurações salvas. Endereço: ${updated.slug}`)
       } else {
-        toast.success('Menü ayarları kaydedildi.')
+        toast.success('Configurações salvas.')
       }
     } catch (err) {
       // A taken or reserved address comes back as 409 and belongs on the field
@@ -1019,9 +1019,9 @@ export default function MenuSettings() {
       <ActiveMenuBar />
 
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold text-gray-900">Görünüm ve Ayarlar</h1>
+        <h1 className="text-2xl font-semibold text-gray-900">Aparência e configurações</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Bu sayfadaki her ayar yalnızca <b className="font-medium text-gray-700">
+          Cada configuração desta página vale apenas para <b className="font-medium text-gray-700">
             {activeMenu.name}
           </b>{' '}
           menüsü için geçerlidir. Diğer menüleriniz etkilenmez.
@@ -1035,8 +1035,8 @@ export default function MenuSettings() {
           <section className="card p-5">
             <SectionHeading
               icon={Store}
-              title="Menü Kimliği"
-              description="Menünün adı, adresi ve müşteri menüsünün en üstünde görünen görselleri."
+              title="Identidade do cardápio"
+              description="Nome, endereço e imagens exibidas no topo do cardápio do cliente."
             />
 
             <div className="space-y-5">
@@ -1044,13 +1044,13 @@ export default function MenuSettings() {
                 value={draft.logo_url}
                 onChange={(url) => update('logo_url', url)}
                 label="Logo"
-                hint="Kare veya yuvarlak logo önerilir. Geniş logolarda SVG en net sonucu verir."
+                hint="Recomendamos um logotipo quadrado ou circular. Para logos largos, SVG oferece melhor definição."
                 round
               />
 
               <div>
                 <label className="label" htmlFor="menu-name">
-                  Menü adı
+                  Nome do cardápio
                 </label>
                 <input
                   id="menu-name"
@@ -1058,7 +1058,7 @@ export default function MenuSettings() {
                   className="input"
                   value={draft.name}
                   maxLength={60}
-                  placeholder="Kahvaltı Menüsü"
+                  placeholder="Cardápio de café da manhã"
                   onChange={(event) => update('name', event.target.value)}
                 />
                 <p className="help-text">2 ile 60 karakter arasında olmalıdır.</p>
@@ -1069,7 +1069,7 @@ export default function MenuSettings() {
                   in the customer menu's header. */}
               <div>
                 <label className="label" htmlFor="menu-slogan">
-                  Slogan (opsiyonel)
+                  Slogan (opcional)
                 </label>
                 <input
                   id="menu-slogan"
@@ -1088,7 +1088,7 @@ export default function MenuSettings() {
 
               <div>
                 <label className="label" htmlFor="menu-slug">
-                  Menü adresi
+                  Endereço do cardápio
                 </label>
                 {/* The subdomain belongs to the business and is fixed here; only
                     the path segment after it names this menu. */}
@@ -1123,14 +1123,14 @@ export default function MenuSettings() {
                 </p>
                 <p className="help-text">
                   Bu adres bu işletmede kullanılıyorsa sonuna otomatik olarak bir numara eklenir.
-                  Adresi değiştirirseniz bu menüyü gösteren eski QR kodlarınız çalışmaya devam
+                  Endereçoi değiştirirseniz bu menüyü gösteren eski QR kodlarınız çalışmaya devam
                   ETMEZ. Değişiklikten sonra QR kodunuzu yeniden indirin.
                 </p>
               </div>
 
               <div>
                 <label className="label" htmlFor="menu-description">
-                  Açıklama (opsiyonel)
+                  Descrição (opcional)
                 </label>
                 <textarea
                   id="menu-description"
@@ -1138,7 +1138,7 @@ export default function MenuSettings() {
                   className="input resize-y"
                   value={draft.description}
                   maxLength={200}
-                  placeholder="Menü hakkında kısa bir not"
+                  placeholder="Breve descrição do cardápio"
                   onChange={(event) => update('description', event.target.value)}
                 />
                 <p className="help-text">{draft.description.length} / 200 karakter</p>
@@ -1147,22 +1147,22 @@ export default function MenuSettings() {
               <ImageUploader
                 value={draft.cover_url}
                 onChange={(url) => update('cover_url', url)}
-                label="Kapak görseli (opsiyonel)"
-                hint="Menünün üst bölümünde kullanılır."
+                label="Imagem de capa (opcional)"
+                hint="Exibida no topo do cardápio."
               />
 
               {/* Which of the two identity fields above — the logo or the name —
                   the customer menu prints at the top of the page. */}
               <div className="border-t border-gray-100 pt-5">
                 <Segmented
-                  label="Menü Başlığı"
+                  label="Título do cardápio"
                   options={HEADER_DISPLAY_MODES.map((mode) => ({
                     value: mode.id,
                     label: mode.label,
                   }))}
                   value={draft.header_display}
                   onChange={(value) => update('header_display', value)}
-                  hint="Müşteri menüsünün en üst satırında ne görüneceğini seçin. Logo yoksa işletme adı gösterilir; menü adı her modda hemen altında yer alır."
+                  hint="Escolha o que aparece no cabeçalho para o cliente. Sem logotipo, aparece o nome da cafeteria."
                 />
 
                 {/* The header logo has no entrance of its own any more. An
@@ -1179,8 +1179,8 @@ export default function MenuSettings() {
           <section className="card p-5">
             <SectionHeading
               icon={Phone}
-              title="İletişim"
-              description="Telefon, Instagram, Wi-Fi ve linkleriniz müşteri menüsünde, aşağıdaki “İletişim ve alt bilgi” bölümünde seçtiğiniz yerlerde gösterilir. Boş bıraktıklarınız menüde hiç yer almaz."
+              title="Contato"
+              description="Telefone, Instagram, Wi-Fi ve linkleriniz müşteri menüsünde, aşağıdaki “Contato ve alt bilgi” bölümünde seçtiğiniz yerlerde gösterilir. Boş bıraktıklarınız menüde hiç yer almaz."
             />
 
             <div className="space-y-5">
@@ -1188,7 +1188,7 @@ export default function MenuSettings() {
                 <label className="label" htmlFor="menu-phone">
                   <span className="inline-flex items-center gap-1.5">
                     <Phone className="h-3.5 w-3.5 text-gray-400" aria-hidden="true" />
-                    Telefon
+                    Telefone
                   </span>
                 </label>
                 <input
@@ -1205,7 +1205,7 @@ export default function MenuSettings() {
                 <label className="label" htmlFor="menu-address">
                   <span className="inline-flex items-center gap-1.5">
                     <MapPin className="h-3.5 w-3.5 text-gray-400" aria-hidden="true" />
-                    Adres
+                    Endereço
                   </span>
                 </label>
                 <textarea
@@ -1222,7 +1222,7 @@ export default function MenuSettings() {
                 <label className="label" htmlFor="menu-instagram">
                   <span className="inline-flex items-center gap-1.5">
                     <Instagram className="h-3.5 w-3.5 text-gray-400" aria-hidden="true" />
-                    Instagram kullanıcı adı
+                    Usuário do Instagram
                   </span>
                 </label>
                 <div className="flex">
@@ -1243,7 +1243,7 @@ export default function MenuSettings() {
                   />
                 </div>
                 <p className="help-text">
-                  “İletişim ve alt bilgi” bölümündeki seçiminize göre menüde Instagram bağlantısı
+                  “Contato ve alt bilgi” bölümündeki seçiminize göre menüde Instagram bağlantısı
                   olarak yer alır. Boş bırakırsanız gösterilmez.
                 </p>
                 {/* The customer menu links only a user name it can read
@@ -1284,7 +1284,7 @@ export default function MenuSettings() {
 
                 <div>
                   <label className="label" htmlFor="menu-wifi-password">
-                    Wi-Fi şifresi
+                    Senha do Wi-Fi
                   </label>
                   <div className="relative">
                     <input
@@ -1300,7 +1300,7 @@ export default function MenuSettings() {
                       type="button"
                       onClick={() => setPasswordVisible((previous) => !previous)}
                       className="absolute inset-y-0 right-0 flex w-11 items-center justify-center text-gray-400 hover:text-gray-600"
-                      aria-label={passwordVisible ? 'Şifreyi gizle' : 'Şifreyi göster'}
+                      aria-label={passwordVisible ? 'Ocultar senha' : 'Mostrar senha'}
                     >
                       {passwordVisible ? (
                         <EyeOff className="h-4 w-4" aria-hidden="true" />
@@ -1508,13 +1508,13 @@ export default function MenuSettings() {
               details sit on the home view, and what the footer at the bottom
               of the menu carries. The contact picker used to close the
               section above and the footer switches had a section of their
-              own ("Menü Altı Bilgiler"); both MOVED here - nothing is kept
+              own ("Informações do rodapé"); both MOVED here - nothing is kept
               twice. */}
           <section className="card p-5">
             <SectionHeading
               icon={PanelBottom}
-              title="İletişim ve alt bilgi"
-              description="İletişim bilgilerinizin ana ekranda nasıl görüneceğini ve menünün en altındaki alt bilgide nelerin yer alacağını seçin."
+              title="Contato ve alt bilgi"
+              description="Contato bilgilerinizin ana ekranda nasıl görüneceğini ve menünün en altındaki alt bilgide nelerin yer alacağını seçin."
             />
 
             <div className="space-y-5">
@@ -1557,7 +1557,7 @@ export default function MenuSettings() {
                 {!hasContactItems ? (
                   <p className="help-text">
                     Henüz telefon, Instagram, Wi-Fi ya da link girmediniz. Seçiminiz, bunları
-                    yukarıdaki “İletişim” bölümüne eklediğinizde uygulanır.
+                    yukarıdaki “Contato” bölümüne eklediğinizde uygulanır.
                   </p>
                 ) : null}
               </div>
@@ -1572,8 +1572,8 @@ export default function MenuSettings() {
                     <Switch
                       checked={draft.contact_in_footer}
                       onChange={(value) => update('contact_in_footer', value)}
-                      label="İletişim bilgileri"
-                      description="Telefon, Instagram, Wi-Fi ve linkleriniz alt bilgide kısa bir liste olarak da yer alır. Kapalıyken alt bilgide yalnızca aşağıdaki ibareler ve Karecik imzası bulunur."
+                      label="Contato bilgileri"
+                      description="Telefone, Instagram, Wi-Fi ve linkleriniz alt bilgide kısa bir liste olarak da yer alır. Kapalıyken alt bilgide yalnızca aşağıdaki ibareler ve Karecik imzası bulunur."
                     />
                     {draft.contact_in_footer && !hasContactItems ? (
                       <p className="mt-2 text-xs text-amber-700">
@@ -1586,7 +1586,7 @@ export default function MenuSettings() {
                     <Switch
                       checked={draft.show_price_date}
                       onChange={(value) => update('show_price_date', value)}
-                      label="Fiyat geçerlilik tarihi"
+                      label="Validade dos preços"
                     />
 
                     <p className="mt-3 rounded-lg bg-gray-50 px-3 py-2.5 text-sm text-gray-600">
@@ -1640,7 +1640,7 @@ export default function MenuSettings() {
                     <Switch
                       checked={draft.show_yerli_uretim}
                       onChange={(value) => update('show_yerli_uretim', value)}
-                      label="Yerli Üretim rozeti"
+                      label="Selo de produção local"
                       description="Menünün en altında, Karecik imzasının hemen üzerinde görünür."
                     />
 
@@ -1649,7 +1649,7 @@ export default function MenuSettings() {
                         <ImageUploader
                           value={draft.yerli_uretim_logo_url}
                           onChange={(url) => update('yerli_uretim_logo_url', url)}
-                          label="Yerli Üretim logosu (opsiyonel)"
+                          label="Logotipo de produção local (opcional)"
                           hint="Belgeli logonuzu yükleyin. Boş bırakırsanız sade bir metin rozeti gösterilir."
                         />
                       </div>
@@ -1674,7 +1674,7 @@ export default function MenuSettings() {
             <SectionHeading
               icon={Globe}
               title="Para Birimi ve Diller"
-              description="Bu menüdeki tüm fiyatlar seçtiğiniz para birimiyle gösterilir."
+              description="Todos os preços deste cardápio aparecem na moeda selecionada."
             />
 
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -1765,8 +1765,8 @@ export default function MenuSettings() {
           <section className="card p-5">
             <SectionHeading
               icon={Palette}
-              title="Görünüm"
-              description="Bu menünün tasarım tarzı, yazı tipi, ana rengi ve arka planı."
+              title="Aparência"
+              description="Estilo visual, fonte, cor principal e fundo do cardápio."
             />
 
             {/* Theme */}
@@ -1855,7 +1855,7 @@ export default function MenuSettings() {
                   type="color"
                   value={primaryColor}
                   onChange={(event) => update('primary_color', event.target.value)}
-                  aria-label="Ana renk seçici"
+                  aria-label="Seletor de cor principal"
                   className="h-11 w-14 shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-1"
                 />
 
@@ -1913,7 +1913,7 @@ export default function MenuSettings() {
                   type="color"
                   value={textColor}
                   onChange={(event) => update('text_color', event.target.value)}
-                  aria-label="Metin rengi seçici"
+                  aria-label="Seletor de cor do texto"
                   className="h-11 w-14 shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-1"
                 />
 
@@ -1969,10 +1969,10 @@ export default function MenuSettings() {
               </div>
 
               <Segmented
-                label="Arka plan türü"
+                label="Tipo de fundo"
                 options={[
                   { value: 'color', label: 'Renk' },
-                  { value: 'image', label: 'Görsel' },
+                  { value: 'image', label: 'Imagem' },
                 ]}
                 value={draft.background_type}
                 onChange={(value) => update('background_type', value)}
@@ -1983,8 +1983,8 @@ export default function MenuSettings() {
                   <ImageUploader
                     value={draft.background_image_url}
                     onChange={(url) => update('background_image_url', url)}
-                    label="Arka plan görseli"
-                    hint="Geniş, sakin görseller en iyi sonucu verir."
+                    label="Imagem de fundo"
+                    hint="Imagens amplas e discretas oferecem melhor legibilidade."
                   />
 
                   <div>
@@ -2023,7 +2023,7 @@ export default function MenuSettings() {
                         isValidColor(draft.background_color) ? draft.background_color : '#ffffff'
                       }
                       onChange={(event) => update('background_color', event.target.value)}
-                      aria-label="Arka plan rengi seçici"
+                      aria-label="Seletor de cor de fundo"
                       className="h-11 w-14 shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-1"
                     />
 
@@ -2115,21 +2115,21 @@ export default function MenuSettings() {
           <section className="card p-5">
             <SectionHeading
               icon={Sparkles}
-              title="Karşılama Ekranı"
-              description="Menü açıldığında logonuzla birlikte kısa bir karşılama ekranı gösterilir. Müşterilere oturum başına yalnızca bir kez görünür."
+              title="Tela de boas-vindas"
+              description="Uma tela de boas-vindas pode aparecer ao abrir o cardápio, uma vez por sessão."
             />
 
             <Switch
               checked={splashEnabled}
               onChange={(value) => update('splash_enabled', value)}
-              label="Karşılama ekranı açık"
+              label="Ativar tela de boas-vindas"
             />
 
             <div className={`mt-5 grid gap-5 lg:grid-cols-2 ${splashEnabled ? '' : 'opacity-60'}`}>
               {/* ------------------------------------------- logo and text */}
               <div className="space-y-5">
                 <Segmented
-                  label="Görünüm"
+                  label="Aparência"
                   options={SPLASH_DISPLAY_MODES.map((mode) => ({
                     value: mode.id,
                     label: mode.label,
@@ -2144,7 +2144,7 @@ export default function MenuSettings() {
                   <ImageUploader
                     value={draft.splash_logo_url}
                     onChange={(url) => update('splash_logo_url', url)}
-                    label="Karşılama logosu"
+                    label="Logo de boas-vindas"
                     hint="Yatay logolar desteklenir; SVG her ekranda keskin görünür."
                   />
                   <p className="help-text">Boş bırakırsanız menü logonuz kullanılır.</p>
@@ -2179,7 +2179,7 @@ export default function MenuSettings() {
                     className="input"
                     value={draft.splash_text}
                     onChange={(event) => update('splash_text', event.target.value.slice(0, 200))}
-                    placeholder="Hoş geldiniz"
+                    placeholder="Boas-vindas"
                     maxLength={200}
                     disabled={!splashEnabled}
                   />
@@ -2197,7 +2197,7 @@ export default function MenuSettings() {
                       value={splashBackground}
                       onChange={(event) => update('splash_bg_color', event.target.value)}
                       disabled={!splashEnabled}
-                      aria-label="Karşılama arka plan rengi seçici"
+                      aria-label="Seletor de fundo de boas-vindas"
                       className="h-11 w-14 shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-1 disabled:cursor-not-allowed"
                     />
                     <div className="w-40">
@@ -2208,7 +2208,7 @@ export default function MenuSettings() {
                         placeholder={DEFAULT_SPLASH_BG_COLOR}
                         maxLength={7}
                         disabled={!splashEnabled}
-                        aria-label="Karşılama arka plan renk kodu"
+                        aria-label="Código da cor do fundo de boas-vindas"
                         className={`input font-mono uppercase ${
                           splashBackgroundInvalid
                             ? 'border-red-400 focus:border-red-500 focus:ring-red-100'
@@ -2380,13 +2380,13 @@ export default function MenuSettings() {
 
           {/* ------------------------------------------- 7. Menu status */}
           <section className="card p-5">
-            <SectionHeading icon={Eye} title="Menü Durumu" />
+            <SectionHeading icon={Eye} title="Status do cardápio" />
 
             <Switch
               checked={draft.is_active}
               onChange={(value) => update('is_active', value)}
-              label="Menü yayında"
-              description="Kapattığınızda menüyü panelden düzenlemeye devam edebilirsiniz, müşteriler göremez."
+              label="Cardápio publicado"
+              description="Se desativado, o cardápio ainda poderá ser editado, mas não será exibido aos clientes."
             />
 
             {!draft.is_active ? (
@@ -2424,7 +2424,7 @@ export default function MenuSettings() {
 
             <button type="button" className="btn-primary shrink-0" onClick={save} disabled={saving}>
               <Save className="h-4 w-4" aria-hidden="true" />
-              {saving ? 'Kaydediliyor...' : 'Kaydet'}
+              {saving ? 'Salvando...' : 'Salvar'}
             </button>
           </div>
         </div>
