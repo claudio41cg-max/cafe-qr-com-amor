@@ -112,7 +112,7 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
         const result = await QRCodeLib.toDataURL(address, { ...QR_OPTIONS, width: 512 })
         if (!cancelled) setPreview(result)
       } catch (error) {
-        if (!cancelled) toast.error(error.message || 'QR kodu oluşturulamadı.')
+        if (!cancelled) toast.error(error.message || 'Não foi possível gerar o QR Code.')
       } finally {
         if (!cancelled) setGenerating(false)
       }
@@ -129,9 +129,9 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
     if (!text) return
     try {
       await navigator.clipboard.writeText(text)
-      toast.success('Adres kopyalandı.')
+      toast.success('Endereço copiado.')
     } catch {
-      toast.error('Adres kopyalanamadı. Metni elle seçip kopyalayabilirsiniz.')
+      toast.error('Não foi possível copiar. Selecione o endereço manualmente.')
     }
   }
 
@@ -144,7 +144,7 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
       triggerDownload(dataUrl, `${fileName}.png`)
       toast.success('QR kodu PNG olarak indirildi.')
     } catch (error) {
-      toast.error(error.message || 'QR kodu oluşturulamadı.')
+      toast.error(error.message || 'Não foi possível gerar o QR Code.')
     } finally {
       setDownloading('')
     }
@@ -161,7 +161,7 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
       triggerDownload(objectUrl, `${fileName}.svg`)
       toast.success('QR kodu SVG olarak indirildi.')
     } catch (error) {
-      toast.error(error.message || 'QR kodu oluşturulamadı.')
+      toast.error(error.message || 'Não foi possível gerar o QR Code.')
     } finally {
       // Without the revoke the blob is held for the whole page session; the
       // zero delay lets the anchor click be dispatched first.
@@ -198,7 +198,7 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
         ) : preview ? (
           <img
             src={preview}
-            alt={`${name} menü QR kodu`}
+            alt={`QR Code do cardápio ${name}`}
             width={256}
             height={256}
             className="h-64 w-64 rounded-xl bg-white object-contain"
@@ -225,7 +225,7 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
               value={address}
               onFocus={(event) => event.target.select()}
               className="input font-mono text-xs"
-              aria-label={`${name} menü adresi`}
+              aria-label={`Endereço do cardápio ${name}`}
             />
             <button
               type="button"
@@ -351,7 +351,7 @@ export default function QrHub() {
         setError('')
       } catch (err) {
         if (cancelled) return
-        const message = err.message || 'Menüler yüklenemedi.'
+        const message = err.message || 'Não foi possível carregar os cardápios.'
         setError(message)
         toast.error(message)
       } finally {
@@ -391,7 +391,7 @@ export default function QrHub() {
       </div>
 
       {loading ? (
-        <Loading text="Menüler yükleniyor" />
+        <Loading text="Carregando cardápios" />
       ) : error ? (
         <div className="print-hide rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
           {error}
@@ -400,8 +400,8 @@ export default function QrHub() {
         <EmptyState
           className="print-hide"
           icon={QrCodeIcon}
-          title="Henüz bir menünüz yok"
-          description="QR kodlarını görüntülemek için önce bir menü oluşturun."
+          title="Você ainda não tem cardápios"
+          description="Crie um cardápio para visualizar os códigos QR."
         />
       ) : (
         <>
