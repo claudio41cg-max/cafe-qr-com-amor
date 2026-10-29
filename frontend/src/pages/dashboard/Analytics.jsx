@@ -55,11 +55,11 @@ import Pagination from '../../components/analytics/Pagination.jsx'
  * Unlike the editing pages it does not follow the menu chosen in the active
  * menu bar: "every menu" is a real answer here, and the page opens on it.
  *
- * At the bottom, "Hariç tutulan IP'ler" (ExcludedIpsSection) keeps the
+ * At the bottom, "IP excluído'ler" (ExcludedIpsSection) keeps the
  * owner's own visits out of all of the above: an IP list and a per-browser
  * switch, both enforced by the server before anything is stored. An address
  * can be put on the list from three places - the section's form, its
- * "Listeye ekle" for the current address, and the "Hariç tut" of a visit log
+ * "Listeye ekle" for the current address, and the "Excluir" of a visit log
  * row - and all three open the same dialog (ExcludeIpDialog), which asks
  * what to do with the visits that address already made. That is why the list
  * and the dialog live here, on the page, rather than inside the section: the
@@ -76,10 +76,10 @@ const EVENTS_PAGE_SIZE = 50
  * cards that can never differ would send the owner looking for a difference.
  */
 const KPI_CARDS = [
-  { key: 'total_visits', label: 'Toplam ziyaret', hint: 'Her menü açılışı bir ziyaret sayılır' },
-  { key: 'unique_visitors', label: 'Tekil ziyaretçi', hint: 'Farklı ziyaretçi, yaklaşık' },
-  { key: 'category_views', label: 'Kategori görüntüleme', hint: 'Açılan kategoriler' },
-  { key: 'product_views', label: 'Ürün detayı açılışı', hint: 'Açılan ürün detayları' },
+  { key: 'total_visits', label: 'Toplam ziyaret', hint: 'Cada abertura do cardápio conta como uma visita' },
+  { key: 'unique_visitors', label: 'Visitantes únicos', hint: 'Estimativa de visitantes diferentes' },
+  { key: 'category_views', label: 'Visualizações de categoria', hint: 'Categorias acessadas' },
+  { key: 'product_views', label: 'Visualizações dos detalhes de produtos', hint: 'Detalhes de produtos acessados' },
 ]
 
 /** Badge colours of the address sources (ipSourceInfo tones). */
@@ -158,8 +158,8 @@ function TopList({ title, rows, nameOf, detailOf, loading, emptyText }) {
 }
 
 /**
- * "Kaynak" cell: the source as a small badge with its qualifier ("doğrulanmış",
- * "doğrulanmamış") on a line of its own under it - two short lines keep the
+ * "Kaynak" cell: the source as a small badge with its qualifier ("verificado",
+ * "não verificado") on a line of its own under it - two short lines keep the
  * log narrow enough for a laptop - and the full explanation on hover and for
  * screen readers.
  */
@@ -180,13 +180,13 @@ function SourceBadge({ source }) {
   )
 }
 
-/** "Kategori / Ürün" cell: what the visitor opened, product first. */
+/** "Categoria / Produto" cell: what the visitor opened, product first. */
 function TargetCell({ event }) {
   if (event?.type === 'product_view') {
     return (
       <>
         <span className="block max-w-[14rem] truncate text-gray-900" title={event.product_name || ''}>
-          {event.product_name || 'Silinmiş ürün'}
+          {event.product_name || 'Produto excluído'}
         </span>
         {event.category_name ? (
           <span className="block max-w-[14rem] truncate text-[11px] text-gray-400">
@@ -199,7 +199,7 @@ function TargetCell({ event }) {
   if (event?.type === 'category_view') {
     return (
       <span className="block max-w-[14rem] truncate text-gray-900" title={event.category_name || ''}>
-        {event.category_name || 'Silinmiş kategori'}
+        {event.category_name || 'Categoria excluída'}
       </span>
     )
   }
@@ -220,7 +220,7 @@ function IpCell({ ip, coveredBy, onExclude }) {
       {!address ? null : coveredBy ? (
         <span
           className="mt-0.5 block font-sans text-[11px] text-gray-400"
-          title={`Hariç tutulanlar listesinde (${
+          title={`Excluirulanlar listesinde (${
             coveredBy.display || coveredBy.cidr
           }); bu adresten yeni ziyaretler kaydedilmiyor.`}
         >
@@ -234,7 +234,7 @@ function IpCell({ ip, coveredBy, onExclude }) {
           aria-label={`${address} adresini hariç tut`}
         >
           <EyeOff className="h-3 w-3" aria-hidden="true" />
-          Hariç tut
+          Excluir
         </button>
       )}
     </>
@@ -290,7 +290,7 @@ export default function Analytics() {
         if (request !== summaryRequest.current) return
         // The last answer belongs to another filter; showing it under this one would lie.
         setSummary(null)
-        setSummaryError(err.message || 'İstatistikler yüklenemedi.')
+        setSummaryError(err.message || 'Não foi possível carregar as estatísticas.')
       })
       .finally(() => {
         if (request === summaryRequest.current) setSummaryLoading(false)
@@ -332,7 +332,7 @@ export default function Analytics() {
       .catch((err) => {
         if (request !== eventsRequest.current) return
         setEvents({ items: [], total: 0 })
-        setEventsError(err.message || 'Ziyaret kayıtları yüklenemedi.')
+        setEventsError(err.message || 'Não foi possível carregar os registros de visitas.')
       })
       .finally(() => {
         if (request === eventsRequest.current) setEventsLoading(false)
@@ -375,7 +375,7 @@ export default function Analytics() {
         if (request !== exclusionsRequest.current) return
         // The last list stays on screen: it was true a moment ago, and the
         // server checks every add and removal again anyway.
-        setExclusionsError(err.message || "Hariç tutulan IP'ler yüklenemedi.")
+        setExclusionsError(err.message || "IP excluído'ler yüklenemedi.")
       })
       .finally(() => {
         if (request === exclusionsRequest.current) setExclusionsLoading(false)
@@ -400,7 +400,7 @@ export default function Analytics() {
     return { problem: '', field: '' }
   }
 
-  /** "Hariç tut" of a visit log row: the same dialog, the row's address in it. */
+  /** "Excluir" of a visit log row: the same dialog, the row's address in it. */
   function excludeFromLog(address) {
     const { problem } = requestExclusion({ cidr: address, label: '' })
     if (problem) toast.error(problem)
@@ -465,7 +465,7 @@ export default function Analytics() {
   /* ------------------------------------------------------------- render */
 
   if (menusLoading && !hasMenus) {
-    return <Loading text="Analitik yükleniyor..." />
+    return <Loading text="Carregando estatísticas..." />
   }
 
   if (!hasMenus) {
@@ -474,10 +474,10 @@ export default function Analytics() {
         <PageHeader range={range} />
         <EmptyState
           icon={BarChart3}
-          title={menusError ? 'Menüler yüklenemedi' : 'Henüz ölçülecek bir menü yok'}
+          title={menusError ? 'Não foi possível carregar os cardápios' : 'Ainda não há cardápios para analisar'}
           description={
             menusError ||
-            'Bir menü oluşturup yayınladığınızda müşterilerinizin ziyaretleri burada görünür.'
+            'Quando publicar um cardápio, as visitas dos clientes aparecerão aqui.'
           }
           action={
             menusError ? (
@@ -514,7 +514,7 @@ export default function Analytics() {
             {menus.map((menu) => (
               <option key={menu.id} value={menu.id}>
                 {menu.name}
-                {menu.is_active === false ? ' (yayında değil)' : ''}
+                {menu.is_active === false ? ' (não publicado)' : ''}
               </option>
             ))}
           </select>
@@ -561,7 +561,7 @@ export default function Analytics() {
       <p className="help-text mt-2 flex items-start gap-1.5">
         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" aria-hidden="true" />
         <span>
-          Tekil ziyaretçi, tarayıcıya özgü anonim bir kimlikle (o yoksa IP adresi ve tarayıcı
+          Visitantes únicos, tarayıcıya özgü anonim bir kimlikle (o yoksa IP adresi ve tarayıcı
           bilgisiyle) yaklaşık olarak hesaplanır. Günler Türkiye saatine göre sayılır. Kendi
           ziyaretlerinizin sayılmaması için{' '}
           <button
@@ -583,7 +583,7 @@ export default function Analytics() {
         </div>
 
         {!hasSummary && summaryLoading ? (
-          <Loading text="Grafik hazırlanıyor..." />
+          <Loading text="Preparando gráfico..." />
         ) : !hasSummary ? (
           <p className="py-10 text-center text-sm text-gray-500">Grafik yüklenemedi.</p>
         ) : dayCount < 2 ? (
@@ -591,7 +591,7 @@ export default function Analytics() {
              The day is only "today" when it is; a custom single day is not. */
           <p className="rounded-lg bg-gray-50 px-3 py-6 text-center text-sm text-gray-500">
             Günlük grafik en az iki günlük bir aralıkta gösterilir.{' '}
-            {range.from === dayInZone() ? 'Bugünün' : 'Seçilen günün'} sayıları yukarıdaki
+            {range.from === dayInZone() ? 'De hoje' : 'Do dia selecionado'} sayıları yukarıdaki
             kartlarda.
           </p>
         ) : (
@@ -605,19 +605,19 @@ export default function Analytics() {
       {/* -------------------------------------------------------- top lists */}
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <TopList
-          title="En çok görüntülenen kategoriler"
+          title="Categorias mais visualizadas"
           rows={summary?.top_categories}
-          nameOf={(row) => row?.name || 'Silinmiş kategori'}
+          nameOf={(row) => row?.name || 'Categoria excluída'}
           loading={summaryLoading}
-          emptyText="Bu aralıkta kategori görüntülemesi yok."
+          emptyText="Não houve visualizações de categorias neste período."
         />
         <TopList
-          title="En çok açılan ürünler"
+          title="Produtos mais acessados"
           rows={summary?.top_products}
-          nameOf={(row) => row?.name || 'Silinmiş ürün'}
+          nameOf={(row) => row?.name || 'Produto excluído'}
           detailOf={(row) => row?.category_name || ''}
           loading={summaryLoading}
-          emptyText="Bu aralıkta ürün detayı açılmadı."
+          emptyText="Nenhum detalhe de produto foi aberto neste período."
         />
       </div>
 
@@ -677,7 +677,7 @@ export default function Analytics() {
                       type="button"
                       onClick={clearIp}
                       className="absolute inset-y-0 right-0 flex w-8 items-center justify-center text-gray-400 hover:text-gray-600"
-                      aria-label="IP aramasını temizle"
+                      aria-label="Limpar busca por IP"
                     >
                       <X className="h-3.5 w-3.5" aria-hidden="true" />
                     </button>
@@ -699,16 +699,16 @@ export default function Analytics() {
         ) : null}
 
         {eventsLoading && events.items.length === 0 && !eventsError ? (
-          <Loading text="Kayıtlar yükleniyor..." />
+          <Loading text="Carregando registros..." />
         ) : events.items.length === 0 && !eventsError ? (
           <div className="p-4">
             <EmptyState
               icon={BarChart3}
-              title="Bu filtrelerle kayıt yok"
+              title="Nenhum registro com estes filtros"
               description={
                 ipQuery || eventType
-                  ? 'Olay türü ya da IP filtresini değiştirmeyi deneyin.'
-                  : 'Seçtiğiniz tarih aralığında menülerinize bir ziyaret kaydedilmedi.'
+                  ? 'Experimente alterar o tipo de evento ou o filtro de IP.'
+                  : 'Nenhuma visita foi registrada no período selecionado.'
               }
             />
           </div>
@@ -730,7 +730,7 @@ export default function Analytics() {
                     Menü
                   </th>
                   <th scope="col" className="px-3 py-2.5 font-medium">
-                    Kategori / Ürün
+                    Categoria / Produto
                   </th>
                   <th scope="col" className="px-3 py-2.5 font-medium">
                     IP adresi
@@ -753,7 +753,7 @@ export default function Analytics() {
                 {events.items.map((event, index) => {
                   const language = typeof event?.language === 'string' ? event.language : ''
                   const menuName =
-                    event?.menu_name || menuNames.get(event?.menu_id) || 'Silinmiş menü'
+                    event?.menu_name || menuNames.get(event?.menu_id) || 'Cardápio excluído'
                   return (
                     <tr key={event?.id || index} className="align-top">
                       <td className="whitespace-nowrap px-4 py-2.5 text-gray-700 tabular-nums">
@@ -829,7 +829,7 @@ export default function Analytics() {
             ))}
           </dl>
           <p className="mt-2 text-xs leading-relaxed text-gray-600">
-            Port yalnızca doğrulanmış Cloudflare kaynağında ve doğrudan bağlantıda kaydedilebilir;
+            Port yalnızca verificado Cloudflare kaynağında ve doğrudan bağlantıda kaydedilebilir;
             diğer kaynaklarda “—” görünür.
           </p>
         </details>
