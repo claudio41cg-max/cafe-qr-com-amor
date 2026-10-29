@@ -313,6 +313,7 @@ type Language struct {
 
 // Languages lists the languages a menu can be published in.
 var Languages = []Language{
+	{Code: "pt", Short: "PT", Label: "Português (Brasil)", Flag: "🇧🇷"},
 	{Code: "tr", Short: "TR", Label: "Türkçe", Flag: "🇹🇷"},
 	{Code: "en", Short: "EN", Label: "English", Flag: "🇬🇧"},
 	{Code: "de", Short: "DE", Label: "Deutsch", Flag: "🇩🇪"},
