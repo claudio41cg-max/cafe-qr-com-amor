@@ -27,6 +27,7 @@
 // Each language therefore carries its own short code (TR / EN / DE), which looks
 // identical and correct on every operating system.
 export const LANGUAGES = [
+  { code: 'pt', short: 'PT', label: 'Português (Brasil)', flag: '🇧🇷' },
   { code: 'tr', short: 'TR', label: 'Türkçe', flag: '🇹🇷' },
   { code: 'en', short: 'EN', label: 'English', flag: '🇬🇧' },
   { code: 'de', short: 'DE', label: 'Deutsch', flag: '🇩🇪' },
@@ -101,7 +102,7 @@ export function textDir(text, language) {
   an allergy is used to looking for on a menu.
 */
 export const ALLERGENS = [
-  { code: 'gluten', emoji: '🌾', tr: 'Gluten', en: 'Gluten', de: 'Gluten', ru: 'Глютен', ar: 'غلوتين', fr: 'Gluten' },
+  { code: 'gluten', emoji: '🌾', pt: 'Glúten', tr: 'Gluten', en: 'Gluten', de: 'Gluten', ru: 'Глютен', ar: 'غلوتين', fr: 'Gluten' },
   { code: 'sut', emoji: '🥛', tr: 'Süt', en: 'Milk', de: 'Milch', ru: 'Молоко', ar: 'حليب', fr: 'Lait' },
   { code: 'yumurta', emoji: '🥚', tr: 'Yumurta', en: 'Egg', de: 'Ei', ru: 'Яйца', ar: 'بيض', fr: 'Œufs' },
   {
