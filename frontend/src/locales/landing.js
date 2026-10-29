@@ -14,12 +14,13 @@
 // "Karecik" is the product's name and is never translated.
 
 export const LANDING_LANGUAGES = [
+  { code: 'pt', short: 'PT', name: 'Português (Brasil)' },
   { code: 'tr', short: 'TR', name: 'Türkçe' },
   { code: 'en', short: 'EN', name: 'English' },
   { code: 'de', short: 'DE', name: 'Deutsch' },
 ]
 
-export const DEFAULT_LANDING_LANGUAGE = 'tr'
+export const DEFAULT_LANDING_LANGUAGE = 'pt'
 
 export const LANDING_STRINGS = {
   tr: {
@@ -147,6 +148,66 @@ export const LANDING_STRINGS = {
     signUpErrorRateLimited: 'Too many attempts. Please wait a moment and try again.',
     signUpErrorServer: 'Something went wrong on our side. Please try again.',
     signUpErrorGeneric: 'Your account could not be created. Please check your details and try again.',
+  },
+
+  pt: {
+    documentTitle: 'Café QR com Amor — Cardápios digitais para cafeterias',
+
+    brandHome: 'Página inicial do Café QR com Amor',
+    selectLanguage: 'Selecionar idioma',
+    signIn: 'Entrar',
+    startFree: 'Começar grátis',
+    startFreeShort: 'Começar grátis',
+
+    heading: 'Seu cardápio digital feito com amor',
+    description: 'Crie um cardápio com fotos, preços e QR Code para seus clientes acessarem pelo celular.',
+
+    badgeFree: 'Comece gratuitamente',
+    badgeSetup: 'Configuração rápida',
+    badgeMobile: 'Feito para celular',
+
+    demoTitle: 'Exemplo de cardápio de cafeteria',
+    demoPlaceholderTitle: 'Seu cardápio aparece aqui',
+    demoPlaceholderText: 'Categorias, produtos, preços e sua marca, tudo no celular.',
+
+    copyright: '© 2026 Café QR com Amor',
+    footerPlatform: 'Plataforma de cardápio com QR Code',
+    footerSetup: 'Sem taxa de instalação',
+    footerCard: 'Sem cartão de crédito',
+
+    close: 'Fechar',
+    dismissNotification: 'Fechar notificação',
+    signUpTitle: 'Crie sua conta gratuita',
+    signUpDescription: 'Comece a montar seu cardápio digital.',
+    signUpBusinessName: 'Nome da cafeteria',
+    signUpBusinessNamePlaceholder: 'Ex.: Café da Praça',
+    signUpEmail: 'E-mail',
+    signUpEmailPlaceholder: 'voce@suacafeteria.com',
+    signUpPassword: 'Senha',
+    signUpPasswordPlaceholder: 'Pelo menos 8 caracteres',
+    signUpPasswordHelp: 'Sua senha deve ter pelo menos 8 caracteres.',
+    signUpShowPassword: 'Mostrar senha',
+    signUpHidePassword: 'Ocultar senha',
+    signUpSubmit: 'Criar minha conta',
+    signUpSubmitting: 'Criando sua conta...',
+    signUpHaveAccount: 'Já tem uma conta?',
+    signUpSignInLink: 'Entrar',
+    signUpWelcome: 'Bem-vindo! Você já pode começar a montar seu cardápio.',
+
+    signUpErrorBusinessNameRequired: 'Digite o nome da cafeteria.',
+    signUpErrorBusinessNameShort: 'O nome deve ter pelo menos 2 caracteres.',
+    signUpErrorBusinessNameLong: 'O nome pode ter no máximo 100 caracteres.',
+    signUpErrorEmailRequired: 'Digite seu e-mail.',
+    signUpErrorEmailInvalid: 'Digite um e-mail válido.',
+    signUpErrorPasswordRequired: 'Escolha uma senha.',
+    signUpErrorPasswordShort: 'A senha deve ter pelo menos 8 caracteres.',
+    signUpErrorPasswordLong: 'A senha deve ter no máximo 72 bytes.',
+
+    signUpErrorEmailTaken: 'Este e-mail já foi cadastrado. Tente entrar.',
+    signUpErrorNetwork: 'Não foi possível conectar ao servidor. Confira sua conexão e tente novamente.',
+    signUpErrorRateLimited: 'Muitas tentativas. Aguarde um pouco e tente novamente.',
+    signUpErrorServer: 'Ocorreu um erro no servidor. Tente novamente.',
+    signUpErrorGeneric: 'Não foi possível criar sua conta. Confira seus dados e tente novamente.',
   },
 
   de: {
