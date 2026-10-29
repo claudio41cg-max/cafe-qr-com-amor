@@ -155,7 +155,7 @@ const TRIMMED_FIELDS = [
 
 /* The sentence the customer menu prints for a blank VAT text. The settings field
    shows it only as its placeholder; see buildDraft. */
-const DEFAULT_VAT_NOTE = 'Fiyatlarımıza KDV dahildir.'
+const DEFAULT_VAT_NOTE = 'Os preços já incluem impostos.'
 /* The domain every public address sits under; lib/subdomain.js owns the value */
 const MENU_SUFFIX = `.${APP_DOMAIN}`
 const DEFAULT_OVERLAY_OPACITY = 0.4
@@ -172,7 +172,7 @@ const DEFAULT_SPLASH_BG_COLOR = '#0f172a'
  * default; 'none' draws the logo and the text with no animation at all.
  */
 const SPLASH_ENTRANCES = [
-  { id: 'fade', label: 'Yumuşak belirsin' },
+  { id: 'fade', label: 'Aparecer suavemente' },
   { id: 'none', label: 'Direkt gelsin' },
 ]
 
@@ -182,8 +182,8 @@ const SPLASH_ENTRANCES = [
  * the labels live here, the stored value is the boolean itself.
  */
 const SLIDE_FADE_MODES = [
-  { value: true, label: 'Kayarken soluklaşsın' },
-  { value: false, label: 'Tam opak kaysın (perde gibi)' },
+  { value: true, label: 'Deslizar e desaparecer' },
+  { value: false, label: 'Deslizar sem transparência' },
 ]
 
 /*
@@ -288,9 +288,9 @@ function formatOpacity(value) {
 /** Short readability hint shown next to the darkening slider. */
 function readabilityHint(value) {
   const opacity = clampOpacity(value)
-  if (opacity < 0.25) return 'Imagem çok baskın, yazılar okunmayabilir.'
-  if (opacity < 0.6) return 'Dengeli: görsel görünür, yazılar okunur.'
-  return 'Yazılar çok net, görsel geri planda kalır.'
+  if (opacity < 0.25) return 'Imagem muito destacada, o texto pode ficar difícil de ler.'
+  if (opacity < 0.6) return 'Equilibrado: imagem visível e texto legível.'
+  return 'Texto em destaque e imagem mais discreta.'
 }
 
 /**
@@ -854,17 +854,17 @@ export default function MenuSettings() {
 
     const name = draft.name.trim()
     if (name.length < 2 || name.length > 60) {
-      toast.error('Nome do cardápio 2 ile 60 karakter arasında olmalıdır.')
+      toast.error('O nome do cardápio deve ter entre 2 e 60 caracteres.')
       return
     }
     if (finalSlug.length < MIN_SLUG_LENGTH) {
       setSlugError(
-        'Endereço do cardápio en az 2 karakter olmalı ve yalnızca harf, rakam ve tire içerebilir.',
+        'O endereço deve ter ao menos 2 caracteres e conter apenas letras, números e hífens.',
       )
       return
     }
     if (draft.description.trim().length > 200) {
-      toast.error('Menü açıklaması en fazla 200 karakter olabilir.')
+      toast.error('A descrição pode ter no máximo 200 caracteres.')
       return
     }
     // The input's maxLength already makes this unreachable from the page; the
@@ -908,19 +908,19 @@ export default function MenuSettings() {
       return
     }
     if (primaryColorInvalid) {
-      toast.error('Ana renk #RRGGBB biçiminde olmalı (örn. #1d4ed8).')
+      toast.error('A cor principal deve estar no formato #RRGGBB (ex.: #1d4ed8).')
       return
     }
     if (textColorInvalid) {
-      toast.error('Metin rengi #RRGGBB biçiminde olmalı (örn. #111827).')
+      toast.error('A cor do texto deve estar no formato #RRGGBB (ex.: #111827).')
       return
     }
     if (backgroundColorInvalid) {
-      toast.error('Arka plan rengi #RRGGBB biçiminde olmalıdır (örn. #ffffff).')
+      toast.error('A cor do fundo deve estar no formato #RRGGBB (ex.: #ffffff).')
       return
     }
     if (splashBackgroundInvalid) {
-      toast.error('Karşılama ekranı arka plan rengi #RRGGBB biçiminde olmalı.')
+      toast.error('A cor de fundo da tela de boas-vindas deve estar no formato #RRGGBB.')
       return
     }
     if (draft.vat_note_text.trim().length > 200) {
@@ -1168,7 +1168,7 @@ export default function MenuSettings() {
                 {/* The header logo has no entrance of its own any more. An
                     entrance belongs to the splash screen — the one moment the
                     menu actually opens — and it is configured there through
-                    "Giriş animasyonu". In the header it replayed on every
+                    "Animação de entrada". In the header it replayed on every
                     language switch and every re-render, which is not an
                     entrance at all. */}
               </div>
@@ -1180,7 +1180,7 @@ export default function MenuSettings() {
             <SectionHeading
               icon={Phone}
               title="Contato"
-              description="Telefone, Instagram, Wi-Fi ve linkleriniz müşteri menüsünde, aşağıdaki “Contato ve alt bilgi” bölümünde seçtiğiniz yerlerde gösterilir. Boş bıraktıklarınız menüde hiç yer almaz."
+              description="Telefone, Instagram, Wi-Fi e links aparecerão onde você escolher. Campos vazios não serão exibidos."
             />
 
             <div className="space-y-5">
@@ -1213,7 +1213,7 @@ export default function MenuSettings() {
                   rows={3}
                   className="input resize-y"
                   value={draft.address}
-                  placeholder="Caferağa Mah. Moda Cad. No: 12, Kadıköy / İstanbul"
+                  placeholder="Rua das Flores, 123, Rio de Janeiro - RJ"
                   onChange={(event) => update('address', event.target.value)}
                 />
               </div>
@@ -1274,7 +1274,7 @@ export default function MenuSettings() {
                     className="input"
                     value={draft.wifi_ssid}
                     maxLength={64}
-                    placeholder="Kahve Durağı Misafir"
+                    placeholder="Wi-Fi Café com Amor"
                     autoComplete="off"
                     spellCheck={false}
                     onChange={(event) => update('wifi_ssid', event.target.value)}
@@ -1372,8 +1372,8 @@ export default function MenuSettings() {
                                 className="btn-ghost btn-sm px-2"
                                 onClick={() => moveLink(link.id, -1)}
                                 disabled={index === 0}
-                                aria-label={`${rowNumber}. linki yukarı taşı`}
-                                title="Yukarı taşı"
+                                aria-label={`Mover link ${rowNumber} para cima`}
+                                title="Mover para cima"
                               >
                                 <ArrowUp className="h-4 w-4" aria-hidden="true" />
                               </button>
@@ -1382,8 +1382,8 @@ export default function MenuSettings() {
                                 className="btn-ghost btn-sm px-2"
                                 onClick={() => moveLink(link.id, 1)}
                                 disabled={index === draft.links.length - 1}
-                                aria-label={`${rowNumber}. linki aşağı taşı`}
-                                title="Aşağı taşı"
+                                aria-label={`Mover link ${rowNumber} para baixo`}
+                                title="Mover para baixo"
                               >
                                 <ArrowDown className="h-4 w-4" aria-hidden="true" />
                               </button>
@@ -1514,7 +1514,7 @@ export default function MenuSettings() {
             <SectionHeading
               icon={PanelBottom}
               title="Contato ve alt bilgi"
-              description="Contato bilgilerinizin ana ekranda nasıl görüneceğini ve menünün en altındaki alt bilgide nelerin yer alacağını seçin."
+              description="Escolha como as informações de contato e o rodapé aparecem no cardápio."
             />
 
             <div className="space-y-5">
@@ -1573,7 +1573,7 @@ export default function MenuSettings() {
                       checked={draft.contact_in_footer}
                       onChange={(value) => update('contact_in_footer', value)}
                       label="Contato bilgileri"
-                      description="Telefone, Instagram, Wi-Fi ve linkleriniz alt bilgide kısa bir liste olarak da yer alır. Kapalıyken alt bilgide yalnızca aşağıdaki ibareler ve Karecik imzası bulunur."
+                      description="Telefone, Instagram, Wi-Fi e links também podem aparecer no rodapé."
                     />
                     {draft.contact_in_footer && !hasContactItems ? (
                       <p className="mt-2 text-xs text-amber-700">
@@ -1641,7 +1641,7 @@ export default function MenuSettings() {
                       checked={draft.show_yerli_uretim}
                       onChange={(value) => update('show_yerli_uretim', value)}
                       label="Selo de produção local"
-                      description="Menünün en altında, Karecik imzasının hemen üzerinde görünür."
+                      description="Exibido no rodapé, acima da assinatura do Karecik."
                     />
 
                     {draft.show_yerli_uretim ? (
@@ -1650,7 +1650,7 @@ export default function MenuSettings() {
                           value={draft.yerli_uretim_logo_url}
                           onChange={(url) => update('yerli_uretim_logo_url', url)}
                           label="Logotipo de produção local (opcional)"
-                          hint="Belgeli logonuzu yükleyin. Boş bırakırsanız sade bir metin rozeti gösterilir."
+                          hint="Envie seu logotipo. Se deixar vazio, será exibido um selo simples de texto."
                         />
                       </div>
                     ) : null}
@@ -2067,7 +2067,7 @@ export default function MenuSettings() {
                           type="button"
                           onClick={() => update('background_color', color)}
                           title={color}
-                          aria-label={`Arka planı ${color} yap`}
+                          aria-label={`Definir fundo como ${color}`}
                           className={`h-9 w-9 rounded-lg border ${
                             isSelected
                               ? 'border-transparent ring-2 ring-brand-600'
@@ -2137,7 +2137,7 @@ export default function MenuSettings() {
                   value={draft.splash_display}
                   onChange={(value) => update('splash_display', value)}
                   disabled={!splashEnabled}
-                  hint="Sadece yazı seçilirse logo gösterilmez, sadece logo seçilirse başlık ve alt başlık gizlenir."
+                  hint="Se escolher somente texto, o logo não aparecerá. Se escolher somente logo, o título e subtítulo serão ocultados."
                 />
 
                 <div>
@@ -2145,7 +2145,7 @@ export default function MenuSettings() {
                     value={draft.splash_logo_url}
                     onChange={(url) => update('splash_logo_url', url)}
                     label="Logo de boas-vindas"
-                    hint="Yatay logolar desteklenir; SVG her ekranda keskin görünür."
+                    hint="Logotipos horizontais são aceitos; SVG mantém boa definição em todas as telas."
                   />
                   <p className="help-text">Boş bırakırsanız menü logonuz kullanılır.</p>
                 </div>
@@ -2160,7 +2160,7 @@ export default function MenuSettings() {
                     className="input"
                     value={draft.splash_headline}
                     onChange={(event) => update('splash_headline', event.target.value.slice(0, 60))}
-                    placeholder={draft.name || 'Kahve Durağı'}
+                    placeholder={draft.name || 'Café com Amor'}
                     maxLength={60}
                     disabled={!splashEnabled}
                   />
@@ -2232,7 +2232,7 @@ export default function MenuSettings() {
                           onClick={() => update('splash_bg_color', color)}
                           disabled={!splashEnabled}
                           title={color}
-                          aria-label={`Arka planı ${color} yap`}
+                          aria-label={`Definir fundo como ${color}`}
                           className={`h-9 w-9 rounded-lg border disabled:cursor-not-allowed ${
                             isSelected
                               ? 'border-transparent ring-2 ring-brand-600'
@@ -2276,7 +2276,7 @@ export default function MenuSettings() {
                     before everything below it, so it comes first in the form
                     too — the controls read in the order the customer sees. */}
                 <Segmented
-                  label="Giriş animasyonu"
+                  label="Animação de entrada"
                   options={SPLASH_ENTRANCES.map((entrance) => ({
                     value: entrance.id,
                     label: entrance.label,
@@ -2284,7 +2284,7 @@ export default function MenuSettings() {
                   value={draft.splash_entrance}
                   onChange={(value) => update('splash_entrance', value)}
                   disabled={!splashEnabled}
-                  hint="Logo ve yazı yumuşak bir geçişle mi belirsin, yoksa doğrudan mı görünsün?"
+                  hint="Escolha se logo e texto aparecem suavemente ou de imediato."
                 />
 
                 {/* Exit animation */}
@@ -2312,12 +2312,12 @@ export default function MenuSettings() {
                     stay solid while they move. */}
                 {showSlideStyle ? (
                   <Segmented
-                    label="Kayma biçimi"
+                    label="Tipo de transição"
                     options={SLIDE_FADE_MODES}
                     value={Boolean(draft.splash_slide_fade)}
                     onChange={(value) => update('splash_slide_fade', value)}
                     disabled={!splashEnabled}
-                    hint="Perde etkisi için ikinci seçeneği kullanın: karşılama ekranı saydamlaşmadan, tam opak kayar."
+                    hint="Para o efeito cortina, escolha a segunda opção: a tela desliza sem ficar transparente."
                   />
                 ) : null}
 
