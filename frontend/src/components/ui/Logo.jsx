@@ -28,7 +28,7 @@
  */
 export default function Logo({
   className = 'h-8 w-8 text-brand-600',
-  title = 'Karecik',
+  title = 'Café QR com Amor',
   knockoutColor = '#ffffff',
 }) {
   return (
@@ -80,7 +80,7 @@ export function BrandLockup({
   return (
     <span className={className}>
       <Logo className={markClassName} title="" />
-      <span className={wordClassName}>Karecik</span>
+      <span className={wordClassName}>Café QR com Amor</span>
     </span>
   )
 }
