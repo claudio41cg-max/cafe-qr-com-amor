@@ -46,7 +46,7 @@ function shortAddress(address) {
 
 /** "3 kategori" — the count is computed by the server for every menu. */
 function categoryLabel(menu) {
-  return `${Number(menu?.category_count) || 0} kategori`
+  return `${Number(menu?.category_count) || 0} categorias`
 }
 
 /* --------------------------------------------------------------- pills */
@@ -54,7 +54,7 @@ function categoryLabel(menu) {
 /** Status marker shown next to a menu name. */
 function MenuPills({ menu }) {
   if (menu?.is_active !== false) return null
-  return <span className="badge shrink-0 bg-gray-100 text-gray-600">Pasif</span>
+  return <span className="badge shrink-0 bg-gray-100 text-gray-600">Inativo</span>
 }
 
 /* ----------------------------------------------------------------- bar */
@@ -91,9 +91,9 @@ export default function ActiveMenuBar({ className = '' }) {
     if (!address) return
     try {
       await navigator.clipboard.writeText(address)
-      toast.success('Menü adresi kopyalandı.')
+      toast.success('Endereço do cardápio copiado.')
     } catch {
-      toast.error('Menü adresi kopyalanamadı.')
+      toast.error('Não foi possível copiar o endereço.')
     }
   }
 
@@ -122,7 +122,7 @@ export default function ActiveMenuBar({ className = '' }) {
       // Nothing is left to switch between, so the switcher must not stay armed
       // — it would pop back open the moment a new menu is created.
       if (wasLast) setSwitchOpen(false)
-      toast.success('Menü silindi.')
+      toast.success('Cardápio excluído.')
     } catch (err) {
       toast.error(err.message)
     } finally {
@@ -139,7 +139,7 @@ export default function ActiveMenuBar({ className = '' }) {
       <section className={wrapper} aria-busy="true">
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <Loader2 className="h-4 w-4 animate-spin text-brand-600" aria-hidden="true" />
-          Menüler yükleniyor...
+          Carregando cardápios...
         </div>
       </section>
     )
@@ -158,18 +158,18 @@ export default function ActiveMenuBar({ className = '' }) {
         <EmptyState
           className={`mb-6 py-8 ${className}`}
           icon={Layers}
-          title={error ? 'Menüler yüklenemedi' : 'Menü seçilmedi'}
+          title={error ? 'Não foi possível carregar os cardápios' : 'Nenhum cardápio selecionado'}
           description={error}
           action={
             <div className="flex flex-wrap items-center justify-center gap-2">
               {error ? (
                 <button type="button" className="btn-secondary" onClick={reload}>
-                  Yeniden dene
+                  Tentar novamente
                 </button>
               ) : null}
               <button type="button" className="btn-primary" onClick={() => setCreateOpen(true)}>
                 <Plus className="h-4 w-4" aria-hidden="true" />
-                Yeni Menü Oluştur
+                Criar novo cardápio
               </button>
             </div>
           }
@@ -198,9 +198,9 @@ export default function ActiveMenuBar({ className = '' }) {
             open
             onClose={() => setMenuToDelete(null)}
             onConfirm={confirmDelete}
-            title="Menüyü sil"
-            message={`"${menuToDelete.name}" menüsü ve içindeki tüm kategori ve ürünler kalıcı olarak silinecek.`}
-            confirmText="Sil"
+            title="Excluir cardápio"
+            message={`"${menuToDelete.name}" e todas as suas categorias e produtos serão excluídos permanentemente.`}
+            confirmText="Excluir"
             busy={deleting}
           />
         </div>
@@ -219,7 +219,7 @@ export default function ActiveMenuBar({ className = '' }) {
 
             <div className="min-w-0">
               <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
-                Düzenlenen menü
+                Cardápio em edição
               </p>
               <div className="flex min-w-0 flex-wrap items-center gap-2">
                 <h2 className="truncate text-lg font-semibold text-gray-900">{activeMenu.name}</h2>
@@ -239,8 +239,8 @@ export default function ActiveMenuBar({ className = '' }) {
                 type="button"
                 onClick={copyAddress}
                 disabled={!address}
-                title="Menü adresini kopyala"
-                aria-label="Menü adresini kopyala"
+                title="Copiar endereço do cardápio"
+                aria-label="Copiar endereço do cardápio"
                 className="shrink-0 rounded p-1 text-gray-400 hover:bg-white hover:text-gray-700 disabled:cursor-not-allowed"
               >
                 <Copy className="h-3.5 w-3.5" aria-hidden="true" />
@@ -253,12 +253,12 @@ export default function ActiveMenuBar({ className = '' }) {
               onClick={() => setSwitchOpen(true)}
               title={
                 menus.length < 2
-                  ? 'Tek menünüz var. Buradan silebilir veya yeni bir menü oluşturabilirsiniz.'
-                  : 'Başka bir menüye geç veya bir menüyü sil'
+                  ? 'Você tem um cardápio. Aqui pode excluí-lo ou criar outro.'
+                  : 'Trocar de cardápio ou excluir um'
               }
             >
               <Repeat className="h-4 w-4" aria-hidden="true" />
-              Menü Değiştir
+              Trocar cardápio
             </button>
 
             <button
@@ -267,7 +267,7 @@ export default function ActiveMenuBar({ className = '' }) {
               onClick={() => setCreateOpen(true)}
             >
               <Plus className="h-4 w-4" aria-hidden="true" />
-              Yeni Menü
+              Novo cardápio
             </button>
           </div>
         </div>
@@ -277,12 +277,12 @@ export default function ActiveMenuBar({ className = '' }) {
       <Modal
         open={switchOpen}
         onClose={() => setSwitchOpen(false)}
-        title="Menü Değiştir"
-        description="Panelde düzenlemek istediğiniz menüyü seçin veya bir menüyü silin."
+        title="Trocar cardápio"
+        description="Selecione o cardápio para editar ou exclua um cardápio."
         width="max-w-2xl"
         footer={
           <button type="button" className="btn-secondary" onClick={() => setSwitchOpen(false)}>
-            Kapat
+            Fechar
           </button>
         }
       >
@@ -343,7 +343,7 @@ export default function ActiveMenuBar({ className = '' }) {
                   onClick={() => setMenuToDelete(menu)}
                   className="shrink-0 rounded-md p-1.5 text-gray-400 hover:bg-red-50 hover:text-red-600"
                   aria-label={`${menu.name} menüsünü sil`}
-                  title="Menüyü sil"
+                  title="Excluir cardápio"
                 >
                   <Trash2 className="h-4 w-4" aria-hidden="true" />
                 </button>
