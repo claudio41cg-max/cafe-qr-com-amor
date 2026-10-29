@@ -1,29 +1,349 @@
-import { useMemo, useState } from 'react'
-const products = [{"category":"Cafés quentes","emoji":"☕","name":"Espresso","price":8,"description":"Café intenso e aromático, com crema dourada.","image":"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Espresso duplo","price":12,"description":"Duas doses de café encorpado.","image":"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Americano","price":10,"description":"Espresso alongado com água quente.","image":"https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Coado da casa","price":12,"description":"Café filtrado fresco e suave.","image":"https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Café com leite","price":11,"description":"A combinação clássica de café e leite quente.","image":"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Cappuccino da casa","price":15,"description":"Espresso, leite cremoso, canela e cacau.","image":"https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Latte","price":14,"description":"Espresso com leite vaporizado e espuma delicada.","image":"https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Mocha","price":18,"description":"Espresso, leite vaporizado e chocolate.","image":"https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés quentes","emoji":"☕","name":"Chocolate quente","price":16,"description":"Chocolate cremoso servido bem quentinho.","image":"https://images.unsplash.com/photo-1542990253-0b8be00f0f0ed?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés gelados","emoji":"🧊","name":"Iced latte","price":16,"description":"Espresso, leite gelado e bastante gelo.","image":"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés gelados","emoji":"🧊","name":"Café gelado","price":15,"description":"Café refrescante servido sobre gelo.","image":"https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés gelados","emoji":"🧊","name":"Frappé de café","price":19,"description":"Café batido com leite e gelo.","image":"https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés gelados","emoji":"🧊","name":"Affogato","price":18,"description":"Sorvete de baunilha com espresso quente.","image":"https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=760&q=80"},{"category":"Cafés gelados","emoji":"🧊","name":"Espresso tônica","price":17,"description":"Espresso, água tônica e gelo.","image":"https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Pão na chapa com amor","price":8,"description":"Pão dourado na chapa com manteiga.","image":"https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Pão de queijo","price":14,"description":"Cestinha de pães de queijo quentinhos.","image":"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Misto quente artesanal","price":18,"description":"Pão tostado com presunto e queijo.","image":"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Croissant de presunto e queijo","price":19,"description":"Massa folhada amanteigada com recheio cremoso.","image":"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Croissant caprese","price":21,"description":"Croissant com queijo, tomate e manjericão.","image":"https://images.unsplash.com/photo-1608198093002-ad4e005484df?auto=format&fit=crop&w=760&q=80"},{"category":"Salgados","emoji":"🥐","name":"Empada de frango","price":12,"description":"Massa delicada e frango cremoso.","image":"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Bolo do dia","price":12,"description":"Fatia de bolo caseiro fresquinho.","image":"https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Brownie de chocolate","price":13,"description":"Brownie macio, rico em chocolate.","image":"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Cookie de chocolate","price":8,"description":"Cookie artesanal com gotas de chocolate.","image":"https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Cheesecake","price":15,"description":"Fatia cremosa com calda de frutas.","image":"https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Banoffee","price":16,"description":"Banana, doce de leite e chantilly.","image":"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=760&q=80"},{"category":"Doces e sobremesas","emoji":"🍰","name":"Croissant de avelã","price":17,"description":"Croissant recheado com creme de avelã.","image":"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=760&q=80"},{"category":"Combos","emoji":"❤️","name":"Combo bom dia","price":13.9,"description":"Espresso e pão na chapa.","image":"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=760&q=80"},{"category":"Combos","emoji":"❤️","name":"Combo café da tarde","price":24.9,"description":"Cappuccino da casa e bolo do dia.","image":"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=760&q=80"},{"category":"Combos","emoji":"❤️","name":"Combo pausa doce","price":19.9,"description":"Latte com cookie de chocolate.","image":"https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=760&q=80"},{"category":"Combos","emoji":"❤️","name":"Combo gelado","price":26.9,"description":"Iced latte e brownie de chocolate.","image":"https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=760&q=80"}]
-const categories = ['Todos', ...new Set(products.map(p => p.category))]
-const money = v => new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(v)
-export default function CafeDemo(){
- const [category,setCategory] = useState('Todos')
- const [search,setSearch] = useState('')
- const [selected,setSelected] = useState(null)
- const filtered=useMemo(()=>products.filter(p=>(category==='Todos'||p.category===category)&&(`${p.name} ${p.description}`.toLocaleLowerCase('pt-BR').includes(search.toLocaleLowerCase('pt-BR')))),[category,search])
- return <main style={{minHeight:'100vh',background:'#fffaf4',color:'#3b261b',fontFamily:'system-ui,-apple-system,sans-serif'}}>
-  <header style={{background:'#39251e',color:'#fff7eb',padding:'28px 18px 22px',textAlign:'center'}}>
-   <div style={{fontSize:35}}>☕❤️</div><h1 style={{fontFamily:'Georgia,serif',fontSize:28,margin:'5px 0'}}>Café com Amor</h1>
-   <p style={{fontSize:14,opacity:.8,margin:0}}>Um carinho a cada xícara</p>
-   <div style={{fontSize:11,marginTop:14,opacity:.65}}>CARDÁPIO DEMONSTRATIVO · PREÇOS ILUSTRATIVOS</div>
-  </header>
-  <div style={{maxWidth:680,margin:'auto',padding:'18px 14px 65px'}}>
-   <input aria-label="Buscar produto" value={search} onChange={e=>setSearch(e.target.value)} placeholder="⌕  Buscar cafés, salgados e doces" style={{width:'100%',boxSizing:'border-box',border:'1px solid #e9d8c5',background:'white',borderRadius:14,padding:15,fontSize:15,color:'#422d21'}}/>
-   <nav style={{display:'flex',gap:8,overflowX:'auto',padding:'15px 0 22px'}}>{categories.map(c=><button key={c} onClick={()=>setCategory(c)} style={{whiteSpace:'nowrap',border:'1px solid #e1c8ae',background:category===c?'#633b27':'white',color:category===c?'white':'#573d2d',borderRadius:30,padding:'10px 15px',fontWeight:600}}>{c}</button>)}</nav>
-   <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:12}}><h2 style={{fontFamily:'Georgia,serif',fontSize:26,margin:0}}>{category==='Todos'?'Nosso cardápio':category}</h2><span style={{fontSize:12,color:'#987b68'}}>{filtered.length} produtos</span></div>
-   <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:16}}>{filtered.map((p,i)=><button key={p.name} onClick={()=>setSelected(p)} style={{textAlign:'left',background:'white',border:'1px solid #ebdfd1',borderRadius:15,padding:0,overflow:'hidden',boxShadow:'0 5px 18px #4a2c1c0a',cursor:'pointer',color:'inherit'}}>
-    <img src={p.image} alt={p.name} loading={i<4?'eager':'lazy'} style={{width:'100%',aspectRatio:'1 / 1',objectFit:'cover',display:'block',background:'#efe5db'}} onError={e=>{e.currentTarget.style.visibility='hidden'}}/>
-    <div style={{padding:'15px'}}><div style={{fontSize:10,color:'#9b755e',marginBottom:5}}>{p.category}</div><strong style={{fontSize:16,lineHeight:1.35,display:'block'}}>{p.name}</strong><p style={{fontSize:13,lineHeight:1.5,color:'#7c6b60',minHeight:49,margin:'7px 0'}}>{p.description}</p><b style={{color:'#81522f',fontSize:18}}>{money(p.price)}</b></div>
-   </button>)}</div>
-   {filtered.length===0&&<p>Nenhum produto encontrado. Tente outra busca.</p>}
-   <p style={{fontSize:12,color:'#9a8070',textAlign:'center',marginTop:30}}>Este é um cardápio de demonstração. Os produtos e preços podem ser personalizados no painel.</p>
-  </div>
-  {selected&&<div onClick={()=>setSelected(null)} role="presentation" style={{position:'fixed',inset:0,background:'#0009',display:'grid',placeItems:'center',zIndex:999,padding:20}}><section role="dialog" aria-modal="true" aria-label={selected.name} onClick={e=>e.stopPropagation()} style={{background:'#fffaf4',maxWidth:420,width:'100%',borderRadius:20,overflow:'hidden',position:'relative'}}><button onClick={()=>setSelected(null)} aria-label="Fechar" style={{position:'absolute',top:10,right:10,border:0,borderRadius:'50%',background:'white',fontSize:23,width:37,height:37}}>×</button><img src={selected.image} alt={selected.name} style={{width:'100%',height:250,objectFit:'cover'}}/><div style={{padding:22}}><div style={{color:'#9b755e',fontSize:13}}>{selected.category}</div><h2 style={{margin:'8px 0',fontFamily:'Georgia,serif'}}>{selected.name}</h2><p style={{color:'#736050',lineHeight:1.5}}>{selected.description}</p><strong style={{fontSize:23,color:'#81522f'}}>{money(selected.price)}</strong></div></section></div>}
- </main>
+import { useState } from 'react'
+import MenuContent from '../components/menu/MenuContent.jsx'
+
+// Demonstração segura: utiliza a interface ORIGINAL do Karecik.
+// Nenhuma conta ou produto real do banco de dados é modificado.
+const menu = {
+  "business": {
+    "business_name": "Café com Amor",
+    "name": "Cardápio Principal",
+    "business_slug": "cafe-com-amor",
+    "menu_slug": "cardapio-principal",
+    "theme": "classic",
+    "primary_color": "#663e2e",
+    "default_language": "pt",
+    "languages": [
+      "pt"
+    ],
+    "currency": "BRL",
+    "currency_symbol": "R$",
+    "header_display": "name",
+    "description": "Um carinho a cada xícara",
+    "slogan": "Um carinho a cada xícara",
+    "show_search": true
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cafés quentes",
+      "emoji": "☕",
+      "is_active": true,
+      "sort_order": 0,
+      "products": [
+        {
+          "id": 100,
+          "name": "Espresso",
+          "description": "Café intenso e aromático, com crema dourada.",
+          "price": 8,
+          "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 0
+        },
+        {
+          "id": 101,
+          "name": "Espresso duplo",
+          "description": "Duas doses de café encorpado.",
+          "price": 12,
+          "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 1
+        },
+        {
+          "id": 102,
+          "name": "Americano",
+          "description": "Espresso alongado com água quente.",
+          "price": 10,
+          "image_url": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 2
+        },
+        {
+          "id": 103,
+          "name": "Coado da casa",
+          "description": "Café filtrado fresco e suave.",
+          "price": 12,
+          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 3
+        },
+        {
+          "id": 104,
+          "name": "Café com leite",
+          "description": "A combinação clássica de café e leite quente.",
+          "price": 11,
+          "image_url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 4
+        },
+        {
+          "id": 105,
+          "name": "Cappuccino da casa",
+          "description": "Espresso, leite cremoso, canela e cacau.",
+          "price": 15,
+          "image_url": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 5
+        },
+        {
+          "id": 106,
+          "name": "Latte",
+          "description": "Espresso com leite vaporizado e espuma delicada.",
+          "price": 14,
+          "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 6
+        },
+        {
+          "id": 107,
+          "name": "Mocha",
+          "description": "Espresso, leite vaporizado e chocolate.",
+          "price": 18,
+          "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 7
+        },
+        {
+          "id": 108,
+          "name": "Chocolate quente",
+          "description": "Chocolate cremoso servido bem quentinho.",
+          "price": 16,
+          "image_url": "https://images.unsplash.com/photo-1542990253-0b8be00f0f0ed?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cafés gelados",
+      "emoji": "🧊",
+      "is_active": true,
+      "sort_order": 1,
+      "products": [
+        {
+          "id": 200,
+          "name": "Iced latte",
+          "description": "Espresso, leite gelado e bastante gelo.",
+          "price": 16,
+          "image_url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 0
+        },
+        {
+          "id": 201,
+          "name": "Café gelado",
+          "description": "Café refrescante servido sobre gelo.",
+          "price": 15,
+          "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 1
+        },
+        {
+          "id": 202,
+          "name": "Frappé de café",
+          "description": "Café batido com leite e gelo.",
+          "price": 19,
+          "image_url": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 2
+        },
+        {
+          "id": 203,
+          "name": "Affogato",
+          "description": "Sorvete de baunilha com espresso quente.",
+          "price": 18,
+          "image_url": "https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 3
+        },
+        {
+          "id": 204,
+          "name": "Espresso tônica",
+          "description": "Espresso, água tônica e gelo.",
+          "price": 17,
+          "image_url": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Salgados",
+      "emoji": "🥐",
+      "is_active": true,
+      "sort_order": 2,
+      "products": [
+        {
+          "id": 300,
+          "name": "Pão na chapa com amor",
+          "description": "Pão dourado na chapa com manteiga.",
+          "price": 8,
+          "image_url": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 0
+        },
+        {
+          "id": 301,
+          "name": "Pão de queijo",
+          "description": "Cestinha de pães de queijo quentinhos.",
+          "price": 14,
+          "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 1
+        },
+        {
+          "id": 302,
+          "name": "Misto quente artesanal",
+          "description": "Pão tostado com presunto e queijo.",
+          "price": 18,
+          "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 2
+        },
+        {
+          "id": 303,
+          "name": "Croissant de presunto e queijo",
+          "description": "Massa folhada amanteigada com recheio cremoso.",
+          "price": 19,
+          "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 3
+        },
+        {
+          "id": 304,
+          "name": "Croissant caprese",
+          "description": "Croissant com queijo, tomate e manjericão.",
+          "price": 21,
+          "image_url": "https://images.unsplash.com/photo-1608198093002-ad4e005484df?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 4
+        },
+        {
+          "id": 305,
+          "name": "Empada de frango",
+          "description": "Massa delicada e frango cremoso.",
+          "price": 12,
+          "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Doces e sobremesas",
+      "emoji": "🍰",
+      "is_active": true,
+      "sort_order": 3,
+      "products": [
+        {
+          "id": 400,
+          "name": "Bolo do dia",
+          "description": "Fatia de bolo caseiro fresquinho.",
+          "price": 12,
+          "image_url": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 0
+        },
+        {
+          "id": 401,
+          "name": "Brownie de chocolate",
+          "description": "Brownie macio, rico em chocolate.",
+          "price": 13,
+          "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 1
+        },
+        {
+          "id": 402,
+          "name": "Cookie de chocolate",
+          "description": "Cookie artesanal com gotas de chocolate.",
+          "price": 8,
+          "image_url": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 2
+        },
+        {
+          "id": 403,
+          "name": "Cheesecake",
+          "description": "Fatia cremosa com calda de frutas.",
+          "price": 15,
+          "image_url": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 3
+        },
+        {
+          "id": 404,
+          "name": "Banoffee",
+          "description": "Banana, doce de leite e chantilly.",
+          "price": 16,
+          "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 4
+        },
+        {
+          "id": 405,
+          "name": "Croissant de avelã",
+          "description": "Croissant recheado com creme de avelã.",
+          "price": 17,
+          "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Combos",
+      "emoji": "❤️",
+      "is_active": true,
+      "sort_order": 4,
+      "products": [
+        {
+          "id": 500,
+          "name": "Combo bom dia",
+          "description": "Espresso e pão na chapa.",
+          "price": 13.9,
+          "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 0
+        },
+        {
+          "id": 501,
+          "name": "Combo café da tarde",
+          "description": "Cappuccino da casa e bolo do dia.",
+          "price": 24.9,
+          "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 1
+        },
+        {
+          "id": 502,
+          "name": "Combo pausa doce",
+          "description": "Latte com cookie de chocolate.",
+          "price": 19.9,
+          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 2
+        },
+        {
+          "id": 503,
+          "name": "Combo gelado",
+          "description": "Iced latte e brownie de chocolate.",
+          "price": 26.9,
+          "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=760&q=80",
+          "is_active": true,
+          "sort_order": 3
+        }
+      ]
+    }
+  ],
+  "menus": [],
+  "footer": {}
+}
+
+export default function CafeDemo() {
+ const [language,setLanguage] = useState('pt')
+ return <><div style={{background:'#38241c',color:'#fff',textAlign:'center',padding:'9px 12px',fontSize:12}}>Cardápio demonstrativo · produtos e valores ilustrativos</div><MenuContent menu={menu} language={language} onLanguageChange={setLanguage} showMenuSwitcher={false}/></>
 }
