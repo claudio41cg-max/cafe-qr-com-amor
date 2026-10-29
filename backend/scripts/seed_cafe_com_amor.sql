@@ -1,6 +1,10 @@
 -- Demonstração brasileira para uma cafeteria já cadastrada.
 -- Não executa se o cardápio já tiver categorias ou produtos.
 BEGIN;
+-- Corrige a restrição antiga que não aceita a moeda brasileira.
+ALTER TABLE menus DROP CONSTRAINT IF EXISTS menus_currency_check;
+ALTER TABLE menus ADD CONSTRAINT menus_currency_check
+  CHECK (currency IN ('TRY','USD','EUR','GBP','AZN','RUB','SAR','AED','BRL'));
 DO $seed$
 DECLARE target_menu uuid; target_business uuid; cat record; catid uuid; item record;
 BEGIN
