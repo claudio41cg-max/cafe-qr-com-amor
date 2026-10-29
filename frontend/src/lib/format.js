@@ -11,7 +11,8 @@ import { trimSpace } from './contact.js'
 import { t } from '../locales/index.js'
 
 export const CURRENCIES = {
-  BRL: { code: 'BRL', symbol: 'R
+  BRL: { code: 'BRL', symbol: 'R$', label: 'Real brasileiro', position: 'prefix' },
+  TRY: { code: 'TRY', symbol: '₺', label: 'Türk Lirası', position: 'suffix' },
   USD: { code: 'USD', symbol: '$', label: 'Amerikan Doları', position: 'prefix' },
   EUR: { code: 'EUR', symbol: '€', label: 'Euro', position: 'prefix' },
   GBP: { code: 'GBP', symbol: '£', label: 'İngiliz Sterlini', position: 'prefix' },
