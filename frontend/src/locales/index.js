@@ -103,11 +103,12 @@ export function textDir(text, language) {
 */
 export const ALLERGENS = [
   { code: 'gluten', emoji: '🌾', pt: 'Glúten', tr: 'Gluten', en: 'Gluten', de: 'Gluten', ru: 'Глютен', ar: 'غلوتين', fr: 'Gluten' },
-  { code: 'sut', emoji: '🥛', pt: 'Glúten', tr: 'Süt', en: 'Milk', de: 'Milch', ru: 'Молоко', ar: 'حليب', fr: 'Lait' },
-  { code: 'yumurta', emoji: '🥚', pt: 'Leite', tr: 'Yumurta', en: 'Egg', de: 'Ei', ru: 'Яйца', ar: 'بيض', fr: 'Œufs' },
+  { code: 'sut', emoji: '🥛', pt: 'Leite', tr: 'Süt', en: 'Milk', de: 'Milch', ru: 'Молоко', ar: 'حليب', fr: 'Lait' },
+  { code: 'yumurta', emoji: '🥚', pt: 'Ovos', tr: 'Yumurta', en: 'Egg', de: 'Ei', ru: 'Яйца', ar: 'بيض', fr: 'Œufs' },
   {
     code: 'findik',
     emoji: '🌰',
+    pt: 'Castanhas e nozes',
     tr: 'Fındık / Kuruyemiş',
     en: 'Nuts',
     de: 'Schalenfrüchte',
@@ -118,6 +119,7 @@ export const ALLERGENS = [
   {
     code: 'yer_fistigi',
     emoji: '🥜',
+    pt: 'Amendoim',
     tr: 'Yer Fıstığı',
     en: 'Peanuts',
     de: 'Erdnüsse',
@@ -125,11 +127,12 @@ export const ALLERGENS = [
     ar: 'فول سوداني',
     fr: 'Arachides',
   },
-  { code: 'soya', emoji: '🫘', pt: 'Ovos', tr: 'Soya', en: 'Soy', de: 'Soja', ru: 'Соя', ar: 'صويا', fr: 'Soja' },
-  { code: 'balik', emoji: '🐟', pt: 'Castanhas e nozes', tr: 'Balık', en: 'Fish', de: 'Fisch', ru: 'Рыба', ar: 'سمك', fr: 'Poisson' },
+  { code: 'soya', emoji: '🫘', pt: 'Soja', tr: 'Soya', en: 'Soy', de: 'Soja', ru: 'Соя', ar: 'صويا', fr: 'Soja' },
+  { code: 'balik', emoji: '🐟', pt: 'Peixe', tr: 'Balık', en: 'Fish', de: 'Fisch', ru: 'Рыба', ar: 'سمك', fr: 'Poisson' },
   {
     code: 'kabuklu_deniz',
     emoji: '🦐',
+    pt: 'Crustáceos e moluscos',
     tr: 'Kabuklu Deniz Ürünü',
     en: 'Shellfish',
     de: 'Schalentiere',
@@ -137,14 +140,15 @@ export const ALLERGENS = [
     ar: 'المحار والقشريات',
     fr: 'Crustacés et mollusques',
   },
-  { code: 'susam', emoji: '🌱', pt: 'Amendoim', tr: 'Susam', en: 'Sesame', de: 'Sesam', ru: 'Кунжут', ar: 'سمسم', fr: 'Sésame' },
-  { code: 'hardal', emoji: '🟡', pt: 'Soja', tr: 'Hardal', en: 'Mustard', de: 'Senf', ru: 'Горчица', ar: 'خردل', fr: 'Moutarde' },
-  { code: 'kereviz', emoji: '🥬', pt: 'Peixe', tr: 'Kereviz', en: 'Celery', de: 'Sellerie', ru: 'Сельдерей', ar: 'كرفس', fr: 'Céleri' },
-  { code: 'sulfit', emoji: '🧪', pt: 'Crustáceos e moluscos', tr: 'Sülfit', en: 'Sulphites', de: 'Sulfite', ru: 'Сульфиты', ar: 'كبريتيت', fr: 'Sulfites' },
-  { code: 'aci', emoji: '🌶️', pt: 'Gergelim', tr: 'Acı', en: 'Spicy', de: 'Scharf', ru: 'Острое', ar: 'حار', fr: 'Épicé' },
+  { code: 'susam', emoji: '🌱', pt: 'Gergelim', tr: 'Susam', en: 'Sesame', de: 'Sesam', ru: 'Кунжут', ar: 'سمسم', fr: 'Sésame' },
+  { code: 'hardal', emoji: '🟡', pt: 'Mostarda', tr: 'Hardal', en: 'Mustard', de: 'Senf', ru: 'Горчица', ar: 'خردل', fr: 'Moutarde' },
+  { code: 'kereviz', emoji: '🥬', pt: 'Aipo', tr: 'Kereviz', en: 'Celery', de: 'Sellerie', ru: 'Сельдерей', ar: 'كرفس', fr: 'Céleri' },
+  { code: 'sulfit', emoji: '🧪', pt: 'Sulfitos', tr: 'Sülfit', en: 'Sulphites', de: 'Sulfite', ru: 'Сульфиты', ar: 'كبريتيت', fr: 'Sulfites' },
+  { code: 'aci', emoji: '🌶️', pt: 'Picante', tr: 'Acı', en: 'Spicy', de: 'Scharf', ru: 'Острое', ar: 'حار', fr: 'Épicé' },
   {
     code: 'vejetaryen',
     emoji: '🥗',
+    pt: 'Vegetariano',
     tr: 'Vejetaryen',
     en: 'Vegetarian',
     de: 'Vegetarisch',
@@ -152,10 +156,11 @@ export const ALLERGENS = [
     ar: 'نباتي',
     fr: 'Végétarien',
   },
-  { code: 'vegan', emoji: '🌿', pt: 'Mostarda', tr: 'Vegan', en: 'Vegan', de: 'Vegan', ru: 'Веганское', ar: 'نباتي صرف', fr: 'Végan' },
+  { code: 'vegan', emoji: '🌿', pt: 'Vegano', tr: 'Vegan', en: 'Vegan', de: 'Vegan', ru: 'Веганское', ar: 'نباتي صرف', fr: 'Végan' },
   {
     code: 'alkol',
     emoji: '🍷',
+    pt: 'Contém álcool',
     tr: 'Alkol İçerir',
     en: 'Contains Alcohol',
     de: 'Enthält Alkohol',
@@ -163,7 +168,7 @@ export const ALLERGENS = [
     ar: 'يحتوي على كحول',
     fr: "Contient de l'alcool",
   },
-  { code: 'kafein', emoji: '☕', pt: 'Aipo', tr: 'Kafein', en: 'Caffeine', de: 'Koffein', ru: 'Кофеин', ar: 'كافيين', fr: 'Caféine' },
+  { code: 'kafein', emoji: '☕', pt: 'Cafeína', tr: 'Kafein', en: 'Caffeine', de: 'Koffein', ru: 'Кофеин', ar: 'كافيين', fr: 'Caféine' },
 ]
 
 export function findAllergen(code) {
