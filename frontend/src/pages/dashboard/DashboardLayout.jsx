@@ -22,12 +22,12 @@ import Logo from '../../components/ui/Logo.jsx'
 /* Sidebar links. Every page below edits the menu chosen in the ActiveMenuBar,
    which each page renders for itself — the topbar carries no switcher. */
 const NAV_ITEMS = [
-  { to: '/panel', label: 'Menü Yönetimi', icon: LayoutList, end: true },
-  { to: '/panel/ayarlar', label: 'Görünüm ve Ayarlar', icon: Settings },
-  { to: '/panel/qr', label: 'QR Kodlar', icon: QrCode },
-  { to: '/panel/analitik', label: 'Analitik', icon: BarChart3 },
-  { to: '/panel/gecmis', label: 'Değişiklik Geçmişi', icon: History },
-  { to: '/panel/hesap', label: 'Hesap', icon: UserRound },
+  { to: '/panel', label: 'Gerenciar cardápios', icon: LayoutList, end: true },
+  { to: '/panel/ayarlar', label: 'Aparência e configurações', icon: Settings },
+  { to: '/panel/qr', label: 'Códigos QR', icon: QrCode },
+  { to: '/panel/analitik', label: 'Estatísticas', icon: BarChart3 },
+  { to: '/panel/gecmis', label: 'Histórico de alterações', icon: History },
+  { to: '/panel/hesap', label: 'Minha conta', icon: UserRound },
 ]
 
 /** NavLink class name — the active item is highlighted in the brand colour. */
@@ -74,7 +74,7 @@ export default function DashboardLayout() {
   }, [location.pathname])
 
   if (!business) {
-    return <Loading fullScreen text="Panel hazırlanıyor..." />
+    return <Loading fullScreen text="Carregando painel..." />
   }
 
   // The public address is the tenant subdomain plus the menu path, so the button
@@ -128,7 +128,7 @@ export default function DashboardLayout() {
                 type="button"
                 onClick={() => setDrawerOpen(false)}
                 className="btn-ghost btn-sm"
-                aria-label="Menüyü kapat"
+                aria-label="Fechar menu"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -146,7 +146,7 @@ export default function DashboardLayout() {
             type="button"
             onClick={() => setDrawerOpen(true)}
             className="btn-ghost btn-sm shrink-0 lg:hidden"
-            aria-label="Menüyü aç"
+            aria-label="Abrir menu"
           >
             <Menu className="h-5 w-5" />
           </button>
@@ -160,7 +160,7 @@ export default function DashboardLayout() {
             onClick={openPublicMenu}
             disabled={!publicMenuUrl}
             className="btn-secondary btn-sm shrink-0"
-            title={publicMenuUrl || 'Önce bir menü oluşturun'}
+            title={publicMenuUrl || 'Crie um cardápio primeiro'}
           >
             <ExternalLink className="h-4 w-4" />
             <span className="hidden sm:inline">Menüyü Gör</span>
