@@ -71,7 +71,7 @@ function getProductName(product, language) {
  * The 404 messages of a write whose category or menu no longer exists: it was
  * deleted in another tab, say, while this page still lists it.
  */
-const STALE_LIST_MESSAGES = ['Kategori bulunamadı.', 'Menü bulunamadı.']
+const STALE_LIST_MESSAGES = ['Categoria não encontrada.', 'Cardápio não encontrado.']
 
 /** Whether a failed request says the editor's lists hold a category or a menu that is gone. */
 function isStaleListError(err) {
@@ -172,7 +172,7 @@ export default function MenuEditor() {
 
       const list = Array.isArray(incomingCategories) ? incomingCategories : []
       setCategories(list)
-      // The "Menü Değiştir" dialog prints this count; see setMenuCategoryCount.
+      // The "Trocar cardápio" dialog prints this count; see setMenuCategoryCount.
       setMenuCategoryCount(activeMenuID, list.length)
       setProductsByCategory(groupProducts(incomingProducts))
       // Switching menus replaces the whole list, so ids that no longer exist are
@@ -194,7 +194,7 @@ export default function MenuEditor() {
 
   /**
    * Reloads the categories and products and refreshes the preview after a
-   * write answered 404 "Kategori bulunamadı." or "Menü bulunamadı.": the
+   * write answered 404 "Categoria não encontrada." or "Cardápio não encontrado.": the
    * category or menu it wrote into was deleted in another tab, so the lists on
    * this page are out of date. The reload drops the category that is gone,
    * instead of leaving it on screen for the next action on it to fail as well.
@@ -353,7 +353,7 @@ export default function MenuEditor() {
       return
     }
 
-    // A new category adds one to the menu's count in the "Menü Değiştir" dialog.
+    // A new category adds one to the menu's count in the "Trocar cardápio" dialog.
     const current = categoriesRef.current
     if (!current.some((item) => item.id === category.id)) {
       setMenuCategoryCount(activeMenuID, current.length + 1)
@@ -365,7 +365,7 @@ export default function MenuEditor() {
         ? previous.map((item) =>
             // The update response counts no products (only the list endpoint
             // does), so the count already in state is kept. Without it the bulk
-            // price dialog reports "0 ürün" for a category right after it is
+            // price dialog reports "0 produtos" for a category right after it is
             // edited.
             item.id === category.id ? { ...category, product_count: item.product_count } : item,
           )
@@ -776,7 +776,7 @@ export default function MenuEditor() {
             title="Excluir produto"
             message={
               productToDelete
-                ? `"${getProductName(productToDelete, language)}" ürünü kalıcı olarak silinecek.`
+                ? `"${getProductName(productToDelete, language)}" será excluído permanentemente.`
                 : ''
             }
             confirmText="Sil"
