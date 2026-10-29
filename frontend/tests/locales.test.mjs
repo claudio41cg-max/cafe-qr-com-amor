@@ -43,12 +43,12 @@ function check(name, run) {
   }
 }
 
-const SIX = ['tr', 'en', 'de', 'ru', 'ar', 'fr']
+const SIX = ['pt', 'tr', 'en', 'de', 'ru', 'ar', 'fr']
 const trKeys = Object.keys(STRINGS.tr).sort()
 
 /* ------------------------------------------------------------ languages */
 
-check('the menu speaks exactly six languages, in picker order', () => {
+check('the menu speaks exactly seven languages, in picker order', () => {
   assert.deepEqual(LANGUAGE_CODES, SIX)
   assert.deepEqual(
     LANGUAGES.map((language) => language.code),
