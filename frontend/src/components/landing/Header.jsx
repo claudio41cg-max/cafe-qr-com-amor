@@ -48,9 +48,7 @@ export default function Header({ onSignUpClick, language = 'tr', onLanguageChang
           aria-label={t.brandHome}
         >
           <BrandMark />
-          <span className="truncate text-lg font-bold leading-none tracking-tight text-gray-900 sm:text-[2.125rem]">
-            Karecik
-          </span>
+          <span className="truncate text-sm font-bold leading-none tracking-tight text-gray-900 sm:text-[2.125rem]">Café QR com Amor</span>
         </Link>
 
         <nav className="flex shrink-0 flex-nowrap items-center gap-1 sm:gap-2">
