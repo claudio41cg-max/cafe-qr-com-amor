@@ -1,0 +1,49 @@
+name: Importar biblioteca de imagens ilustrativas
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'biblioteca-produtos/pacote-imagens.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir e extrair imagens da biblioteca
+        run: |
+          python3 - <<'PY'
+          import json, zipfile, pathlib, hashlib
+          pack=pathlib.Path('biblioteca-produtos/pacote-imagens.zip')
+          if not pack.exists():
+              raise SystemExit('Envie o ZIP para biblioteca-produtos/pacote-imagens.zip')
+          with zipfile.ZipFile(pack) as z:
+              names=z.namelist()
+              if any(not x.startswith('biblioteca-produtos/') or '..' in pathlib.PurePosixPath(x).parts for x in names):
+                  raise SystemExit('ZIP contem caminho inesperado')
+              catalog=json.loads(z.read('biblioteca-produtos/catalogo.json'))
+              ids=set()
+              digests=set()
+              for p in catalog['produtos']:
+                  if p['id'] in ids: raise SystemExit('Produto repetido: '+p['id'])
+                  ids.add(p['id'])
+                  name='biblioteca-produtos/'+p['imagem']
+                  if name not in names: raise SystemExit('Imagem ausente: '+name)
+                  data=z.read(name)
+                  digest=hashlib.sha256(data).hexdigest()
+                  if digest in digests: raise SystemExit('Imagem identica encontrada: '+name)
+                  digests.add(digest)
+              z.extractall('.')
+              print(f"Importados {len(ids)} produtos sem duplicatas.")
+          PY
+      - name: Salvar biblioteca no GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add biblioteca-produtos/catalogo.json biblioteca-produtos/imagens
+          if ! git diff --cached --quiet; then
+            git commit -m "Importa biblioteca de imagens ilustrativas sem repeticoes"
+            git push
+          fi
