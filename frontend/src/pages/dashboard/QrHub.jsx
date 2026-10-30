@@ -135,6 +135,24 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
     }
   }
 
+  async function exportPublicMenu() {
+    if (!businessSlug || !slug) return
+    try {
+      const payload = await api.publicMenu(businessSlug, slug, 'pt')
+      if (!payload?.business || !Array.isArray(payload?.categories)) {
+        throw new Error('Dados públicos do cardápio incompletos.')
+      }
+      // Export only the public menu response, never admin, accounts or sessions.
+      const json = JSON.stringify(payload, null, 2)
+      const objectUrl = URL.createObjectURL(new Blob([json], { type: 'application/json' }))
+      triggerDownload(objectUrl, `cardapio-publico-${slug}.json`)
+      setTimeout(() => URL.revokeObjectURL(objectUrl), 1000)
+      toast.success('Dados públicos do cardápio exportados.')
+    } catch (error) {
+      toast.error(error.message || 'Não foi possível exportar o cardápio.')
+    }
+  }
+
   async function downloadPng() {
     if (!address || downloading) return
 
@@ -268,6 +286,16 @@ function MenuQrCard({ businessSlug, menu, hiddenInPrint, onPrint }) {
 
       {/* ----------------------------------------------------------- actions */}
       <div className="print-hide mt-4 flex flex-wrap gap-2 border-t border-gray-100 pt-4">
+        <button
+          type="button"
+          onClick={exportPublicMenu}
+          className="btn-secondary btn-sm"
+          disabled={!businessSlug || !slug}
+        >
+          <Download className="h-3.5 w-3.5" aria-hidden="true" />
+          Exportar cardápio público
+        </button>
+
         <button
           type="button"
           onClick={downloadPng}
