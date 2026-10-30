@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import {
   BarChart3,
+  Building2,
   ExternalLink,
   History,
   LayoutList,
@@ -22,6 +23,7 @@ import Logo from '../../components/ui/Logo.jsx'
 /* Sidebar links. Every page below edits the menu chosen in the ActiveMenuBar,
    which each page renders for itself — the topbar carries no switcher. */
 const NAV_ITEMS = [
+  { to: '/panel/clientes', label: 'Central de Clientes', icon: Building2 },
   { to: '/panel', label: 'Gerenciar cardápios', icon: LayoutList, end: true },
   { to: '/panel/ayarlar', label: 'Aparência e configurações', icon: Settings },
   { to: '/panel/qr', label: 'Códigos QR', icon: QrCode },
