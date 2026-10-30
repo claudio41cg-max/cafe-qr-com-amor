@@ -30,7 +30,7 @@ var hexColorPattern = regexp.MustCompile(`^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$`)
 // display modes, contact display modes, languages and rounding modes.
 func (h *Handler) Meta(c *fiber.Ctx) error {
 	currencies := make([]utils.Currency, 0, len(utils.Currencies))
-	for _, code := range []string{"TRY", "USD", "EUR", "GBP", "AZN", "RUB", "SAR", "AED"} {
+	for _, code := range []string{"BRL", "TRY", "USD", "EUR", "GBP", "AZN", "RUB", "SAR", "AED"} {
 		currencies = append(currencies, utils.Currencies[code])
 	}
 
