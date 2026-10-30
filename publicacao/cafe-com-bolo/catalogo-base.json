@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "source": "Resumo fornecido pelo usuário do arquivo cafe-com-amor (1).json",
+    "imageUrlsComplete": false,
+    "publicReady": false,
+    "reason": "URLs das imagens originais omitidas no resumo; não usar substitutas"
+  },
+  "business": {
+    "name": "Cafe com amor",
+    "slug": "cafe-com-amor",
+    "menuName": "Café com bolo",
+    "menuSlug": "p-o-na-chapa-com-amor",
+    "description": "Um carinho a cada xícara",
+    "address": "Estrada da Tutóia",
+    "phone": "+55 21 98765-3184",
+    "language": "pt",
+    "currency": "BRL",
+    "theme": "zarif",
+    "font": "lora",
+    "primary_color": "#835533",
+    "text_color": "#111827",
+    "splash": {
+      "enabled": true,
+      "duration_ms": 1200,
+      "background": "#0f172a",
+      "enter": "fade",
+      "exit": "fade"
+    }
+  },
+  "categories": [
+    {
+      "name": "Cafés especiais",
+      "products": [
+        {
+          "name": "Espresso",
+          "description": "Café intenso com crema dourada.",
+          "price": 8,
+          "featured": true,
+          "image_url": null
+        },
+        {
+          "name": "Espresso duplo",
+          "description": "Duas doses encorpadas de espresso.",
+          "price": 12,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Americano",
+          "description": "Espresso alongado com água quente.",
+          "price": 10,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Café coado",
+          "description": "Café filtrado na hora.",
+          "price": 9,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Cappuccino artesanal",
+          "description": "Espresso, leite vaporizado e cacau.",
+          "price": 15,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Mocha",
+          "description": "Café, leite e chocolate.",
+          "price": 18,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Latte",
+          "description": "Espresso suave com leite cremoso.",
+          "price": 14,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Chocolate quente",
+          "description": "Chocolate cremoso servido quentinho.",
+          "price": 16,
+          "featured": false,
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "name": "Cafés gelados",
+      "products": [
+        {
+          "name": "Iced latte",
+          "description": "Espresso com leite e gelo.",
+          "price": 16,
+          "featured": true,
+          "image_url": null
+        },
+        {
+          "name": "Café gelado",
+          "description": "Café especial servido sobre gelo.",
+          "price": 15,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Frappé de café",
+          "description": "Café batido com leite e gelo.",
+          "price": 19,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Affogato",
+          "description": "Sorvete de baunilha com espresso.",
+          "price": 18,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Espresso tônica",
+          "description": "Espresso, água tônica e gelo.",
+          "price": 17,
+          "featured": false,
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "name": "Salgados",
+      "products": [
+        {
+          "name": "Pão na chapa com amor",
+          "description": "Pão dourado na chapa com manteiga.",
+          "price": 8,
+          "featured": true,
+          "image_url": null
+        },
+        {
+          "name": "Pão de queijo",
+          "description": "Porção de pães de queijo quentinhos.",
+          "price": 9,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Misto quente",
+          "description": "Pão tostado com queijo e presunto.",
+          "price": 18,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Croissant de queijo",
+          "description": "Massa folhada com queijo cremoso.",
+          "price": 19,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Empada de frango",
+          "description": "Massa delicada com recheio de frango.",
+          "price": 12,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Sanduíche natural",
+          "description": "Pão macio, folhas frescas e frango.",
+          "price": 17,
+          "featured": false,
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "name": "Doces e sobremesas",
+      "products": [
+        {
+          "name": "Bolo do dia",
+          "description": "Fatia de bolo caseiro fresquinho.",
+          "price": 12,
+          "featured": true,
+          "image_url": null
+        },
+        {
+          "name": "Brownie de chocolate",
+          "description": "Brownie macio e rico em chocolate.",
+          "price": 13,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Cookie de chocolate",
+          "description": "Cookie artesanal com gotas de chocolate.",
+          "price": 8,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Cheesecake",
+          "description": "Fatia cremosa com calda de frutas.",
+          "price": 18,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Banoffee",
+          "description": "Banana, doce de leite e chantilly.",
+          "price": 16,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Croissant de avelã",
+          "description": "Croissant com creme de avelã.",
+          "price": 17,
+          "featured": false,
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "name": "Combos",
+      "products": [
+        {
+          "name": "Combo bom dia",
+          "description": "Espresso e pão na chapa.",
+          "price": 14.9,
+          "featured": true,
+          "image_url": null
+        },
+        {
+          "name": "Combo café da tarde",
+          "description": "Cappuccino artesanal e bolo do dia.",
+          "price": 24.9,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Combo pausa doce",
+          "description": "Latte e cookie de chocolate.",
+          "price": 19.9,
+          "featured": false,
+          "image_url": null
+        },
+        {
+          "name": "Combo gelado",
+          "description": "Iced latte e brownie de chocolate.",
+          "price": 26.9,
+          "featured": false,
+          "image_url": null
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "price_date": "2026-10-29",
+    "price_note": "Nossos preços são válidos a partir de 29/10/2026.",
+    "tax_note": "Todos os preços incluem impostos.",
+    "attribution": "Criado com Karecik"
+  }
+}
