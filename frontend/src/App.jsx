@@ -13,6 +13,7 @@ import ResetPassword from './pages/ResetPassword.jsx'
 import CustomerMenu from './pages/menu/CustomerMenu.jsx'
 
 import DashboardLayout from './pages/dashboard/DashboardLayout.jsx'
+import ClientCentral from './pages/dashboard/ClientCentral.jsx'
 import MenuEditor from './pages/dashboard/MenuEditor.jsx'
 import MenuSettings from './pages/dashboard/MenuSettings.jsx'
 import QrHub from './pages/dashboard/QrHub.jsx'
@@ -108,6 +109,7 @@ export default function App() {
       >
         <Route index element={<MenuEditor />} />
         <Route path="ayarlar" element={<MenuSettings />} />
+        <Route path="clientes" element={<ClientCentral />} />
         <Route path="qr" element={<QrHub />} />
         {/* Visitor traffic, and who changed what in the panel. Two pages, not
             two tabs: they answer different questions with different filters,
