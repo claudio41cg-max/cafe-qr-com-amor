@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'docs/index.html'
+      - 'docs/cafe-com-bolo/**'
       - '.github/workflows/publicar-cardapio.yml'
   workflow_dispatch:
 permissions:
