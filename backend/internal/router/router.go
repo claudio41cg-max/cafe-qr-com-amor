@@ -233,6 +233,7 @@ func Setup(app *fiber.App, h *handlers.Handler, cfg *config.Config) {
 	api := app.Group("/api", middleware.Protected(h.Sessions, cfg))
 
 	api.Get("/auth/me", h.Me)
+	api.Get("/platform/businesses", h.PlatformBusinesses)
 	api.Post("/auth/change-password", h.ChangePassword)
 
 	// The account owns exactly two fields — its name and the subdomain slug.
