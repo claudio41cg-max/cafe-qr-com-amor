@@ -22,3 +22,5 @@ for produto in catalog["produtos"]:
     except Exception as exc:
         print(f"ERRO {produto['id']}: {exc}")
     time.sleep(1)
+
+# Importacao inicial do catalogo brasileiro.
