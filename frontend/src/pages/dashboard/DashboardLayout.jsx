@@ -163,12 +163,12 @@ export default function DashboardLayout() {
             title={publicMenuUrl || 'Crie um cardápio primeiro'}
           >
             <ExternalLink className="h-4 w-4" />
-            <span className="hidden sm:inline">Menüyü Gör</span>
+            <span className="hidden sm:inline">Ver cardápio</span>
           </button>
 
           <button type="button" onClick={signOut} className="btn-ghost btn-sm shrink-0">
             <LogOut className="h-4 w-4" />
-            <span className="hidden sm:inline">Çıkış</span>
+            <span className="hidden sm:inline">Sair</span>
           </button>
         </header>
 
