@@ -1,0 +1,84 @@
+{
+  "versao": 1,
+  "observacao": "Imagens demonstrativas, creditadas; valores e disponibilidade definidos por cafeteria.",
+  "produtos": [
+    {
+      "id": "cafe-coado",
+      "nome": "Café coado",
+      "categoria": "Cafés",
+      "descricao": "Café brasileiro preparado no filtro.",
+      "imagem": "/produtos/imagens/cafe-coado.jpg",
+      "arquivo_origem": "Café coado.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_coado.jpg",
+      "autor": "Melsj",
+      "licenca": "CC BY-SA 4.0",
+      "preco": null,
+      "ativo": false
+    },
+    {
+      "id": "pao-de-queijo",
+      "nome": "Pão de queijo",
+      "categoria": "Salgados",
+      "descricao": "Pão de queijo tradicional brasileiro.",
+      "imagem": "/produtos/imagens/pao-de-queijo.jpg",
+      "arquivo_origem": "Pao de queijo brasil.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Pao_de_queijo_brasil.jpg",
+      "autor": "Acfariac",
+      "licenca": "CC BY-SA 4.0",
+      "preco": null,
+      "ativo": false
+    },
+    {
+      "id": "coxinha",
+      "nome": "Coxinha de frango",
+      "categoria": "Salgados",
+      "descricao": "Salgado brasileiro de frango com massa empanada.",
+      "imagem": "/produtos/imagens/coxinha.jpg",
+      "arquivo_origem": "Coxinha.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Coxinha.jpg",
+      "autor": "Tom B",
+      "licenca": "Domínio público",
+      "preco": null,
+      "ativo": false
+    },
+    {
+      "id": "pastel",
+      "nome": "Pastel brasileiro",
+      "categoria": "Salgados",
+      "descricao": "Pastel frito, crocante, de recheio a escolher.",
+      "imagem": "/produtos/imagens/pastel.jpg",
+      "arquivo_origem": "Brazilian pastel.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Brazilian_pastel.jpg",
+      "autor": "BuenosAiresPhotographer",
+      "licenca": "CC BY-SA 2.0",
+      "preco": null,
+      "ativo": false
+    },
+    {
+      "id": "brigadeiro",
+      "nome": "Brigadeiro",
+      "categoria": "Doces",
+      "descricao": "Doce brasileiro à base de chocolate e leite condensado.",
+      "imagem": "/produtos/imagens/brigadeiro.jpg",
+      "arquivo_origem": "Brigadeiro.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Brigadeiro.jpg",
+      "autor": "Mayra (Maych)",
+      "licenca": "CC BY-SA 2.0",
+      "preco": null,
+      "ativo": false
+    },
+    {
+      "id": "bolo-de-cenoura",
+      "nome": "Bolo de cenoura com chocolate",
+      "categoria": "Bolos",
+      "descricao": "Bolo de cenoura brasileiro com cobertura de chocolate.",
+      "imagem": "/produtos/imagens/bolo-de-cenoura.jpg",
+      "arquivo_origem": "Bolo de cenoura (lateral), 08-12-2020.jpg",
+      "fonte": "https://commons.wikimedia.org/wiki/File:Bolo_de_cenoura_(lateral)%2C_08-12-2020.jpg",
+      "autor": "Pedro Toniazzo Terres",
+      "licenca": "CC BY-SA 4.0",
+      "preco": null,
+      "ativo": false
+    }
+  ]
+}
