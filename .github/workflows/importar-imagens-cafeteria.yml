@@ -1,0 +1,30 @@
+name: Importar fotos brasileiras para o catalogo
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/baixar_imagens_cafeteria.py'
+      - 'frontend/public/produtos/catalogo.json'
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Baixar fotografias licenciadas
+        run: python scripts/baixar_imagens_cafeteria.py
+      - name: Guardar fotografias no repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/produtos/imagens
+          if ! git diff --cached --quiet; then
+            git commit -m "Adiciona imagens brasileiras da biblioteca de cafeteria"
+            git push
+          fi
