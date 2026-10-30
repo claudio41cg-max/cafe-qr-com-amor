@@ -173,6 +173,8 @@ export const api = {
   meta: () => request('/api/meta'),
   health: () => request('/api/health'),
 
+  platformBusinesses: () => request('/api/platform/businesses'),
+
   /* authentication */
   register: (payload) =>
     request('/api/auth/register', { method: 'POST', body: payload }),
