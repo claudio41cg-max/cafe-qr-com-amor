@@ -69,6 +69,10 @@ export function businessUrl(businessSlug) {
  * business. Without a menu slug this degrades to the tenant's root address.
  */
 export function menuUrl(businessSlug, menuSlug) {
+  // Devices on a LAN cannot resolve tenant.localhost. Use the real host and path.
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(window.location.hostname)) {
+    return menuPathUrl(businessSlug, menuSlug)
+  }
   const base = businessUrl(businessSlug)
   if (!base) return ''
   return menuSlug ? `${base}/${menuSlug}` : base
