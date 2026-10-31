@@ -3,7 +3,8 @@
     "source": "Resumo fornecido pelo usuário do arquivo cafe-com-amor (1).json",
     "imageUrlsComplete": true,
     "publicReady": true,
-    "reason": "URLs originais dos 29 produtos fornecidas pelo usuário"
+    "reason": "URLs originais dos 29 produtos fornecidas pelo usuário",
+    "note": "As fotografias externas corrigidas devem ser confirmadas visualmente e quanto ao direito de uso antes do serviço comercial."
   },
   "business": {
     "name": "Cafe com amor",
@@ -44,8 +45,9 @@
           "description": "Duas doses encorpadas de espresso.",
           "price": 12,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://www.nespresso.com/shared_res/mos/free_html/au/content/double-espresso.jpg",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         },
         {
           "name": "Americano",
@@ -129,16 +131,18 @@
           "description": "Sorvete de baunilha com espresso.",
           "price": 18,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://baybistro.cafe/storage/138/01JWXQJSTNR4E5Z5N6D1EFWH9T.webp",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         },
         {
           "name": "Espresso tônica",
           "description": "Espresso, água tônica e gelo.",
           "price": 17,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://images.unsplash.com/photo-1632099820044-916a57ceef05?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         }
       ]
     },
@@ -166,8 +170,9 @@
           "description": "Pão tostado com queijo e presunto.",
           "price": 18,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/misto_quente.jpg",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         },
         {
           "name": "Croissant de queijo",
@@ -235,16 +240,18 @@
           "description": "Banana, doce de leite e chantilly.",
           "price": 16,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://culinar-ia.tetri.net/assets/images/banoffe.webp",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         },
         {
           "name": "Croissant de avelã",
           "description": "Croissant com creme de avelã.",
           "price": 17,
           "featured": false,
-          "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80",
-          "image_verified_original": true
+          "image_url": "https://1544329252.rsc.cdn77.org/temp/1714408739_c058c05873adf99aef89673b7f36688b.jpg",
+          "image_verified_original": false,
+          "image_source": "referência externa correspondente ao produto, substitui fotografia antiga inadequada"
         }
       ]
     },
