@@ -1,0 +1,27 @@
+name: Importar imagens de cafeteria por ZIP
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'importar-imagens/*.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Importar imagens ZIP
+        run: python3 scripts/importar-zip-cafeteria.py
+      - name: Registrar imagens e atualizar cardápio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/cafe-com-bolo/index.html docs/imagens/cafe-com-bolo biblioteca-produtos/cafe-com-bolo
+          if ! git diff --cached --quiet; then
+            git commit -m "Importa lote ZIP de imagens e atualiza produtos"
+            git push
+          fi
