@@ -1,10 +1,15 @@
 name: Publicar cardapio demonstrativo no GitHub Pages
 on:
+  workflow_run:
+    workflows: ['Importar imagens de cafeteria por ZIP']
+    types: [completed]
   push:
     branches: [main]
     paths:
       - 'docs/index.html'
       - 'docs/cafe-com-bolo/**'
+      - 'docs/imagens/**'
+      - 'biblioteca-produtos/**'
       - '.github/workflows/publicar-cardapio.yml'
   workflow_dispatch:
 permissions:
@@ -16,6 +21,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
