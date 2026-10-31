@@ -1,9 +1,9 @@
 {
   "metadata": {
     "source": "Resumo fornecido pelo usuário do arquivo cafe-com-amor (1).json",
-    "imageUrlsComplete": false,
-    "publicReady": false,
-    "reason": "URLs das imagens originais omitidas no resumo; não usar substitutas"
+    "imageUrlsComplete": true,
+    "publicReady": true,
+    "reason": "URLs originais dos 29 produtos fornecidas pelo usuário"
   },
   "business": {
     "name": "Cafe com amor",
@@ -36,56 +36,64 @@
           "description": "Café intenso com crema dourada.",
           "price": 8,
           "featured": true,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Espresso duplo",
           "description": "Duas doses encorpadas de espresso.",
           "price": 12,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Americano",
           "description": "Espresso alongado com água quente.",
           "price": 10,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Café coado",
           "description": "Café filtrado na hora.",
           "price": 9,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Cappuccino artesanal",
           "description": "Espresso, leite vaporizado e cacau.",
           "price": 15,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Mocha",
           "description": "Café, leite e chocolate.",
           "price": 18,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Latte",
           "description": "Espresso suave com leite cremoso.",
           "price": 14,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Chocolate quente",
           "description": "Chocolate cremoso servido quentinho.",
           "price": 16,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1542990253-0b8be29b14b8?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         }
       ]
     },
@@ -97,35 +105,40 @@
           "description": "Espresso com leite e gelo.",
           "price": 16,
           "featured": true,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Café gelado",
           "description": "Café especial servido sobre gelo.",
           "price": 15,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Frappé de café",
           "description": "Café batido com leite e gelo.",
           "price": 19,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Affogato",
           "description": "Sorvete de baunilha com espresso.",
           "price": 18,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Espresso tônica",
           "description": "Espresso, água tônica e gelo.",
           "price": 17,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         }
       ]
     },
@@ -137,42 +150,48 @@
           "description": "Pão dourado na chapa com manteiga.",
           "price": 8,
           "featured": true,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Pão de queijo",
           "description": "Porção de pães de queijo quentinhos.",
           "price": 9,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1608198093002-ad4e005484df?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Misto quente",
           "description": "Pão tostado com queijo e presunto.",
           "price": 18,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Croissant de queijo",
           "description": "Massa folhada com queijo cremoso.",
           "price": 19,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Empada de frango",
           "description": "Massa delicada com recheio de frango.",
           "price": 12,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Sanduíche natural",
           "description": "Pão macio, folhas frescas e frango.",
           "price": 17,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         }
       ]
     },
@@ -184,42 +203,48 @@
           "description": "Fatia de bolo caseiro fresquinho.",
           "price": 12,
           "featured": true,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Brownie de chocolate",
           "description": "Brownie macio e rico em chocolate.",
           "price": 13,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Cookie de chocolate",
           "description": "Cookie artesanal com gotas de chocolate.",
           "price": 8,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Cheesecake",
           "description": "Fatia cremosa com calda de frutas.",
           "price": 18,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Banoffee",
           "description": "Banana, doce de leite e chantilly.",
           "price": 16,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Croissant de avelã",
           "description": "Croissant com creme de avelã.",
           "price": 17,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         }
       ]
     },
@@ -231,28 +256,32 @@
           "description": "Espresso e pão na chapa.",
           "price": 14.9,
           "featured": true,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Combo café da tarde",
           "description": "Cappuccino artesanal e bolo do dia.",
           "price": 24.9,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Combo pausa doce",
           "description": "Latte e cookie de chocolate.",
           "price": 19.9,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         },
         {
           "name": "Combo gelado",
           "description": "Iced latte e brownie de chocolate.",
           "price": 26.9,
           "featured": false,
-          "image_url": null
+          "image_url": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+          "image_verified_original": true
         }
       ]
     }
