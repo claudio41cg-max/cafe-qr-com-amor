@@ -8,6 +8,7 @@ on:
     paths:
       - 'docs/index.html'
       - 'docs/cafe-com-bolo/**'
+      - 'docs/americo-do-peixe/**'
       - 'docs/imagens/**'
       - 'biblioteca-produtos/**'
       - '.github/workflows/publicar-cardapio.yml'
