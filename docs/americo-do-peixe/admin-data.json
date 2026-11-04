@@ -1,0 +1,568 @@
+{
+  "schema": 1,
+  "restaurant": "americo-do-peixe",
+  "categories": [
+    {
+      "id": "Porções",
+      "name": "Porções"
+    },
+    {
+      "id": "Peixe frito",
+      "name": "Peixe frito"
+    },
+    {
+      "id": "Moqueca",
+      "name": "Moqueca"
+    },
+    {
+      "id": "Camarão com abóbora e Catupiry",
+      "name": "Camarão com abóbora e Catupiry"
+    },
+    {
+      "id": "Guarnições",
+      "name": "Guarnições"
+    },
+    {
+      "id": "Bebidas",
+      "name": "Bebidas"
+    }
+  ],
+  "products": [
+    {
+      "id": "camarao",
+      "category": "Porções",
+      "name": "Camarão",
+      "desc": "Camarões preparados para servir como petisco. Consulte a casa sobre o preparo.",
+      "img": "shrimp",
+      "opts": [
+        [
+          "Meia porção",
+          "R$ 75,00"
+        ],
+        [
+          "Porção inteira",
+          "R$ 130,00"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "batata",
+      "category": "Porções",
+      "name": "Batata frita",
+      "desc": "Batatas fritas douradas, crocantes por fora e macias por dentro.",
+      "img": "fries",
+      "opts": [
+        [
+          "Meia porção",
+          "A confirmar"
+        ],
+        [
+          "Porção inteira",
+          "R$ 55,00"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "contrafile",
+      "category": "Porções",
+      "name": "Contrafilé com fritas",
+      "desc": "Tiras de contrafilé acompanhadas de batatas fritas.",
+      "img": "beef",
+      "opts": [
+        [
+          "Porção",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "frango",
+      "category": "Porções",
+      "name": "Filé de frango grelhado com fritas",
+      "desc": "Filé de frango grelhado com batatas fritas.",
+      "img": "chicken",
+      "opts": [
+        [
+          "Porção",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "bolinho",
+      "category": "Porções",
+      "name": "Bolinho de bacalhau",
+      "desc": "Porção de 12 bolinhos dourados de bacalhau.",
+      "img": "cod",
+      "opts": [
+        [
+          "12 unidades",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "isca",
+      "category": "Porções",
+      "name": "Isca de peixe com batata frita",
+      "desc": "Iscas de peixe acompanhadas de batatas fritas.",
+      "img": "fishchips",
+      "opts": [
+        [
+          "Porção",
+          "R$ 75,00"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "lula",
+      "category": "Porções",
+      "name": "Anéis de lula empanados",
+      "desc": "Anéis de lula empanados e fritos.",
+      "img": "calamari",
+      "opts": [
+        [
+          "Porção",
+          "R$ 75,00"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "peixe",
+      "category": "Peixe frito",
+      "name": "Peixe frito",
+      "desc": "Acompanha arroz, pirão e salada. Escolha a quantidade de pessoas.",
+      "img": "fishFried",
+      "opts": [
+        [
+          "01 pessoa (03 postas)",
+          "A confirmar"
+        ],
+        [
+          "02 pessoas (06 postas)",
+          "A confirmar"
+        ],
+        [
+          "03 pessoas (09 postas)",
+          "A confirmar"
+        ],
+        [
+          "04 pessoas (12 postas)",
+          "A confirmar"
+        ],
+        [
+          "05 pessoas (15 postas)",
+          "A confirmar"
+        ],
+        [
+          "06 pessoas (18 postas)",
+          "A confirmar"
+        ],
+        [
+          "07 pessoas (21 postas)",
+          "A confirmar"
+        ],
+        [
+          "08 pessoas (24 postas)",
+          "A confirmar"
+        ],
+        [
+          "09 pessoas (27 postas)",
+          "A confirmar"
+        ],
+        [
+          "10 pessoas (30 postas)",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "moqueca",
+      "category": "Moqueca",
+      "name": "Moqueca",
+      "desc": "Moqueca para compartilhar, em porções para duas a dez pessoas. Consulte a casa para saber o tipo de peixe e os acompanhamentos.",
+      "img": "moqueca",
+      "opts": [
+        [
+          "2 pessoas (6 postas)",
+          "A confirmar"
+        ],
+        [
+          "3 pessoas (9 postas)",
+          "A confirmar"
+        ],
+        [
+          "4 pessoas (12 postas)",
+          "A confirmar"
+        ],
+        [
+          "5 pessoas (15 postas)",
+          "A confirmar"
+        ],
+        [
+          "6 pessoas (18 postas)",
+          "A confirmar"
+        ],
+        [
+          "7 pessoas (21 postas)",
+          "A confirmar"
+        ],
+        [
+          "8 pessoas (24 postas)",
+          "A confirmar"
+        ],
+        [
+          "9 pessoas (27 postas)",
+          "A confirmar"
+        ],
+        [
+          "10 pessoas (30 postas)",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "abobora",
+      "category": "Camarão com abóbora e Catupiry",
+      "name": "Camarão com abóbora e Catupiry",
+      "desc": "Preparação cremosa de camarão, abóbora e Catupiry para compartilhar.",
+      "img": "abobora",
+      "opts": [
+        [
+          "2 pessoas",
+          "R$ 150,00"
+        ],
+        [
+          "3 pessoas",
+          "A confirmar"
+        ],
+        [
+          "4 pessoas",
+          "A confirmar"
+        ],
+        [
+          "5 pessoas",
+          "A confirmar"
+        ],
+        [
+          "6 pessoas",
+          "A confirmar"
+        ],
+        [
+          "7 pessoas",
+          "A confirmar"
+        ],
+        [
+          "8 pessoas",
+          "A confirmar"
+        ],
+        [
+          "9 pessoas",
+          "A confirmar"
+        ],
+        [
+          "10 pessoas",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "arroz",
+      "category": "Guarnições",
+      "name": "Arroz",
+      "desc": "Porção de arroz para acompanhar o prato.",
+      "emoji": "🍚",
+      "opts": [
+        [
+          "Porção",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "pirao",
+      "category": "Guarnições",
+      "name": "Pirão",
+      "desc": "Pirão servido como acompanhamento.",
+      "emoji": "🥣",
+      "opts": [
+        [
+          "Porção",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "feijao",
+      "category": "Guarnições",
+      "name": "Feijão",
+      "desc": "Feijão para complementar sua refeição.",
+      "emoji": "🫘",
+      "opts": [
+        [
+          "Porção",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "refri1",
+      "category": "Bebidas",
+      "name": "Coca-Cola 1 litro",
+      "desc": "Refrigerante Coca-Cola em garrafa de 1 litro.",
+      "img": "sodaBottle",
+      "opts": [
+        [
+          "1 litro",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "lata",
+      "category": "Bebidas",
+      "name": "Coca-Cola lata 350 ml",
+      "desc": "Refrigerante Coca-Cola original em lata.",
+      "img": "sodaCan",
+      "opts": [
+        [
+          "Lata",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "fanta",
+      "category": "Bebidas",
+      "name": "Fanta Laranja lata 350 ml",
+      "desc": "Refrigerante Fanta sabor laranja em lata. Disponibilidade a confirmar.",
+      "img": null,
+      "opts": [
+        [
+          "Lata",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "pepsi",
+      "category": "Bebidas",
+      "name": "Pepsi lata 350 ml",
+      "desc": "Refrigerante Pepsi em lata. Disponibilidade a confirmar.",
+      "img": null,
+      "opts": [
+        [
+          "Lata",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "h2o",
+      "category": "Bebidas",
+      "name": "H2OH! Limão",
+      "desc": "Bebida gaseificada sabor limão.",
+      "img": "sodaBottle",
+      "opts": [
+        [
+          "Unidade",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "agua",
+      "category": "Bebidas",
+      "name": "Água mineral",
+      "desc": "Água sem gás ou com gás.",
+      "img": "water",
+      "opts": [
+        [
+          "Sem gás",
+          "A confirmar"
+        ],
+        [
+          "Com gás",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "jarra",
+      "category": "Bebidas",
+      "name": "Suco de laranja na jarra",
+      "desc": "Suco de laranja servido em jarra.",
+      "img": "juice",
+      "opts": [
+        [
+          "Jarra",
+          "A confirmar"
+        ],
+        [
+          "Meia jarra",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "suco",
+      "category": "Bebidas",
+      "name": "Suco de maracujá no copo",
+      "desc": "Suco de maracujá servido no copo.",
+      "img": "juice",
+      "opts": [
+        [
+          "Copo",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "lataSuco",
+      "category": "Bebidas",
+      "name": "Suco de lata",
+      "desc": "Consulte os sabores disponíveis.",
+      "img": null,
+      "opts": [
+        [
+          "Lata",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "mate",
+      "category": "Bebidas",
+      "name": "Mate ou Icetea",
+      "desc": "Bebida pronta para consumo.",
+      "img": null,
+      "opts": [
+        [
+          "300 ml",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "cerveja",
+      "category": "Bebidas",
+      "name": "Cerveja Amstel 600 ml",
+      "desc": "Cerveja Amstel em garrafa de 600 ml.",
+      "img": "beer",
+      "opts": [
+        [
+          "600 ml",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "long",
+      "category": "Bebidas",
+      "name": "Cerveja long neck",
+      "desc": "Consulte as marcas disponíveis.",
+      "img": null,
+      "opts": [
+        [
+          "Long neck",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "heineken",
+      "category": "Bebidas",
+      "name": "Cerveja Heineken long neck",
+      "desc": "Cerveja Heineken em garrafa long neck.",
+      "img": "beer",
+      "opts": [
+        [
+          "Unidade",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "vinho",
+      "category": "Bebidas",
+      "name": "Taça de vinho tinto",
+      "desc": "Vinho tinto servido em taça.",
+      "img": "wine",
+      "opts": [
+        [
+          "Copo",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "energetico",
+      "category": "Bebidas",
+      "name": "Energético",
+      "desc": "Consulte as marcas disponíveis.",
+      "img": null,
+      "opts": [
+        [
+          "Unidade",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "caipirinha",
+      "category": "Bebidas",
+      "name": "Caipirinha",
+      "desc": "Bebida preparada na casa.",
+      "img": null,
+      "opts": [
+        [
+          "Unidade",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chopp",
+      "category": "Bebidas",
+      "name": "Chopp de vinho",
+      "desc": "Chopp de vinho.",
+      "img": null,
+      "opts": [
+        [
+          "Copo",
+          "A confirmar"
+        ]
+      ],
+      "active": true
+    }
+  ]
+}
