@@ -5,6 +5,7 @@ on:
     paths:
       - 'importar-imagens/*.zip'
       - '!importar-imagens/americo_do_peixe_10_fotos_profissionais.zip'
+      - '!importar-imagens/americo_do_peixe_bebidas_10_imagens.zip'
   workflow_dispatch:
 permissions:
   contents: write
