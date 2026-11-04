@@ -8,6 +8,8 @@ on:
     paths:
       - 'docs/index.html'
       - 'docs/cafe-com-bolo/**'
+      - 'docs/admin/**'
+      - 'docs/biblioteca/**'
       - 'docs/americo-do-peixe/**'
       - 'docs/imagens/**'
       - 'biblioteca-produtos/**'
