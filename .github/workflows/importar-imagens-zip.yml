@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'importar-imagens/*.zip'
+      - '!importar-imagens/americo_do_peixe_10_fotos_profissionais.zip'
   workflow_dispatch:
 permissions:
   contents: write
