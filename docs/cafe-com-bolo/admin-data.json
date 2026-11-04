@@ -1,0 +1,469 @@
+{
+  "schema": 1,
+  "restaurant": "cafe-com-bolo",
+  "categories": [
+    {
+      "id": "cat0",
+      "name": "Cafés especiais"
+    },
+    {
+      "id": "cat1",
+      "name": "Cafés gelados"
+    },
+    {
+      "id": "cat2",
+      "name": "Salgados"
+    },
+    {
+      "id": "cat3",
+      "name": "Doces e sobremesas"
+    },
+    {
+      "id": "cat4",
+      "name": "Combos"
+    }
+  ],
+  "products": [
+    {
+      "id": "cat0-001",
+      "category": "cat0",
+      "name": "Espresso",
+      "desc": "Café intenso com crema dourada.",
+      "price": 8,
+      "image": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-002",
+      "category": "cat0",
+      "name": "Espresso duplo",
+      "desc": "Duas doses encorpadas de espresso.",
+      "price": 12,
+      "image": "https://www.nespresso.com/shared_res/mos/free_html/au/content/double-espresso.jpg",
+      "active": true
+    },
+    {
+      "id": "cat0-003",
+      "category": "cat0",
+      "name": "Americano",
+      "desc": "Espresso alongado com água quente.",
+      "price": 10,
+      "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-004",
+      "category": "cat0",
+      "name": "Café coado",
+      "desc": "Café filtrado na hora.",
+      "price": 9,
+      "image": "../imagens/cafe-com-bolo/cafe-coado.webp",
+      "active": true
+    },
+    {
+      "id": "cat0-005",
+      "category": "cat0",
+      "name": "Cappuccino artesanal",
+      "desc": "Espresso, leite vaporizado e cacau.",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-006",
+      "category": "cat0",
+      "name": "Mocha",
+      "desc": "Café, leite e chocolate.",
+      "price": 18,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-007",
+      "category": "cat0",
+      "name": "Latte",
+      "desc": "Espresso suave com leite cremoso.",
+      "price": 14,
+      "image": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-008",
+      "category": "cat0",
+      "name": "Chocolate quente",
+      "desc": "Chocolate cremoso servido quentinho.",
+      "price": 16,
+      "image": "https://images.unsplash.com/photo-1542990253-0b8be29b14b8?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat0-009",
+      "category": "cat0",
+      "name": "Cappuccino caramelizado com chantilly",
+      "desc": "Cappuccino cremoso em camadas, com chantilly, calda de caramelo e raspas de chocolate.",
+      "price": 21.9,
+      "image": "../imagens/cafe-com-bolo/cappuccino-caramelizado-com-chantilly.webp",
+      "active": true
+    },
+    {
+      "id": "cat0-010",
+      "category": "cat0",
+      "name": "Cappuccino caramelado com pão de queijo",
+      "desc": "Cappuccino com calda de caramelo e chantilly, acompanhado de pão de queijo.",
+      "price": 25.9,
+      "image": "../imagens/cafe-com-bolo/cappuccino-caramelado-com-pao-de-queijo.webp",
+      "active": true
+    },
+    {
+      "id": "cat0-011",
+      "category": "cat0",
+      "name": "Chocolate quente com marshmallows",
+      "desc": "Chocolate quente cremoso com marshmallows e raspas de chocolate.",
+      "price": 19.9,
+      "image": "../imagens/cafe-com-bolo/chocolate-quente-com-marshmallows.webp",
+      "active": true
+    },
+    {
+      "id": "cat1-001",
+      "category": "cat1",
+      "name": "Iced latte",
+      "desc": "Espresso com leite e gelo.",
+      "price": 16,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat1-002",
+      "category": "cat1",
+      "name": "Café gelado",
+      "desc": "Café especial servido sobre gelo.",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat1-003",
+      "category": "cat1",
+      "name": "Frappé de café",
+      "desc": "Café batido com leite e gelo.",
+      "price": 19,
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat1-004",
+      "category": "cat1",
+      "name": "Affogato",
+      "desc": "Sorvete de baunilha com espresso.",
+      "price": 18,
+      "image": "https://baybistro.cafe/storage/138/01JWXQJSTNR4E5Z5N6D1EFWH9T.webp",
+      "active": true
+    },
+    {
+      "id": "cat1-005",
+      "category": "cat1",
+      "name": "Espresso tônica",
+      "desc": "Espresso, água tônica e gelo.",
+      "price": 17,
+      "image": "../imagens/cafe-com-bolo/espresso-tonica.webp",
+      "active": true
+    },
+    {
+      "id": "cat1-006",
+      "category": "cat1",
+      "name": "Frappé de chocolate com chantilly",
+      "desc": "Bebida gelada e cremosa de chocolate, finalizada com chantilly e calda de chocolate.",
+      "price": 22.9,
+      "image": "../imagens/cafe-com-bolo/frappe-de-chocolate-com-chantilly.webp",
+      "active": true
+    },
+    {
+      "id": "cat1-007",
+      "category": "cat1",
+      "name": "Milk-shake de morango com chantilly",
+      "desc": "Bebida cremosa de morango, finalizada com chantilly e calda de frutas vermelhas.",
+      "price": 21.9,
+      "image": "../imagens/cafe-com-bolo/milkshake-de-morango-com-chantilly.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-001",
+      "category": "cat2",
+      "name": "Pão na chapa com amor",
+      "desc": "Pão dourado na chapa com manteiga.",
+      "price": 8,
+      "image": "../imagens/cafe-com-bolo/pao-na-chapa.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-002",
+      "category": "cat2",
+      "name": "Pão de queijo",
+      "desc": "Porção de pães de queijo quentinhos.",
+      "price": 9,
+      "image": "../imagens/cafe-com-bolo/pao-de-queijo.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-003",
+      "category": "cat2",
+      "name": "Misto quente",
+      "desc": "Pão tostado com queijo e presunto.",
+      "price": 18,
+      "image": "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/misto_quente.jpg",
+      "active": true
+    },
+    {
+      "id": "cat2-004",
+      "category": "cat2",
+      "name": "Croissant de queijo",
+      "desc": "Massa folhada com queijo cremoso.",
+      "price": 19,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat2-005",
+      "category": "cat2",
+      "name": "Empada de frango",
+      "desc": "Massa delicada com recheio de frango.",
+      "price": 12,
+      "image": "../imagens/cafe-com-bolo/empada-de-frango.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-006",
+      "category": "cat2",
+      "name": "Sanduíche natural",
+      "desc": "Pão macio, folhas frescas e frango.",
+      "price": 17,
+      "image": "../imagens/cafe-com-bolo/sanduiche-natural.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-007",
+      "category": "cat2",
+      "name": "Sanduíche gratinado especial",
+      "desc": "Pão dourado com queijo derretido, presunto, tomate e folhas frescas.",
+      "price": 24.9,
+      "image": "../imagens/cafe-com-bolo/sanduiche-gratinado-com-cafe.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-008",
+      "category": "cat2",
+      "name": "Sanduíche de presunto e queijo",
+      "desc": "Pão macio, queijo derretido e presunto, servido quentinho.",
+      "price": 18.9,
+      "image": "../imagens/cafe-com-bolo/sanduiche-presunto-queijo.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-009",
+      "category": "cat2",
+      "name": "Croissant recheado com cappuccino",
+      "desc": "Croissant com queijo, bacon, tomate e folhas, acompanhado de cappuccino.",
+      "price": 29.9,
+      "image": "../imagens/cafe-com-bolo/croissant-recheado-com-cappuccino.webp",
+      "active": true
+    },
+    {
+      "id": "cat2-010",
+      "category": "cat2",
+      "name": "Sanduíche grelhado com latte",
+      "desc": "Sanduíche grelhado com recheio salgado, acompanhado de café com leite cremoso.",
+      "price": 27.9,
+      "image": "../imagens/cafe-com-bolo/sanduiche-grelhado-com-latte.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-001",
+      "category": "cat3",
+      "name": "Bolo do dia",
+      "desc": "Fatia de bolo caseiro fresquinho.",
+      "price": 12,
+      "image": "../imagens/cafe-com-bolo/bolo-do-dia.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-002",
+      "category": "cat3",
+      "name": "Brownie de chocolate",
+      "desc": "Brownie macio e rico em chocolate.",
+      "price": 13,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat3-003",
+      "category": "cat3",
+      "name": "Cookie de chocolate",
+      "desc": "Cookie artesanal com gotas de chocolate.",
+      "price": 8,
+      "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat3-004",
+      "category": "cat3",
+      "name": "Cheesecake",
+      "desc": "Fatia cremosa com calda de frutas.",
+      "price": 18,
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat3-005",
+      "category": "cat3",
+      "name": "Banoffee",
+      "desc": "Banana, doce de leite e chantilly.",
+      "price": 16,
+      "image": "../imagens/cafe-com-bolo/banoffee.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-006",
+      "category": "cat3",
+      "name": "Croissant de avelã",
+      "desc": "Croissant com creme de avelã.",
+      "price": 17,
+      "image": "https://1544329252.rsc.cdn77.org/temp/1714408739_c058c05873adf99aef89673b7f36688b.jpg",
+      "active": true
+    },
+    {
+      "id": "cat3-007",
+      "category": "cat3",
+      "name": "Panquecas com morango e banana",
+      "desc": "Panquecas fofinhas com morangos, banana, chantilly e calda doce.",
+      "price": 23.9,
+      "image": "../imagens/cafe-com-bolo/panquecas-morango-banana.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-008",
+      "category": "cat3",
+      "name": "Donuts rosa e chocolate",
+      "desc": "Dupla de donuts decorados, um com cobertura rosa e outro com chocolate.",
+      "price": 16.9,
+      "image": "../imagens/cafe-com-bolo/donuts-com-cafe.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-009",
+      "category": "cat3",
+      "name": "Bolo de laranja com café",
+      "desc": "Fatia de bolo fofinho de laranja, com cobertura cítrica, acompanhada de café.",
+      "price": 16.9,
+      "image": "../imagens/cafe-com-bolo/bolo-de-laranja-com-cafe.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-010",
+      "category": "cat3",
+      "name": "Tapioca de banana com caramelo",
+      "desc": "Tapioca recheada com banana e caramelo, finalizada com canela.",
+      "price": 18.9,
+      "image": "../imagens/cafe-com-bolo/tapioca-de-banana-com-caramelo.webp",
+      "active": true
+    },
+    {
+      "id": "cat3-011",
+      "category": "cat3",
+      "name": "Bolo de morango",
+      "desc": "Bolo com creme e morangos frescos, decorado com cobertura de frutas vermelhas.",
+      "price": 19.9,
+      "image": "../imagens/cafe-com-bolo/bolo-de-morango.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-001",
+      "category": "cat4",
+      "name": "Combo bom dia",
+      "desc": "Espresso e pão na chapa.",
+      "price": 14.9,
+      "image": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat4-002",
+      "category": "cat4",
+      "name": "Combo café da tarde",
+      "desc": "Cappuccino artesanal e bolo do dia.",
+      "price": 24.9,
+      "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat4-003",
+      "category": "cat4",
+      "name": "Combo pausa doce",
+      "desc": "Latte e cookie de chocolate.",
+      "price": 19.9,
+      "image": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat4-004",
+      "category": "cat4",
+      "name": "Combo gelado",
+      "desc": "Iced latte e brownie de chocolate.",
+      "price": 26.9,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80",
+      "active": true
+    },
+    {
+      "id": "cat4-005",
+      "category": "cat4",
+      "name": "Combo milk-shake de morango",
+      "desc": "Milk-shake de morango com chantilly e sanduíche quente de queijo.",
+      "price": 29.9,
+      "image": "../imagens/cafe-com-bolo/milk-shake-morango-com-torradas.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-006",
+      "category": "cat4",
+      "name": "Combo café da manhã completo",
+      "desc": "Ovos, bacon, waffles, tomate, café e suco para começar bem o dia.",
+      "price": 39.9,
+      "image": "../imagens/cafe-com-bolo/cafe-da-manha-completo.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-007",
+      "category": "cat4",
+      "name": "Combo bolo de chocolate com café",
+      "desc": "Fatia de bolo com recheio e cobertura de chocolate, acompanhada de café.",
+      "price": 23.9,
+      "image": "../imagens/cafe-com-bolo/bolo-chocolate-com-cafe.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-008",
+      "category": "cat4",
+      "name": "Combo empadas com café",
+      "desc": "Empadas douradas de frango acompanhadas de café quente.",
+      "price": 25.9,
+      "image": "../imagens/cafe-com-bolo/empadas-de-frango-com-cafe.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-009",
+      "category": "cat4",
+      "name": "Café da manhã com ovos e bacon",
+      "desc": "Ovos fritos, bacon crocante, torradas e café.",
+      "price": 32.9,
+      "image": "../imagens/cafe-com-bolo/cafe-da-manha-com-ovos-e-bacon.webp",
+      "active": true
+    },
+    {
+      "id": "cat4-010",
+      "category": "cat4",
+      "name": "Café da manhã com cuscuz",
+      "desc": "Cuscuz, ovos mexidos, torradas, café e suco de laranja.",
+      "price": 34.9,
+      "image": "../imagens/cafe-com-bolo/cafe-da-manha-com-cuscuz.webp",
+      "active": true
+    }
+  ]
+}
