@@ -95,7 +95,8 @@ const photos={
  "wine": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=850&q=85"
 };
 const localProductPhotos={"camarao":"camarao.webp","batata":"batata.webp","contrafile":"contrafile.webp","frango":"frango.webp","bolinho":"bolinho.webp","isca":"isca.webp","lula":"lula.webp","peixe":"peixe.webp","moqueca":"moqueca.webp","abobora":"abobora.webp"};
-function productImage(p){return localProductPhotos[p.id]?"imagens/"+localProductPhotos[p.id]:p.img?photos[p.img]:null}
+const beveragePhotos={"refri1":"coca-cola-1-litro.webp","lata":"coca-cola-lata.webp","fanta":"fanta-laranja-lata.webp","pepsi":"pepsi-lata.webp","h2o":"h2oh-limao.webp","jarra":"suco-jarra-laranja.webp","suco":"suco-maracuja-copo.webp","cerveja":"amstel-600ml.webp","heineken":"heineken-long-neck.webp","vinho":"vinho-tinto-taca.webp"};
+function productImage(p){return beveragePhotos[p.id]?"imagens/bebidas/"+beveragePhotos[p.id]:localProductPhotos[p.id]?"imagens/"+localProductPhotos[p.id]:p.img?photos[p.img]:null}
 const products=[
 {id:"camarao",category:"Porções",name:"Camarão",desc:"Camarões preparados para servir como petisco. Consulte a casa sobre o preparo.",img:"shrimp",opts:[["Meia porção","R$ 75,00"],["Porção inteira","R$ 130,00"]]},
 {id:"batata",category:"Porções",name:"Batata frita",desc:"Batatas fritas douradas, crocantes por fora e macias por dentro.",img:"fries",opts:[["Meia porção","A confirmar"],["Porção inteira","R$ 55,00"]]},
@@ -110,21 +111,23 @@ const products=[
 {id:"arroz",category:"Guarnições",name:"Arroz",desc:"Porção de arroz para acompanhar o prato.",emoji:"🍚",opts:[["Porção","A confirmar"]]},
 {id:"pirao",category:"Guarnições",name:"Pirão",desc:"Pirão servido como acompanhamento.",emoji:"🥣",opts:[["Porção","A confirmar"]]},
 {id:"feijao",category:"Guarnições",name:"Feijão",desc:"Feijão para complementar sua refeição.",emoji:"🫘",opts:[["Porção","A confirmar"]]},
-{id:"refri1",category:"Bebidas",name:"Refrigerante 1 litro",desc:"Consulte as opções e sabores disponíveis.",img:"sodaBottle",opts:[["1 litro","A confirmar"]]},
-{id:"lata",category:"Bebidas",name:"Refrigerante lata",desc:"Consulte as opções e sabores disponíveis.",img:"sodaCan",opts:[["Lata","A confirmar"]]},
-{id:"h2o",category:"Bebidas",name:"H2OH!",desc:"Bebida gaseificada. Consulte sabores.",img:"sodaBottle",opts:[["Unidade","A confirmar"]]},
+{id:"refri1",category:"Bebidas",name:"Coca-Cola 1 litro",desc:"Refrigerante Coca-Cola em garrafa de 1 litro.",img:"sodaBottle",opts:[["1 litro","A confirmar"]]},
+{id:"lata",category:"Bebidas",name:"Coca-Cola lata 350 ml",desc:"Refrigerante Coca-Cola original em lata.",img:"sodaCan",opts:[["Lata","A confirmar"]]},
+{id:"fanta",category:"Bebidas",name:"Fanta Laranja lata 350 ml",desc:"Refrigerante Fanta sabor laranja em lata. Disponibilidade a confirmar.",img:null,opts:[["Lata","A confirmar"]]},
+{id:"pepsi",category:"Bebidas",name:"Pepsi lata 350 ml",desc:"Refrigerante Pepsi em lata. Disponibilidade a confirmar.",img:null,opts:[["Lata","A confirmar"]]},
+{id:"h2o",category:"Bebidas",name:"H2OH! Limão",desc:"Bebida gaseificada sabor limão.",img:"sodaBottle",opts:[["Unidade","A confirmar"]]},
 {id:"agua",category:"Bebidas",name:"Água mineral",desc:"Água sem gás ou com gás.",img:"water",opts:[["Sem gás","A confirmar"],["Com gás","A confirmar"]]},
-{id:"jarra",category:"Bebidas",name:"Suco em jarra",desc:"Sucos preparados na casa. Consulte os sabores.",img:"juice",opts:[["Jarra","A confirmar"],["Meia jarra","A confirmar"]]},
-{id:"suco",category:"Bebidas",name:"Suco no copo",desc:"Suco servido em copo. Consulte os sabores.",img:"juice",opts:[["Copo","A confirmar"]]},
-{id:"lataSuco",category:"Bebidas",name:"Suco de lata",desc:"Consulte os sabores disponíveis.",img:"juice",opts:[["Lata","A confirmar"]]},
-{id:"mate",category:"Bebidas",name:"Mate ou Icetea",desc:"Bebida pronta para consumo.",img:"juice",opts:[["300 ml","A confirmar"]]},
-{id:"cerveja",category:"Bebidas",name:"Cerveja 600 ml",desc:"Consulte as marcas disponíveis e a venda conforme legislação local.",img:"beer",opts:[["600 ml","A confirmar"]]},
-{id:"long",category:"Bebidas",name:"Cerveja long neck",desc:"Consulte as marcas disponíveis.",img:"beer",opts:[["Long neck","A confirmar"]]},
-{id:"heineken",category:"Bebidas",name:"Cerveja Heineken",desc:"Consulte a apresentação disponível.",img:"beer",opts:[["Unidade","A confirmar"]]},
-{id:"vinho",category:"Bebidas",name:"Copo de vinho",desc:"Vinho servido em copo.",img:"wine",opts:[["Copo","A confirmar"]]},
-{id:"energetico",category:"Bebidas",name:"Energético",desc:"Consulte as marcas disponíveis.",img:"sodaCan",opts:[["Unidade","A confirmar"]]},
-{id:"caipirinha",category:"Bebidas",name:"Caipirinha",desc:"Bebida preparada na casa.",img:"juice",opts:[["Unidade","A confirmar"]]},
-{id:"chopp",category:"Bebidas",name:"Chopp de vinho",desc:"Chopp de vinho.",img:"wine",opts:[["Copo","A confirmar"]]}
+{id:"jarra",category:"Bebidas",name:"Suco de laranja na jarra",desc:"Suco de laranja servido em jarra.",img:"juice",opts:[["Jarra","A confirmar"],["Meia jarra","A confirmar"]]},
+{id:"suco",category:"Bebidas",name:"Suco de maracujá no copo",desc:"Suco de maracujá servido no copo.",img:"juice",opts:[["Copo","A confirmar"]]},
+{id:"lataSuco",category:"Bebidas",name:"Suco de lata",desc:"Consulte os sabores disponíveis.",img:null,opts:[["Lata","A confirmar"]]},
+{id:"mate",category:"Bebidas",name:"Mate ou Icetea",desc:"Bebida pronta para consumo.",img:null,opts:[["300 ml","A confirmar"]]},
+{id:"cerveja",category:"Bebidas",name:"Cerveja Amstel 600 ml",desc:"Cerveja Amstel em garrafa de 600 ml.",img:"beer",opts:[["600 ml","A confirmar"]]},
+{id:"long",category:"Bebidas",name:"Cerveja long neck",desc:"Consulte as marcas disponíveis.",img:null,opts:[["Long neck","A confirmar"]]},
+{id:"heineken",category:"Bebidas",name:"Cerveja Heineken long neck",desc:"Cerveja Heineken em garrafa long neck.",img:"beer",opts:[["Unidade","A confirmar"]]},
+{id:"vinho",category:"Bebidas",name:"Taça de vinho tinto",desc:"Vinho tinto servido em taça.",img:"wine",opts:[["Copo","A confirmar"]]},
+{id:"energetico",category:"Bebidas",name:"Energético",desc:"Consulte as marcas disponíveis.",img:null,opts:[["Unidade","A confirmar"]]},
+{id:"caipirinha",category:"Bebidas",name:"Caipirinha",desc:"Bebida preparada na casa.",img:null,opts:[["Unidade","A confirmar"]]},
+{id:"chopp",category:"Bebidas",name:"Chopp de vinho",desc:"Chopp de vinho.",img:null,opts:[["Copo","A confirmar"]]}
 ];
 const categories=["Porções","Peixe frito","Moqueca","Camarão com abóbora e Catupiry","Guarnições","Bebidas","Todos"];let selected="Porções";
 const tabs=document.getElementById("tabs"),list=document.getElementById("listing"),search=document.getElementById("search"),dialog=document.getElementById("details");
