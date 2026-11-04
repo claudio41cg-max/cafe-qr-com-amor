@@ -1,0 +1,47 @@
+name: Importar fotos do Américo do Peixe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'importar-imagens/americo_do_peixe_10_fotos_profissionais.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verificar ZIP e extrair 10 fotos
+        run: |
+          python3 - <<'PY'
+          import io, json, pathlib, zipfile, hashlib
+          file=pathlib.Path('importar-imagens/americo_do_peixe_10_fotos_profissionais.zip')
+          if not file.exists(): raise SystemExit('ZIP nao encontrado na pasta importar-imagens')
+          valid={'isca.webp','frango.webp','camarao.webp','contrafile.webp','bolinho.webp','batata.webp','peixe.webp','lula.webp','abobora.webp','moqueca.webp'}
+          with zipfile.ZipFile(file) as z:
+            manifest=json.loads(z.read('manifesto.json'))
+            names={x['imagem'] for x in manifest}
+            if names!=valid or len(manifest)!=10: raise SystemExit('Lote esperado: 10 imagens com nomes especificos')
+            dest=pathlib.Path('docs/americo-do-peixe/imagens')
+            dest.mkdir(parents=True,exist_ok=True)
+            for item in manifest:
+              filename=item['imagem']
+              data=z.read(filename)
+              if hashlib.sha256(data).hexdigest()!=item['sha256']: raise SystemExit('Hash incorreto: '+filename)
+              if not data.startswith(b'RIFF') or data[8:12]!=b'WEBP': raise SystemExit('Formato invalido: '+filename)
+              (dest/filename).write_bytes(data)
+            print('10 fotografias verificadas e preparadas')
+          PY
+      - name: Publicar imagens no repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/americo-do-peixe/imagens
+          if ! git diff --cached --quiet; then
+            git commit -m "Importa 10 fotografias profissionais do Américo do Peixe"
+            git pull --rebase
+            git push
+          fi
