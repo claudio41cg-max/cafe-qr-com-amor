@@ -65,7 +65,9 @@
       "price": 15,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-002",
@@ -75,7 +77,9 @@
       "price": 16,
       "emoji": "🥘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-003",
@@ -85,7 +89,9 @@
       "price": 35,
       "emoji": "🥓",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-004",
@@ -95,7 +101,9 @@
       "price": 35,
       "emoji": "🧀",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/pao-de-queijo.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-005",
@@ -105,7 +113,9 @@
       "price": 8.9,
       "emoji": "🥟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/35534609/pexels-photo-35534609.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-006",
@@ -115,7 +125,9 @@
       "price": 8.9,
       "emoji": "🥟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/35534609/pexels-photo-35534609.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-007",
@@ -125,7 +137,9 @@
       "price": 8.9,
       "emoji": "🥟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/35534609/pexels-photo-35534609.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-008",
@@ -135,7 +149,9 @@
       "price": 7.9,
       "emoji": "🥟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/35534609/pexels-photo-35534609.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-009",
@@ -145,7 +161,9 @@
       "price": 29.9,
       "emoji": "🌽",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/21531369/pexels-photo-21531369.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-010",
@@ -155,7 +173,9 @@
       "price": 29.9,
       "emoji": "🌽",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/21531369/pexels-photo-21531369.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-011",
@@ -165,7 +185,9 @@
       "price": 29.9,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/21531369/pexels-photo-21531369.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-012",
@@ -175,7 +197,9 @@
       "price": 22,
       "emoji": "🌽",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/21531369/pexels-photo-21531369.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-013",
@@ -185,7 +209,9 @@
       "price": 38,
       "emoji": "🌽",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/21531369/pexels-photo-21531369.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-014",
@@ -195,7 +221,9 @@
       "price": 35,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-015",
@@ -205,7 +233,9 @@
       "price": 30,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-016",
@@ -215,7 +245,9 @@
       "price": 58,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-017",
@@ -225,7 +257,9 @@
       "price": 120,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-018",
@@ -235,7 +269,9 @@
       "price": 45,
       "emoji": "🥘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-019",
@@ -245,7 +281,9 @@
       "price": 55,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-020",
@@ -255,7 +293,9 @@
       "price": 35,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-021",
@@ -265,7 +305,9 @@
       "price": 42,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-022",
@@ -275,7 +317,9 @@
       "price": 38,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-023",
@@ -285,7 +329,9 @@
       "price": 38,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-024",
@@ -295,7 +341,9 @@
       "price": 58,
       "emoji": "🍲",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-025",
@@ -305,7 +353,9 @@
       "price": 45,
       "emoji": "🍟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-026",
@@ -315,7 +365,9 @@
       "price": 69,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-027",
@@ -325,7 +377,9 @@
       "price": 120,
       "emoji": "🥘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-028",
@@ -335,7 +389,9 @@
       "price": 78,
       "emoji": "🥩",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-029",
@@ -345,7 +401,9 @@
       "price": 70,
       "emoji": "🥩",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-030",
@@ -355,7 +413,9 @@
       "price": 50,
       "emoji": "🍗",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-031",
@@ -365,7 +425,9 @@
       "price": 38,
       "emoji": "🍗",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-032",
@@ -375,7 +437,9 @@
       "price": 60,
       "emoji": "🍖",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-033",
@@ -385,7 +449,9 @@
       "price": 65,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-034",
@@ -395,7 +461,9 @@
       "price": 25,
       "emoji": "🍟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-035",
@@ -405,7 +473,9 @@
       "price": 30,
       "emoji": "🍠",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-036",
@@ -415,7 +485,9 @@
       "price": 40,
       "emoji": "🍟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-037",
@@ -425,7 +497,9 @@
       "price": 40,
       "emoji": "🍟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-038",
@@ -435,7 +509,9 @@
       "price": 80,
       "emoji": "🥩",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-039",
@@ -445,7 +521,9 @@
       "price": 55,
       "emoji": "🧀",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-040",
@@ -455,7 +533,9 @@
       "price": 30,
       "emoji": "🍤",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-041",
@@ -465,7 +545,9 @@
       "price": 34,
       "emoji": "🥘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-042",
@@ -475,7 +557,9 @@
       "price": 34,
       "emoji": "🥘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-043",
@@ -485,7 +569,9 @@
       "price": 20,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-044",
@@ -495,7 +581,9 @@
       "price": 15,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-045",
@@ -505,7 +593,9 @@
       "price": 15,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/14856123/pexels-photo-14856123.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-046",
@@ -515,7 +605,9 @@
       "price": 12,
       "emoji": "🍰",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/bolo-de-laranja-com-cafe.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-047",
@@ -525,7 +617,9 @@
       "price": 18,
       "emoji": "🍨",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/bolo-de-laranja-com-cafe.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-048",
@@ -535,7 +629,9 @@
       "price": 15,
       "emoji": "🍰",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/bolo-de-laranja-com-cafe.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-049",
@@ -545,7 +641,9 @@
       "price": 18,
       "emoji": "🍌",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/tapioca-de-banana-com-caramelo.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-050",
@@ -555,7 +653,9 @@
       "price": 8.9,
       "emoji": "🥟",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/35534609/pexels-photo-35534609.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-051",
@@ -565,7 +665,9 @@
       "price": 11,
       "emoji": "🥥",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/banoffee.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-052",
@@ -575,7 +677,9 @@
       "price": 20,
       "emoji": "🍨",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/33674422/pexels-photo-33674422.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-053",
@@ -585,7 +689,9 @@
       "price": 18,
       "emoji": "🍫",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/33674422/pexels-photo-33674422.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-054",
@@ -595,7 +701,9 @@
       "price": 20,
       "emoji": "🍫",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/33674422/pexels-photo-33674422.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-055",
@@ -605,7 +713,9 @@
       "price": 18,
       "emoji": "🍨",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/33674422/pexels-photo-33674422.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-056",
@@ -615,7 +725,9 @@
       "price": 13,
       "emoji": "🍮",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/34462833/pexels-photo-34462833.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-057",
@@ -625,7 +737,9 @@
       "price": 10,
       "emoji": "🍨",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/33674422/pexels-photo-33674422.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-058",
@@ -635,7 +749,9 @@
       "price": 14,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/coca-cola-1-litro.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-059",
@@ -645,7 +761,9 @@
       "price": 11,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/pepsi-lata.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-060",
@@ -655,7 +773,9 @@
       "price": 7,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/coca-cola-lata.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-061",
@@ -665,7 +785,9 @@
       "price": 6,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/pepsi-lata.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-062",
@@ -675,7 +797,9 @@
       "price": 3,
       "emoji": "💧",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-063",
@@ -685,7 +809,9 @@
       "price": 4,
       "emoji": "💧",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-064",
@@ -695,7 +821,9 @@
       "price": 10,
       "emoji": "🧃",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/suco-jarra-laranja.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-065",
@@ -705,7 +833,9 @@
       "price": 8,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/h2oh-limao.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-066",
@@ -715,7 +845,9 @@
       "price": 4,
       "emoji": "🥤",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/pepsi-lata.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-067",
@@ -725,7 +857,9 @@
       "price": 10,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/amstel-600ml.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-068",
@@ -735,7 +869,9 @@
       "price": 10,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/amstel-600ml.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-069",
@@ -745,7 +881,9 @@
       "price": 10,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/amstel-600ml.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-070",
@@ -755,7 +893,9 @@
       "price": 15,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/heineken-long-neck.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-071",
@@ -765,7 +905,9 @@
       "price": 13,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/amstel-600ml.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-072",
@@ -775,7 +917,9 @@
       "price": 13,
       "emoji": "🍺",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/amstel-600ml.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-073",
@@ -785,7 +929,9 @@
       "price": 13,
       "emoji": "🍷",
       "active": true,
-      "image": ""
+      "image": "../americo-do-peixe/imagens/bebidas/vinho-tinto-taca.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca de bebidas Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-074",
@@ -795,7 +941,9 @@
       "price": 10,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-075",
@@ -805,7 +953,9 @@
       "price": 8,
       "emoji": "🌶️",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-076",
@@ -815,7 +965,9 @@
       "price": 8,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-077",
@@ -825,7 +977,9 @@
       "price": 8,
       "emoji": "🥣",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/12675813/pexels-photo-12675813.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-078",
@@ -835,7 +989,9 @@
       "price": 8,
       "emoji": "🍌",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-079",
@@ -845,7 +1001,9 @@
       "price": 12,
       "emoji": "🧀",
       "active": true,
-      "image": ""
+      "image": "https://raw.githubusercontent.com/claudio41cg-max/cafe-qr-com-amor/main/biblioteca-produtos/cafe-com-bolo/pao-de-queijo.webp",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Biblioteca Café QR, fotografia ilustrativa"
     },
     {
       "id": "bd-080",
@@ -855,7 +1013,9 @@
       "price": 7,
       "emoji": "🍚",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-081",
@@ -865,7 +1025,9 @@
       "price": 8,
       "emoji": "🫘",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-082",
@@ -875,7 +1037,9 @@
       "price": 22,
       "emoji": "🥩",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-083",
@@ -885,7 +1049,9 @@
       "price": 20,
       "emoji": "🍠",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-084",
@@ -895,7 +1061,9 @@
       "price": 18,
       "emoji": "🍖",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-085",
@@ -905,7 +1073,9 @@
       "price": 20,
       "emoji": "🥩",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/27643038/pexels-photo-27643038.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     },
     {
       "id": "bd-086",
@@ -915,7 +1085,10 @@
       "price": 20,
       "emoji": "🥓",
       "active": true,
-      "image": ""
+      "image": "https://images.pexels.com/photos/19781592/pexels-photo-19781592.jpeg?auto=compress&cs=tinysrgb&w=700",
+      "photo_type": "ilustrativa",
+      "photo_credit": "Pexels, fotografia ilustrativa"
     }
-  ]
+  ],
+  "photography_note": "Imagens ilustrativas, não necessariamente fotos de pratos preparados pelo restaurante. A identidade e preços dos produtos seguem cardápio fotografado."
 }
