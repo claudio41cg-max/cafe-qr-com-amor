@@ -11,6 +11,7 @@ on:
       - 'docs/admin/**'
       - 'docs/biblioteca/**'
       - 'docs/americo-do-peixe/**'
+      - 'docs/baiao-de-dois/**'
       - 'docs/imagens/**'
       - 'biblioteca-produtos/**'
       - '.github/workflows/publicar-cardapio.yml'
