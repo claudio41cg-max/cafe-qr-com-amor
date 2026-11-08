@@ -1,0 +1,921 @@
+{
+  "schema": 1,
+  "restaurant": "baiao-de-dois",
+  "business_name": "Baião de Dois Restaurante",
+  "categories": [
+    {
+      "id": "c0",
+      "name": "Pra começar"
+    },
+    {
+      "id": "c1",
+      "name": "Pastéis"
+    },
+    {
+      "id": "c2",
+      "name": "Delícias de Cuscuz"
+    },
+    {
+      "id": "c3",
+      "name": "Especialidades"
+    },
+    {
+      "id": "c4",
+      "name": "Baião do Sertão"
+    },
+    {
+      "id": "c5",
+      "name": "Para beliscar"
+    },
+    {
+      "id": "c6",
+      "name": "Escondidinhos"
+    },
+    {
+      "id": "c7",
+      "name": "Caldos"
+    },
+    {
+      "id": "c8",
+      "name": "Sobremesas"
+    },
+    {
+      "id": "c9",
+      "name": "Bebidas"
+    },
+    {
+      "id": "c10",
+      "name": "Cervejas"
+    },
+    {
+      "id": "c11",
+      "name": "Molhos extras"
+    },
+    {
+      "id": "c12",
+      "name": "Adicionais"
+    }
+  ],
+  "products": [
+    {
+      "id": "bd-001",
+      "category": "Pra começar",
+      "name": "Copo da Felicidade - Camarão",
+      "desc": "Escondidinho no copo, com recheio de camarão, creme de aipim, catupiry e blend de queijos.",
+      "price": 15,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-002",
+      "category": "Pra começar",
+      "name": "Copo da Felicidade - Carne Seca",
+      "desc": "Escondidinho no copo com recheio de carne seca, creme de aipim, catupiry e blend de queijos.",
+      "price": 16,
+      "emoji": "🥘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-003",
+      "category": "Pra começar",
+      "name": "Torresmo Brabo",
+      "desc": "Torresmo fatiado, crocante por fora e macio por dentro, com geleia de pimenta caseira.",
+      "price": 35,
+      "emoji": "🥓",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-004",
+      "category": "Pra começar",
+      "name": "Queijo do Sertão",
+      "desc": "Queijo coalho empanado.",
+      "price": 35,
+      "emoji": "🧀",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-005",
+      "category": "Pastéis",
+      "name": "Pastel do Mar",
+      "desc": "Pastel de camarão, com ou sem catupiry.",
+      "price": 8.9,
+      "emoji": "🥟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-006",
+      "category": "Pastéis",
+      "name": "Pastel do Sertão",
+      "desc": "Pastel de carne seca, com ou sem catupiry.",
+      "price": 8.9,
+      "emoji": "🥟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-007",
+      "category": "Pastéis",
+      "name": "Pastel Nordestino",
+      "desc": "Pastel de carne seca, calabresa e bacon.",
+      "price": 8.9,
+      "emoji": "🥟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-008",
+      "category": "Pastéis",
+      "name": "Pastel do Queijeiro",
+      "desc": "Pastel de queijo.",
+      "price": 7.9,
+      "emoji": "🥟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-009",
+      "category": "Delícias de Cuscuz",
+      "name": "Cuscuz do Sertão",
+      "desc": "Carne seca, bacon, ovo, catupiry e queijo. Serve 1 pessoa; acompanha vinagrete.",
+      "price": 29.9,
+      "emoji": "🌽",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-010",
+      "category": "Delícias de Cuscuz",
+      "name": "Cuscuz do Forró",
+      "desc": "Bacon, calabresa, ovo, catupiry e queijo. Serve 1 pessoa; acompanha vinagrete.",
+      "price": 29.9,
+      "emoji": "🌽",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-011",
+      "category": "Delícias de Cuscuz",
+      "name": "Cuscuz do Mar",
+      "desc": "Camarão, ovo, catupiry e queijo. Serve 1 pessoa; acompanha vinagrete.",
+      "price": 29.9,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-012",
+      "category": "Delícias de Cuscuz",
+      "name": "Cuscuz da Manhã",
+      "desc": "Ovo e bacon. Serve 1 pessoa; acompanha vinagrete.",
+      "price": 22,
+      "emoji": "🌽",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-013",
+      "category": "Delícias de Cuscuz",
+      "name": "Cuscuz Arretado da Casa",
+      "desc": "Carne seca, bacon, linguiça, queijo coalho, banana-da-terra e farofinha crocante. Serve 1 pessoa.",
+      "price": 38,
+      "emoji": "🌽",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-014",
+      "category": "Especialidades",
+      "name": "Baião Lascado no Creme",
+      "desc": "Serve 1 pessoa. Acompanha farofa e vinagrete.",
+      "price": 35,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-015",
+      "category": "Especialidades",
+      "name": "Baião Pra Cumê Só",
+      "desc": "Serve 1 pessoa. Acompanha farofa e vinagrete.",
+      "price": 30,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-016",
+      "category": "Especialidades",
+      "name": "Baião de Dois Mermo",
+      "desc": "Serve 2 pessoas. Acompanha farofa e vinagrete.",
+      "price": 58,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-017",
+      "category": "Especialidades",
+      "name": "Baião Família Arretada",
+      "desc": "Serve 4 pessoas. Acompanha farofa, vinagrete, aipim e banana-da-terra.",
+      "price": 120,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-018",
+      "category": "Especialidades",
+      "name": "Carne Seca do Sertão",
+      "desc": "Arroz de leite com queijo coalho, coberto com carne seca desfiada e refogada na manteiga de garrafa. Serve 1 pessoa.",
+      "price": 45,
+      "emoji": "🥘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-019",
+      "category": "Especialidades",
+      "name": "Camarão Cabra da Peste",
+      "desc": "Camarão empanado com requeijão, servido sobre arroz cremoso com camarões, ervilhas e presunto, gratinado com muçarela; acompanha batata palha.",
+      "price": 55,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-020",
+      "category": "Baião do Sertão",
+      "name": "Baião do Sertão - Filé de Frango",
+      "desc": "Serve 1 pessoa. Baião de dois com filé de frango; acompanha farofa, vinagrete e aipim.",
+      "price": 35,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-021",
+      "category": "Baião do Sertão",
+      "name": "Baião do Sertão - Contrafilé",
+      "desc": "Serve 1 pessoa. Baião de dois com contrafilé; acompanha farofa, vinagrete e aipim.",
+      "price": 42,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-022",
+      "category": "Baião do Sertão",
+      "name": "Baião do Sertão - Costelinha",
+      "desc": "Serve 1 pessoa. Baião de dois com costelinha; acompanha farofa, vinagrete e aipim.",
+      "price": 38,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-023",
+      "category": "Baião do Sertão",
+      "name": "Baião do Sertão - Torresmo",
+      "desc": "Serve 1 pessoa. Baião de dois com torresmo; acompanha farofa, vinagrete e aipim.",
+      "price": 38,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-024",
+      "category": "Baião do Sertão",
+      "name": "Baião do Sertão - Carne de Sol",
+      "desc": "Serve 1 pessoa. Baião de dois com carne de sol; acompanha farofa, vinagrete e aipim.",
+      "price": 58,
+      "emoji": "🍲",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-025",
+      "category": "Para beliscar",
+      "name": "Batata Frita Nordestina",
+      "desc": "Batata com calabresa, bacon, catupiry, cheddar e blend de queijos.",
+      "price": 45,
+      "emoji": "🍟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-026",
+      "category": "Para beliscar",
+      "name": "Batata Frita com Camarão",
+      "desc": "Batata com camarão, cheddar, catupiry e blend de queijos.",
+      "price": 69,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-027",
+      "category": "Para beliscar",
+      "name": "Banquete Nordestino",
+      "desc": "Carne seca, torresmo, aipim, queijo coalho e banana-da-terra.",
+      "price": 120,
+      "emoji": "🥘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-028",
+      "category": "Para beliscar",
+      "name": "Contrafilé Maravilha",
+      "desc": "Contrafilé, aipim e queijo coalho.",
+      "price": 78,
+      "emoji": "🥩",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-029",
+      "category": "Para beliscar",
+      "name": "Contrafilé Supremo",
+      "desc": "Contrafilé em tiras, molho quatro queijos, batata frita e molho da casa.",
+      "price": 70,
+      "emoji": "🥩",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-030",
+      "category": "Para beliscar",
+      "name": "Coxinha de Lampião",
+      "desc": "Coxinhas de frango com maionese de alho.",
+      "price": 50,
+      "emoji": "🍗",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-031",
+      "category": "Para beliscar",
+      "name": "Frango a Passarinho",
+      "desc": "Frango a passarinho. Opção com batata frita ou aipim: R$ 45,00.",
+      "price": 38,
+      "emoji": "🍗",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-032",
+      "category": "Para beliscar",
+      "name": "Costelinha de Porco",
+      "desc": "Com batata frita ou aipim.",
+      "price": 60,
+      "emoji": "🍖",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-033",
+      "category": "Para beliscar",
+      "name": "Camarão Alho e Óleo",
+      "desc": "Camarão alho e óleo. Opção com batata frita ou aipim: R$ 78,00.",
+      "price": 65,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-034",
+      "category": "Para beliscar",
+      "name": "Batata Frita Simples",
+      "desc": "Porção de batata frita.",
+      "price": 25,
+      "emoji": "🍟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-035",
+      "category": "Para beliscar",
+      "name": "Aipim Simples",
+      "desc": "Porção de aipim.",
+      "price": 30,
+      "emoji": "🍠",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-036",
+      "category": "Para beliscar",
+      "name": "Batata Frita com Cheddar e Bacon",
+      "desc": "Batata com cheddar e bacon.",
+      "price": 40,
+      "emoji": "🍟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-037",
+      "category": "Para beliscar",
+      "name": "Batata Frita com Molho 4 Queijos e Bacon",
+      "desc": "Batata com molho de quatro queijos e bacon.",
+      "price": 40,
+      "emoji": "🍟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-038",
+      "category": "Para beliscar",
+      "name": "Carne de Sol",
+      "desc": "Carne de sol com batata frita ou aipim.",
+      "price": 80,
+      "emoji": "🥩",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-039",
+      "category": "Para beliscar",
+      "name": "Dadinhos de Tapioca",
+      "desc": "Sabores: provolone ou queijo coalho.",
+      "price": 55,
+      "emoji": "🧀",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-040",
+      "category": "Escondidinhos",
+      "name": "Escondidinho do Mar",
+      "desc": "Camarão, creme de aipim e blend de queijos. Serve 1 pessoa.",
+      "price": 30,
+      "emoji": "🍤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-041",
+      "category": "Escondidinhos",
+      "name": "Escondidinho do Sertão",
+      "desc": "Carne seca, creme de aipim e blend de queijos. Serve 1 pessoa.",
+      "price": 34,
+      "emoji": "🥘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-042",
+      "category": "Escondidinhos",
+      "name": "Escondidinho Nordestino",
+      "desc": "Carne seca, calabresa e bacon, com creme de aipim e blend de queijos. Serve 1 pessoa.",
+      "price": 34,
+      "emoji": "🥘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-043",
+      "category": "Caldos",
+      "name": "Bobó de Camarão",
+      "desc": "Caldo de 400 ml. Acompanha torrada.",
+      "price": 20,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-044",
+      "category": "Caldos",
+      "name": "Sopa de Ervilha",
+      "desc": "Caldo de 400 ml. Acompanha torrada.",
+      "price": 15,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-045",
+      "category": "Caldos",
+      "name": "Feijão Amigo",
+      "desc": "Caldo de 400 ml. Acompanha torrada.",
+      "price": 15,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-046",
+      "category": "Sobremesas",
+      "name": "Bolo de Rolo de Goiabada",
+      "desc": "Pedaço de bolo de rolo de goiabada.",
+      "price": 12,
+      "emoji": "🍰",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-047",
+      "category": "Sobremesas",
+      "name": "Bolo de Rolo de Goiabada com Sorvete",
+      "desc": "Pedaço de bolo de rolo com sorvete.",
+      "price": 18,
+      "emoji": "🍨",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-048",
+      "category": "Sobremesas",
+      "name": "Bolo de Rolo com Goiabada Cremosa e Queijo Coalho",
+      "desc": "Pedaço de bolo de rolo com goiabada cremosa e queijo coalho.",
+      "price": 15,
+      "emoji": "🍰",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-049",
+      "category": "Sobremesas",
+      "name": "Cartola",
+      "desc": "Banana-da-terra, queijo coalho, açúcar e canela.",
+      "price": 18,
+      "emoji": "🍌",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-050",
+      "category": "Sobremesas",
+      "name": "Pastel Romeu e Julieta",
+      "desc": "Pastel doce. Unidade.",
+      "price": 8.9,
+      "emoji": "🥟",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-051",
+      "category": "Sobremesas",
+      "name": "Cocada Cremosa",
+      "desc": "Sobremesa de cocada cremosa.",
+      "price": 11,
+      "emoji": "🥥",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-052",
+      "category": "Sobremesas",
+      "name": "Cocada Cremosa com Sorvete",
+      "desc": "Cocada cremosa acompanhada de sorvete.",
+      "price": 20,
+      "emoji": "🍨",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-053",
+      "category": "Sobremesas",
+      "name": "Brownie de Ninho com Nutella",
+      "desc": "Sobremesa servida em copinho.",
+      "price": 18,
+      "emoji": "🍫",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-054",
+      "category": "Sobremesas",
+      "name": "Brownie com Sorvete",
+      "desc": "Brownie com sorvete.",
+      "price": 20,
+      "emoji": "🍫",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-055",
+      "category": "Sobremesas",
+      "name": "Sorvete - 2 Bolas",
+      "desc": "Duas bolas de sorvete.",
+      "price": 18,
+      "emoji": "🍨",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-056",
+      "category": "Sobremesas",
+      "name": "Pudim de Leite",
+      "desc": "Pudim de leite.",
+      "price": 13,
+      "emoji": "🍮",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-057",
+      "category": "Sobremesas",
+      "name": "Sorvete - 1 Bola",
+      "desc": "Uma bola de sorvete.",
+      "price": 10,
+      "emoji": "🍨",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-058",
+      "category": "Bebidas",
+      "name": "Coca-Cola 2L",
+      "desc": "Refrigerante Coca-Cola, garrafa de 2 litros.",
+      "price": 14,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-059",
+      "category": "Bebidas",
+      "name": "Refrigerante 1,5L",
+      "desc": "Consulte os sabores disponíveis.",
+      "price": 11,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-060",
+      "category": "Bebidas",
+      "name": "Coca-Cola Lata",
+      "desc": "Refrigerante Coca-Cola em lata.",
+      "price": 7,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-061",
+      "category": "Bebidas",
+      "name": "Refrigerante Lata",
+      "desc": "Consulte os sabores disponíveis.",
+      "price": 6,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-062",
+      "category": "Bebidas",
+      "name": "Água Mineral 500ml",
+      "desc": "Água mineral sem gás.",
+      "price": 3,
+      "emoji": "💧",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-063",
+      "category": "Bebidas",
+      "name": "Água Mineral com Gás 500ml",
+      "desc": "Água mineral com gás.",
+      "price": 4,
+      "emoji": "💧",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-064",
+      "category": "Bebidas",
+      "name": "Suco de Caixa 1L",
+      "desc": "Consulte os sabores disponíveis.",
+      "price": 10,
+      "emoji": "🧃",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-065",
+      "category": "Bebidas",
+      "name": "H2OH!",
+      "desc": "Bebida gaseificada.",
+      "price": 8,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-066",
+      "category": "Bebidas",
+      "name": "Guaraná Natural",
+      "desc": "Guaraná natural.",
+      "price": 4,
+      "emoji": "🥤",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-067",
+      "category": "Cervejas",
+      "name": "Brahma 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 10,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-068",
+      "category": "Cervejas",
+      "name": "Antarctica 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 10,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-069",
+      "category": "Cervejas",
+      "name": "Amstel 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 10,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-070",
+      "category": "Cervejas",
+      "name": "Heineken 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 15,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-071",
+      "category": "Cervejas",
+      "name": "Stella Artois 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 13,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-072",
+      "category": "Cervejas",
+      "name": "Spaten 600ml",
+      "desc": "Cerveja 600 ml.",
+      "price": 13,
+      "emoji": "🍺",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-073",
+      "category": "Cervejas",
+      "name": "Vinho Barril - Caneca 350ml",
+      "desc": "Vinho de barril, servido em caneca de 350 ml.",
+      "price": 13,
+      "emoji": "🍷",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-074",
+      "category": "Molhos extras",
+      "name": "Cheddar Cremoso",
+      "desc": "Molho extra.",
+      "price": 10,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-075",
+      "category": "Molhos extras",
+      "name": "Geleia de Pimenta",
+      "desc": "Molho extra.",
+      "price": 8,
+      "emoji": "🌶️",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-076",
+      "category": "Molhos extras",
+      "name": "Molho da Casa",
+      "desc": "Molho extra.",
+      "price": 8,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-077",
+      "category": "Molhos extras",
+      "name": "Maionese de Alho",
+      "desc": "Molho extra.",
+      "price": 8,
+      "emoji": "🥣",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-078",
+      "category": "Adicionais",
+      "name": "Banana-da-Terra 400g",
+      "desc": "Porção adicional.",
+      "price": 8,
+      "emoji": "🍌",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-079",
+      "category": "Adicionais",
+      "name": "Queijo Coalho - 1 Espeto",
+      "desc": "Porção adicional.",
+      "price": 12,
+      "emoji": "🧀",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-080",
+      "category": "Adicionais",
+      "name": "Porção de Arroz",
+      "desc": "Porção adicional.",
+      "price": 7,
+      "emoji": "🍚",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-081",
+      "category": "Adicionais",
+      "name": "Porção de Feijão",
+      "desc": "Porção adicional.",
+      "price": 8,
+      "emoji": "🫘",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-082",
+      "category": "Adicionais",
+      "name": "Carne de Sol",
+      "desc": "Porção adicional.",
+      "price": 22,
+      "emoji": "🥩",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-083",
+      "category": "Adicionais",
+      "name": "Aipim",
+      "desc": "Porção adicional.",
+      "price": 20,
+      "emoji": "🍠",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-084",
+      "category": "Adicionais",
+      "name": "Costelinha de Porco",
+      "desc": "Porção adicional.",
+      "price": 18,
+      "emoji": "🍖",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-085",
+      "category": "Adicionais",
+      "name": "Contrafilé - 1 Bife",
+      "desc": "Porção adicional.",
+      "price": 20,
+      "emoji": "🥩",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "bd-086",
+      "category": "Adicionais",
+      "name": "Torresmo",
+      "desc": "Porção adicional.",
+      "price": 20,
+      "emoji": "🥓",
+      "active": true,
+      "image": ""
+    }
+  ]
+}
