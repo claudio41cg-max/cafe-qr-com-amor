@@ -1,25 +1,125 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#194532"><meta name="description" content="Cardápio digital do Baião de Dois Restaurante: cuscuz, baião, pratos nordestinos, petiscos, sobremesas e bebidas."><title>Baião de Dois | Cardápio digital</title><style>
-:root{--green:#204431;--deep:#112d22;--red:#9d322b;--gold:#d2a357;--paper:#fcf6e9;--text:#243b2d;--muted:#71776c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);padding-bottom:81px}button,input{font:inherit}button{cursor:pointer}header{position:relative;background:linear-gradient(145deg,#244b37,#142c23);color:#fff7e7;overflow:hidden;text-align:center;padding:28px 16px 27px;border-bottom:5px solid var(--gold)}header:before,header:after{content:"🌵";font-size:75px;opacity:.17;position:absolute;bottom:-11px;left:-10px;transform:rotate(-15deg)}header:after{left:auto;right:-10px;transform:rotate(15deg)}.brand{font-family:Georgia,serif;font-weight:900;font-size:clamp(33px,8vw,54px);line-height:.97;letter-spacing:1px;text-shadow:1px 2px #041e13}.brand span{color:#f7e4c4}.tagline{font-family:Georgia,serif;font-style:italic;color:#f1ce8f;margin:13px 0 0}.mini{font-size:11px;letter-spacing:3px;font-weight:800;color:#f9d3a2;margin-top:8px}.wrap{max-width:1050px;margin:auto;padding:0 14px}.tabs{position:sticky;top:0;background:#fff7eaee;backdrop-filter:blur(12px);z-index:10;padding:12px 0;border-bottom:1px solid #e5cc9d;box-shadow:0 2px 8px #341c1310}.tabs-track{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 14px}.tabs-track::-webkit-scrollbar{display:none}.pill{white-space:nowrap;border:1px solid #d6ba89;color:#39513e;background:#fff9ed;border-radius:17px;padding:12px 16px;font-size:13px;font-weight:750;min-height:45px}.pill.active{background:var(--green);color:white;border-color:var(--green);box-shadow:0 3px 0 #c49749}.search-area{display:flex;gap:10px;align-items:center;padding:18px 0 4px}.search-area input{flex:1;min-width:0;padding:13px 15px;border:1px solid #d9c8a5;border-radius:13px;background:#fff;font-size:16px;color:var(--text)}.search-area input:focus{outline:2px solid #81a18c}.count{font-size:12px;color:#777;white-space:nowrap}.intro{padding:18px 0 2px;display:flex;align-items:center;justify-content:space-between;gap:12px}.intro h1{font:700 23px Georgia,serif;margin:0;color:var(--green)}.intro p{color:#79796f;font-size:12px;margin:7px 0 0}.ribbon{font:700 12px Georgia,serif;background:#f3e2be;color:#7c391f;border:1px solid #e3cd97;border-radius:30px;padding:9px 12px;white-space:nowrap}section{margin:20px 0 26px}section h2{font:700 clamp(20px,4vw,26px) Georgia,serif;color:var(--red);margin:0 0 13px;padding:0 0 10px;border-bottom:2px solid #d6b877}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item{padding:0;border:1px solid #dfcda9;background:#fffaf2;border-radius:17px;overflow:hidden;text-align:left;box-shadow:0 3px 10px #332b1c0a;display:flex;flex-direction:column;color:inherit;min-width:0}.item:focus-visible{outline:3px solid #17794e}.media{height:145px;background:radial-gradient(circle at 50% 50%,#fff1d1,#e8d2a2 70%,#d5b582);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.media .emoji{font-size:65px;filter:drop-shadow(0 5px 5px #49312235)}.media img{width:100%;height:100%;object-fit:cover}.media small{position:absolute;bottom:7px;left:8px;background:#fff9e9d9;font-size:9px;padding:4px 7px;border-radius:7px;color:#706044}.item-content{padding:13px 12px 15px;display:flex;flex-direction:column;flex:1}.item h3{font:700 16px/1.18 Georgia,serif;margin:0 0 7px;color:#213e30}.item p{font-size:12px;line-height:1.35;color:#73766d;margin:0 0 12px;max-height:48px;overflow:hidden}.price{display:block;margin-top:auto;font-size:16px;font-weight:850;color:#9b3729}.empty{padding:35px;text-align:center;color:#777}.note{font-size:12px;color:#68736b;line-height:1.5;padding:4px 0 25px}.bottom{position:fixed;z-index:20;bottom:0;left:0;right:0;background:#103f2d;display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid #bf8f41;box-shadow:0 -4px 18px #0003}.bottom button{border:0;background:transparent;color:#faf6e8;min-height:72px;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.bottom button span{font-size:23px}.bottom button.active{color:#ffd585}dialog{border:0;border-radius:18px;background:#fff9ed;color:var(--text);padding:0;width:min(94vw,480px);max-height:88vh;box-shadow:0 20px 90px #0007}dialog::backdrop{background:#06170ecc}.modal-head{background:#173f2d;color:#ffefce;padding:20px 23px}.modal-head h2{font:750 24px Georgia,serif;margin:0}.modal-body{padding:18px 22px 22px}.modal-body p{line-height:1.55;color:#59665b}.big-icon{font-size:70px;text-align:center;margin:6px}.modal-price{font-size:22px;font-weight:850;color:#a93928;margin:18px 0}.close{background:#204f37;color:white;border:0;border-radius:10px;padding:13px;width:100%;font-weight:750}.qr-area{text-align:center;padding:15px 20px}.qr-area img{width:220px;height:220px;max-width:100%;border:9px solid white;border-radius:10px}.qr-area p{font-size:13px;color:#617061;line-height:1.4}.qr-area .link{display:block;overflow-wrap:anywhere;font-size:11px;color:#28533e;margin:14px 0}.qr-area button{margin-top:8px}.footer{text-align:center;color:#8e8d7b;padding:20px 0;font-size:11px}@media(min-width:670px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.media{height:180px}}@media(min-width:950px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:380px){.media{height:125px}.item h3{font-size:15px}.price{font-size:14px}.item-content{padding:10px}}
-</style></head><body>
-<header id="top"><div class="brand"><span>BAIÃO</span><br>DE DOIS</div><div class="mini">✦ RESTAURANTE ✦</div><p class="tagline">Sabor nordestino arretado</p></header>
-<nav class="tabs" aria-label="Categorias"><div class="tabs-track" id="tabs"><button class="pill active" data-cat="todos">Todos</button></div></nav>
-<main class="wrap"><div class="intro"><div><h1>Nosso cardápio</h1><p>Escolha uma categoria ou procure seu prato favorito.</p></div><div class="ribbon">🌵 Feito com carinho</div></div><div class="search-area"><input id="search" type="search" placeholder="Buscar baião, cuscuz, bebidas..." aria-label="Buscar no cardápio"><span id="count" class="count"></span></div><div id="catalog"></div><p class="note">Valores e disponibilidade sujeitos a confirmação no restaurante. Fotos ilustrativas aparecerão quando forem cadastradas. Cervejas e vinho são destinados a maiores de 18 anos.</p><div class="footer">Baião de Dois Restaurante · Cardápio digital</div></main>
-<nav class="bottom" aria-label="Navegação"><button onclick="scrollTo({top:0,behavior:'smooth'})"><span>⌂</span>Início</button><button id="nav-menu" class="active" onclick="document.querySelector('.search-area').scrollIntoView({behavior:'smooth'})"><span>▤</span>Cardápio</button><button onclick="document.querySelector('#search').focus()"><span>⌕</span>Buscar</button><button onclick="showQr()"><span>▦</span>QR Code</button></nav>
-<dialog id="detail"><div class="modal-head"><h2 id="detail-name"></h2></div><div class="modal-body"><div id="detail-icon" class="big-icon"></div><p id="detail-desc"></p><div id="detail-price" class="modal-price"></div><button class="close" onclick="document.getElementById('detail').close()">Voltar ao cardápio</button></div></dialog>
-<dialog id="qrdialog"><div class="modal-head"><h2>QR Code do restaurante</h2></div><div class="qr-area"><img id="qr" alt="QR Code que abre o cardápio do Baião de Dois"><p>Aponte a câmera para abrir este cardápio no celular.</p><a class="link" id="qr-url" href="#"></a><button class="close" id="copy-btn" onclick="copyLink()">Copiar link do cardápio</button><button style="background:transparent;color:#1f5035;margin-top:9px" class="close" onclick="document.getElementById('qrdialog').close()">Fechar</button></div></dialog>
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7c2e24">
+<meta name="description" content="Cardápio digital do Baião de Dois Restaurante. Pratos nordestinos, cuscuz, especialidades, sobremesas e bebidas com fotos, descrições e preços.">
+<title>Baião de Dois | Cardápio digital</title>
+<style>
+:root{--wine:#842c25;--wine2:#a3402d;--green:#183e31;--ink:#263c31;--gold:#d4a64d;--paper:#fbf3e4;--white:#fffaf2;--muted:#786f61}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:116px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding-bottom:78px}
+button,input{font:inherit}button{cursor:pointer}
+.hero{min-height:320px;background:linear-gradient(0deg,#331a12ed 0%,#351a13b8 38%,#3a251340 100%),url('https://images.pexels.com/photos/34284708/pexels-photo-34284708.jpeg?auto=compress&cs=tinysrgb&w=1500') center 50%/cover;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff3d8;padding:38px 14px}
+.hero:before{content:"";position:absolute;inset:0;border:11px solid #f8dcb233;pointer-events:none}
+.hero:after{content:"✦  🌵  ✦";position:absolute;color:#ffd77c;bottom:19px;letter-spacing:9px;font-size:19px}
+.hero-content{position:relative;z-index:1;text-shadow:0 3px 8px #0008}
+.hero .eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:850;margin-bottom:14px;color:#ffdda8}
+.hero .brand{font-family:Georgia,Times,serif;font-weight:900;font-size:clamp(39px,9vw,72px);line-height:.88;letter-spacing:.5px;color:#fff2d5}
+.hero .brand strong{color:#ffdd9e;display:block;font-size:.8em;letter-spacing:5px}
+.hero .restaurant{font-size:12px;letter-spacing:6px;font-weight:800;color:#f8e4b9;margin:16px 0 9px}
+.hero .tagline{font:italic 21px Georgia,serif;color:#f7cc90}
+.topmenu{background:#fff8ecf2;backdrop-filter:blur(12px);position:sticky;top:0;z-index:12;border-bottom:1px solid #e1ca9b;box-shadow:0 3px 10px #33270b12}
+.tabs{display:flex;gap:9px;padding:12px 14px;max-width:1150px;margin:auto;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;border:1px solid #cda96d;color:#653a29;background:#fff9ed;border-radius:13px;padding:12px 15px;font-size:13px;font-weight:800;min-height:44px}
+.chip[aria-pressed="true"]{background:var(--wine);color:#fff7eb;border-color:var(--wine);box-shadow:0 3px 0 #dcab55}
+.wrap{max-width:1150px;padding:0 15px;margin:auto}
+.welcome{padding:21px 0 8px}
+.welcome-heading{display:flex;gap:12px;align-items:center;justify-content:space-between}
+.welcome h1{font:800 clamp(25px,6vw,36px) Georgia,serif;color:#812e26;margin:0}
+.welcome p{font-size:13px;color:var(--muted);margin:8px 0}
+.sticker{border-radius:12px;border:1px solid #ddc597;background:#f6e5c3;padding:9px;color:#735027;font-size:12px;font-weight:750;text-align:center;white-space:nowrap}
+.searchline{display:flex;gap:9px;align-items:center;margin:12px 0 0}
+.searchline input{flex:1;min-width:0;background:white;border:1px solid #d8c4a3;border-radius:12px;padding:15px;font-size:16px;color:#213c2c;outline-color:#d9a345}
+#count{font-size:12px;color:#766c5b;white-space:nowrap}
+.feature{padding:18px 0 8px}
+.feature h2,.group h2{font:800 25px Georgia,serif;color:var(--wine);margin:0 0 12px}
+.feature .rule{height:3px;background:linear-gradient(90deg,#bb7d30,#ebc681,transparent);margin:-3px 0 14px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.feature-card{position:relative;border:1px solid #ddc49a;border-radius:16px;overflow:hidden;background:white;min-height:190px;box-shadow:0 6px 15px #56422718;text-align:left;color:inherit;padding:0}
+.feature-card img{width:100%;height:165px;object-fit:cover;display:block;background:#e6c38d}
+.feature-card .tag{position:absolute;top:9px;left:9px;background:#873026;color:white;padding:6px 9px;border-radius:7px;font-size:10px;font-weight:800;box-shadow:0 2px 6px #0003}
+.feature-card .info{padding:12px}
+.feature-card h3{font:800 16px/1.22 Georgia,serif;margin:0 0 6px;color:var(--green)}
+.feature-card .value{font-size:17px;color:var(--wine);font-weight:900}
+.feature-card .desc{font-size:11px;color:var(--muted);margin:4px 0 10px;line-height:1.25}
+.group{padding:18px 0 3px}
+.group h2{margin:0 0 12px;padding-bottom:9px;border-bottom:2px solid #d4ad6d}
+.group .subnote{font-size:12px;color:#837761;margin:-4px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{border:1px solid #e0cfaf;background:#fffaf3;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0;color:inherit;text-align:left;padding:0;box-shadow:0 3px 10px #58402112;transition:transform .16s ease,box-shadow .16s ease}
+.card:active,.feature-card:active{transform:scale(.986)}
+.card:focus-visible,.feature-card:focus-visible{outline:3px solid #c58a30}
+.card .photo{height:159px;width:100%;position:relative;overflow:hidden;background:linear-gradient(135deg,#eddab5,#f6e8c9)}
+.card .photo img{display:block;width:100%;height:100%;object-fit:cover}
+.card .photo .fallback{font-size:65px;height:100%;display:flex;align-items:center;justify-content:center}
+.card .photo:after{content:"";position:absolute;inset:65% 0 0;background:linear-gradient(transparent,#3b1e100b);pointer-events:none}
+.card .inner{padding:12px;display:flex;flex-direction:column;flex:1}
+.card h3{font:800 17px/1.22 Georgia,serif;margin:0 0 7px;color:var(--green)}
+.card p{color:#716b62;font-size:12px;line-height:1.37;margin:0 0 13px;max-height:50px;overflow:hidden}
+.card .value{font-size:17px;color:var(--wine);font-weight:900;margin-top:auto}
+.flag{font-size:10px;color:#897353;margin-top:7px}
+.empty{padding:35px;text-align:center;color:#716959;font-size:14px}
+.page-note{background:#f1e4ce;border:1px solid #e3ceab;border-radius:13px;padding:12px 14px;margin:25px 0;font-size:12px;color:#665946;line-height:1.5}
+.footer{text-align:center;color:#98836d;font-size:11px;padding-bottom:27px}
+.bottom{position:fixed;z-index:20;bottom:0;left:0;right:0;border-top:3px solid var(--gold);background:#183c30;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 -3px 15px #0002;padding-bottom:env(safe-area-inset-bottom)}
+.bottom button{border:0;background:transparent;color:#f7e9cd;min-height:70px;font-size:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.bottom button .symbol{font-size:24px;line-height:1}
+.bottom button[aria-current="page"]{color:#ffce77}
+dialog{padding:0;border:0;border-radius:19px;width:min(92vw,490px);max-height:88vh;background:#fff9f0;color:#263d30;overflow:auto;box-shadow:0 24px 90px #0009}
+dialog::backdrop{background:#081c16d6}
+.detail-cover{height:220px;background:#ebd5af;position:relative}
+.detail-cover img{width:100%;height:100%;object-fit:cover}
+.detail-cover .emoji{font-size:80px;display:flex;align-items:center;justify-content:center;height:100%}
+.detail-section{padding:20px}
+.detail-section h2{font:800 27px Georgia,serif;color:var(--wine);margin:0 0 12px}
+.detail-section p{font-size:14px;line-height:1.55;color:#656f64}
+.detail-section .value{font-size:25px;font-weight:900;color:var(--wine);margin:16px 0}
+.detail-section button,.qr-body button{border:0;border-radius:11px;background:var(--green);color:white;padding:13px;width:100%;font-weight:800}
+.qr-body{text-align:center;padding:20px}
+.qr-body h2{font:800 26px Georgia,serif;margin:4px 0;color:var(--wine)}
+.qr-body img{width:220px;height:220px;max-width:100%;border:9px solid #fff;border-radius:9px;margin:10px auto}
+.qr-body p{color:#6d756a;line-height:1.5;font-size:13px}
+.qr-body a{display:block;font-size:12px;overflow-wrap:anywhere;margin:14px 0;color:#21563d}
+@media(min-width:700px){.feature-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card .photo{height:200px}.hero{min-height:385px}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:390px){.card .photo{height:135px}.card h3{font-size:15px}.card .inner{padding:10px}.feature-card img{height:130px}.feature-card h3{font-size:15px}.sticker{font-size:10px;padding:7px}}
+</style></head>
+<body>
+<header class="hero" id="top"><div class="hero-content"><div class="eyebrow">🌵 Tradição nordestina 🌵</div><div class="brand">BAIÃO<strong>DE DOIS</strong></div><div class="restaurant">RESTAURANTE</div><div class="tagline">Sabor arretado da nossa terra</div></div></header>
+<nav class="topmenu" aria-label="Categorias"><div class="tabs" id="tabs"><button class="chip" data-category="Todos" aria-pressed="true">Todos</button></div></nav>
+<main class="wrap">
+<section class="welcome"><div class="welcome-heading"><div><h1>Nosso cardápio</h1><p>Da roça para sua mesa. Escolha sua delícia!</p></div><div class="sticker">✦ 🌵 Sabor do Sertão</div></div><div class="searchline"><input id="search" type="search" placeholder="Buscar prato, bebida ou sobremesa..." aria-label="Pesquisar produtos"><span id="count"></span></div></section>
+<section class="feature" id="featured"><h2>✦ Destaques da casa</h2><div class="rule"></div><div class="feature-grid" id="featured-list"></div></section>
+<div id="catalog"></div>
+<div class="page-note">As fotografias são ilustrativas e podem não reproduzir exatamente a apresentação do prato servido. Valores e disponibilidade devem ser confirmados com o restaurante. Venda de bebidas alcoólicas somente a maiores de 18 anos.</div>
+<footer class="footer">Baião de Dois Restaurante · Cardápio digital com QR próprio</footer>
+</main>
+<nav class="bottom" aria-label="Navegação"><button id="btn-home"><span class="symbol">⌂</span>Início</button><button aria-current="page" id="btn-menu"><span class="symbol">▤</span>Cardápio</button><button id="btn-find"><span class="symbol">⌕</span>Buscar</button><button id="btn-qr"><span class="symbol">▦</span>QR Code</button></nav>
+<dialog id="product-dialog" aria-label="Detalhes do produto"><div id="detail-cover" class="detail-cover"></div><div class="detail-section"><h2 id="detail-name"></h2><p id="detail-description"></p><div class="value" id="detail-price"></div><p style="font-size:11px">Fotografia ilustrativa. Consulte detalhes e disponibilidade com o restaurante.</p><button id="close-product">Voltar ao cardápio</button></div></dialog>
+<dialog id="qr-dialog" aria-label="QR Code do cardápio"><div class="qr-body"><h2>Escaneie nosso cardápio</h2><img id="qr-img" alt="QR Code que abre o cardápio do Baião de Dois"><p>Use a câmera do celular para abrir nosso cardápio.</p><a id="qr-link" href="#"></a><button id="copy-link">Copiar endereço do cardápio</button><button id="close-qr" style="margin-top:9px;background:#ead9b7;color:#294233">Fechar</button></div></dialog>
 <script>
-const target='https://claudio41cg-max.github.io/cafe-qr-com-amor/baiao-de-dois/';
-const labels=['Pra começar','Pastéis','Delícias de Cuscuz','Especialidades','Baião do Sertão','Para beliscar','Escondidinhos','Caldos','Sobremesas','Bebidas','Cervejas','Molhos extras','Adicionais'];
-let all=[],active='todos';
-const images={'Coca-Cola Lata':'../americo-do-peixe/imagens/bebidas/coca-cola-lata.webp'};
-function money(v){return typeof v==='number'?v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'Preço a consultar'}
-function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
-function paint(){const q=document.getElementById('search').value.trim().toLocaleLowerCase('pt-BR'),root=document.getElementById('catalog');root.replaceChildren();let count=0;for(const cat of labels){if(active!=='todos'&&active!==cat)continue;const group=all.filter(x=>x.active!==false&&x.category===cat&&(!q||(x.name+' '+x.desc).toLocaleLowerCase('pt-BR').includes(q)));if(!group.length)continue;count+=group.length;const section=node('section');section.append(node('h2',null,cat));const grid=node('div','grid');for(const p of group){const card=node('button','item');card.type='button';const media=node('div','media');const photo=p.image||images[p.name];if(photo){const img=node('img');img.src=photo;img.loading='lazy';img.alt='Imagem ilustrativa de '+p.name;img.onerror=()=>{media.replaceChildren(node('span','emoji',p.emoji||'🍽️'));media.append(node('small',null,'Foto ilustrativa em breve'))};media.append(img)}else{media.append(node('span','emoji',p.emoji||'🍽️'));media.append(node('small',null,'Imagem ilustrativa em breve'))}const content=node('div','item-content');content.append(node('h3',null,p.name),node('p',null,p.desc||''),node('strong','price',money(p.price)));card.append(media,content);card.onclick=()=>openProduct(p);grid.append(card)}section.append(grid);root.append(section)}if(!count)root.append(node('p','empty','Nenhum prato encontrado. Tente outra pesquisa.'));document.getElementById('count').textContent=count+' itens';document.querySelectorAll('.pill').forEach(b=>b.classList.toggle('active',b.dataset.cat===active))}
-function openProduct(p){document.getElementById('detail-name').textContent=p.name;document.getElementById('detail-icon').textContent=p.emoji||'🍽️';document.getElementById('detail-desc').textContent=p.desc||'Consulte o restaurante.';document.getElementById('detail-price').textContent=money(p.price);document.getElementById('detail').showModal()}
-function showQr(){document.getElementById('qr').src='https://api.qrserver.com/v1/create-qr-code/?size=320x320&data='+encodeURIComponent(target);const a=document.getElementById('qr-url');a.textContent=target;a.href=target;document.getElementById('qrdialog').showModal()}
-async function copyLink(){try{await navigator.clipboard.writeText(target);document.getElementById('copy-btn').textContent='Link copiado!'}catch{prompt('Copie o endereço:',target)}}
-for(const cat of labels){const b=node('button','pill',cat);b.type='button';b.dataset.cat=cat;b.onclick=()=>{active=cat;document.getElementById('search').value='';paint();window.scrollTo({top:0,behavior:'smooth'})};document.getElementById('tabs').append(b)}
-document.querySelector('.pill[data-cat="todos"]').onclick=()=>{active='todos';document.getElementById('search').value='';paint();window.scrollTo({top:0,behavior:'smooth'})};
-document.getElementById('search').oninput=paint;
-(async()=>{try{const r=await fetch('admin-data.json',{cache:'no-store'});if(!r.ok)throw Error('Falha '+r.status);const data=await r.json();all=data.products||[];paint()}catch(e){document.getElementById('catalog').textContent='Não foi possível carregar os produtos. Atualize a página.'}})();
+const PUBLIC_URL='https://claudio41cg-max.github.io/cafe-qr-com-amor/baiao-de-dois/';
+const q=s=>document.querySelector(s), elem=(tag,cls,content)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(content!==undefined)e.textContent=content;return e};
+const featuredNames=['Baião de Dois Mermo','Cuscuz do Sertão','Camarão Cabra da Peste','Escondidinho do Mar'];
+let products=[],categories=[],selected='Todos';
+function price(n){return typeof n==='number'&&Number.isFinite(n)?n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'A consultar'}
+function photoFor(p){return (p.image||'').trim()}
+function media(p){const d=elem('div','photo'),src=photoFor(p);if(src){const img=elem('img');img.src=src;img.alt='Foto ilustrativa de '+p.name;img.loading='lazy';img.decoding='async';img.onerror=()=>{d.replaceChildren(elem('span','fallback',p.emoji||'🍽️'))};d.append(img)}else d.append(elem('span','fallback',p.emoji||'🍽️'));return d}
+function createCard(p,featured=false){const button=elem('button',featured?'feature-card':'card');button.type='button';if(featured){const d=media(p);d.classList.remove('photo');d.classList.add('photo');button.append(d);const tag=elem('span','tag','DESTAQUE');button.append(tag);const info=elem('div','info');info.append(elem('h3',null,p.name),elem('div','desc',p.desc||''),elem('strong','value',price(p.price)));button.append(info)}
+else{button.append(media(p));const info=elem('div','inner');info.append(elem('h3',null,p.name),elem('p',null,p.desc||''),elem('strong','value',price(p.price)));button.append(info)}button.onclick=()=>openDetail(p);return button}
+function render(){const term=q('#search').value.trim().toLocaleLowerCase('pt-BR');const root=q('#catalog');root.replaceChildren();const shown=products.filter(p=>p.active!==false&&(selected==='Todos'||p.category===selected)&&(!term||(p.name+' '+(p.desc||'')).toLocaleLowerCase('pt-BR').includes(term)));q('#count').textContent=shown.length+' itens';q('#featured').hidden=!!term||selected!=='Todos';if(!term&&selected==='Todos'){const list=q('#featured-list');list.replaceChildren();for(const name of featuredNames){const p=products.find(p=>p.name===name&&p.active!==false);if(p)list.append(createCard(p,true))}}
+for(const category of categories){if(selected!=='Todos'&&selected!==category)continue;const items=shown.filter(p=>p.category===category);if(!items.length)continue;const section=elem('section','group');section.append(elem('h2',null,category));if(category==='Delícias de Cuscuz')section.append(elem('p','subnote','Serve 1 pessoa · Acompanha vinagrete'));const grid=elem('div','grid');for(const item of items)grid.append(createCard(item));section.append(grid);root.append(section)}if(!shown.length)root.append(elem('p','empty','Nenhum produto encontrado. Tente outra busca.'));document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===selected)))}
+function updateTabs(){const tabs=q('#tabs');tabs.querySelectorAll('[data-category]:not([data-category="Todos"])').forEach(b=>b.remove());for(const category of categories){const b=elem('button','chip',category);b.dataset.category=category;b.type='button';b.setAttribute('aria-pressed','false');tabs.append(b)}tabs.onclick=e=>{const b=e.target.closest('[data-category]');if(!b)return;selected=b.dataset.category;q('#search').value='';render();window.scrollTo({top:0,behavior:'smooth'})}}
+function openDetail(p){q('#detail-name').textContent=p.name;q('#detail-description').textContent=p.desc||'Consulte os detalhes com o restaurante.';q('#detail-price').textContent=price(p.price);const cover=q('#detail-cover');cover.replaceChildren();const image=photoFor(p);if(image){const img=elem('img');img.src=image;img.alt='Foto ilustrativa de '+p.name;img.onerror=()=>cover.replaceChildren(elem('div','emoji',p.emoji||'🍽️'));cover.append(img)}else cover.append(elem('div','emoji',p.emoji||'🍽️'));q('#product-dialog').showModal()}
+function qr(){const src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(PUBLIC_URL);q('#qr-img').src=src;q('#qr-link').href=PUBLIC_URL;q('#qr-link').textContent=PUBLIC_URL;q('#qr-dialog').showModal()}
+q('#search').addEventListener('input',render);
+q('#btn-home').onclick=()=>{selected='Todos';q('#search').value='';render();window.scrollTo({top:0,behavior:'smooth'})};
+q('#btn-menu').onclick=()=>q('.welcome').scrollIntoView({behavior:'smooth'});
+q('#btn-find').onclick=()=>{q('.welcome').scrollIntoView({behavior:'smooth'});q('#search').focus()};
+q('#btn-qr').onclick=qr;
+q('#close-product').onclick=()=>q('#product-dialog').close();q('#close-qr').onclick=()=>q('#qr-dialog').close();
+q('#copy-link').onclick=async()=>{try{await navigator.clipboard.writeText(PUBLIC_URL);q('#copy-link').textContent='Link copiado!'}catch{prompt('Copie o link:',PUBLIC_URL)}};
+for(const id of ['product-dialog','qr-dialog'])q('#'+id).onclick=e=>{if(e.target===e.currentTarget)e.currentTarget.close()};
+(async()=>{try{const r=await fetch('admin-data.json',{cache:'no-store'});if(!r.ok)throw Error(r.status);const data=await r.json();products=data.products||[];categories=(data.categories||[]).map(c=>c.name);updateTabs();render()}catch(e){q('#catalog').replaceChildren(elem('p','empty','Não foi possível carregar o cardápio. Atualize a página.'))}})();
 </script></body></html>
